@@ -1,6 +1,6 @@
 # 🥅 Goalkeeping Skeletal Action Recognition
 
-A project for skeletal action recognition in goalkeeping scenarios using advanced pose estimation and machine learning techniques.
+A project for skeletal action recognition in goalkeeping scenarios using machine learning techniques.
 
 > **⚠️ IMPORTANT: Data Availability**: 
 > The raw tracking datasets, video footage, and **extracted tensor data** used to train and test these models are **strictly proprietary or derive from proprietary data** and **will not be provided** in this repository or upon request.
