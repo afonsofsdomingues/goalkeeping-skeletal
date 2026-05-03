@@ -1,0 +1,2259 @@
+[02.08.26|19:23:36] Parameters:
+{'work_dir': 'work_dir/crossclr_3views/fulltrain_goalkeeper_v1', 'config': 'config/CrosSCLR/fulltrain_3views.yaml', 'phase': 'train', 'save_result': False, 'start_epoch': 0, 'num_epoch': 300, 'use_gpu': True, 'device': [0], 'log_interval': 100, 'save_interval': 5, 'eval_interval': -1, 'save_log': True, 'print_log': True, 'pavi_log': False, 'train_feeder': 'feeder.ntu_feeder.Feeder_dual', 'test_feeder': 'feeder.feeder', 'num_worker': 0, 'train_feeder_args': {'data_path': '../../data/tensor_native/train_position.npy', 'label_path': '../../data/tensor_native/train_label.pkl', 'shear_amplitude': 0.5, 'temperal_padding_ratio': 6, 'mirror': True, 'random_rotation_angle': 0, 'noise_std': 0.01, 'mmap': False}, 'test_feeder_args': {}, 'batch_size': 64, 'test_batch_size': 64, 'debug': False, 'model': 'net.crossclr_3views.CrosSCLR', 'model_args': {'base_encoder': 'net.st_gcn.Model', 'pretrain': True, 'feature_dim': 128, 'queue_size': 16384, 'momentum': 0.999, 'Temperature': 0.07, 'mlp': True, 'in_channels': 3, 'hidden_channels': 16, 'hidden_dim': 256, 'num_class': 60, 'dropout': 0.5, 'graph_args': {'layout': 'native', 'strategy': 'spatial'}, 'edge_importance_weighting': True}, 'weights': None, 'ignore_weights': ['queue', 'queue_motion', 'queue_bone', 'queue_ptr', 'queue_ptr_motion', 'queue_ptr_bone'], 'base_lr': 0.05, 'step': [250], 'optimizer': 'SGD', 'nesterov': False, 'weight_decay': 0.0001, 'view': 'all', 'cross_epoch': 150, 'context': True, 'topk': 1}
+
+[02.08.26|19:23:36] ---------- Networks initialized -------------
+[02.08.26|19:23:36] [Network] Total number of parameters : 5.428 M
+[02.08.26|19:23:36] -----------------------------------------------
+[02.08.26|19:23:36] Training epoch: 1
+[02.08.26|19:23:37] 	Iter 0 Done. | loss: 12.4831 | loss_motion: 12.9594 | loss_bone: 12.2487 | lr: 0.050000
+[02.08.26|19:23:59] 	Iter 100 Done. | loss: 8.6804 | loss_motion: 8.6587 | loss_bone: 8.6654 | lr: 0.050000
+[02.08.26|19:24:21] 	Iter 200 Done. | loss: 9.3243 | loss_motion: 9.2916 | loss_bone: 9.2957 | lr: 0.050000
+[02.08.26|19:24:44] 	Iter 300 Done. | loss: 9.4481 | loss_motion: 9.4179 | loss_bone: 9.4135 | lr: 0.050000
+[02.08.26|19:24:51] 	train_mean_loss: 8.786897905643613
+[02.08.26|19:24:51] 	train_mean_loss_motion: 8.758789931899472
+[02.08.26|19:24:51] 	train_mean_loss_bone: 8.765807715787629
+[02.08.26|19:24:51] Training epoch: 2
+[02.08.26|19:25:07] 	Iter 400 Done. | loss: 9.2120 | loss_motion: 9.1580 | loss_bone: 9.1145 | lr: 0.050000
+[02.08.26|19:25:29] 	Iter 500 Done. | loss: 8.7718 | loss_motion: 8.6257 | loss_bone: 8.5223 | lr: 0.050000
+[02.08.26|19:25:52] 	Iter 600 Done. | loss: 8.1863 | loss_motion: 7.9594 | loss_bone: 7.8232 | lr: 0.050000
+[02.08.26|19:26:06] 	train_mean_loss: 8.725989501641957
+[02.08.26|19:26:06] 	train_mean_loss_motion: 8.602114057973072
+[02.08.26|19:26:06] 	train_mean_loss_bone: 8.502308145390536
+[02.08.26|19:26:06] Training epoch: 3
+[02.08.26|19:26:14] 	Iter 700 Done. | loss: 7.7978 | loss_motion: 7.5949 | loss_bone: 7.4497 | lr: 0.050000
+[02.08.26|19:26:37] 	Iter 800 Done. | loss: 7.8031 | loss_motion: 7.4311 | loss_bone: 7.3008 | lr: 0.050000
+[02.08.26|19:27:00] 	Iter 900 Done. | loss: 7.6805 | loss_motion: 7.3692 | loss_bone: 7.3210 | lr: 0.050000
+[02.08.26|19:27:21] 	train_mean_loss: 7.7184427382362575
+[02.08.26|19:27:21] 	train_mean_loss_motion: 7.4433829878032025
+[02.08.26|19:27:21] 	train_mean_loss_bone: 7.359465162559578
+[02.08.26|19:27:21] Training epoch: 4
+[02.08.26|19:27:23] 	Iter 1000 Done. | loss: 7.9979 | loss_motion: 7.3236 | loss_bone: 7.4065 | lr: 0.050000
+[02.08.26|19:27:45] 	Iter 1100 Done. | loss: 7.7037 | loss_motion: 7.3848 | loss_bone: 7.4883 | lr: 0.050000
+[02.08.26|19:28:08] 	Iter 1200 Done. | loss: 7.6177 | loss_motion: 7.4182 | loss_bone: 7.5364 | lr: 0.050000
+[02.08.26|19:28:31] 	Iter 1300 Done. | loss: 7.7047 | loss_motion: 7.4550 | loss_bone: 7.5377 | lr: 0.050000
+[02.08.26|19:28:36] 	train_mean_loss: 7.615293001480333
+[02.08.26|19:28:36] 	train_mean_loss_motion: 7.4039281026834445
+[02.08.26|19:28:36] 	train_mean_loss_bone: 7.501368586030251
+[02.08.26|19:28:36] Training epoch: 5
+[02.08.26|19:28:53] 	Iter 1400 Done. | loss: 7.6981 | loss_motion: 7.5011 | loss_bone: 7.5232 | lr: 0.050000
+[02.08.26|19:29:16] 	Iter 1500 Done. | loss: 7.3198 | loss_motion: 7.4422 | loss_bone: 7.4239 | lr: 0.050000
+[02.08.26|19:29:39] 	Iter 1600 Done. | loss: 6.9588 | loss_motion: 7.4593 | loss_bone: 7.3777 | lr: 0.050000
+[02.08.26|19:29:51] 	train_mean_loss: 7.267487125454353
+[02.08.26|19:29:51] 	train_mean_loss_motion: 7.466351990253184
+[02.08.26|19:29:51] 	train_mean_loss_bone: 7.4409744833171185
+[02.08.26|19:29:51] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch5_model.pt.
+[02.08.26|19:29:51] Training epoch: 6
+[02.08.26|19:30:01] 	Iter 1700 Done. | loss: 6.7972 | loss_motion: 7.4052 | loss_bone: 7.2112 | lr: 0.050000
+[02.08.26|19:30:24] 	Iter 1800 Done. | loss: 6.7937 | loss_motion: 7.3367 | loss_bone: 7.1070 | lr: 0.050000
+[02.08.26|19:30:47] 	Iter 1900 Done. | loss: 7.0148 | loss_motion: 7.4052 | loss_bone: 7.0994 | lr: 0.050000
+[02.08.26|19:31:06] 	train_mean_loss: 6.918420690784282
+[02.08.26|19:31:06] 	train_mean_loss_motion: 7.3797480490992795
+[02.08.26|19:31:06] 	train_mean_loss_bone: 7.145608599452454
+[02.08.26|19:31:06] Training epoch: 7
+[02.08.26|19:31:09] 	Iter 2000 Done. | loss: 7.1468 | loss_motion: 7.5346 | loss_bone: 7.2543 | lr: 0.050000
+[02.08.26|19:31:32] 	Iter 2100 Done. | loss: 7.5119 | loss_motion: 7.3541 | loss_bone: 7.3555 | lr: 0.050000
+[02.08.26|19:31:55] 	Iter 2200 Done. | loss: 7.3951 | loss_motion: 7.2854 | loss_bone: 7.3908 | lr: 0.050000
+[02.08.26|19:32:18] 	Iter 2300 Done. | loss: 7.0551 | loss_motion: 7.1345 | loss_bone: 7.3609 | lr: 0.050000
+[02.08.26|19:32:21] 	train_mean_loss: 7.297813682037538
+[02.08.26|19:32:21] 	train_mean_loss_motion: 7.433745840885128
+[02.08.26|19:32:21] 	train_mean_loss_bone: 7.34132125370452
+[02.08.26|19:32:21] Training epoch: 8
+[02.08.26|19:32:40] 	Iter 2400 Done. | loss: 6.7380 | loss_motion: 6.9525 | loss_bone: 7.3755 | lr: 0.050000
+[02.08.26|19:33:03] 	Iter 2500 Done. | loss: 6.7240 | loss_motion: 6.7029 | loss_bone: 7.3611 | lr: 0.050000
+[02.08.26|19:33:26] 	Iter 2600 Done. | loss: 7.2534 | loss_motion: 6.7007 | loss_bone: 7.3460 | lr: 0.050000
+[02.08.26|19:33:37] 	train_mean_loss: 6.694105741840835
+[02.08.26|19:33:37] 	train_mean_loss_motion: 6.769910512734036
+[02.08.26|19:33:37] 	train_mean_loss_bone: 7.354140245662355
+[02.08.26|19:33:37] Training epoch: 9
+[02.08.26|19:33:49] 	Iter 2700 Done. | loss: 6.6115 | loss_motion: 6.6971 | loss_bone: 7.2644 | lr: 0.050000
+[02.08.26|19:34:11] 	Iter 2800 Done. | loss: 6.8782 | loss_motion: 6.8155 | loss_bone: 7.2581 | lr: 0.050000
+[02.08.26|19:34:34] 	Iter 2900 Done. | loss: 7.2130 | loss_motion: 6.8131 | loss_bone: 7.2805 | lr: 0.050000
+[02.08.26|19:34:52] 	train_mean_loss: 6.878783384478704
+[02.08.26|19:34:52] 	train_mean_loss_motion: 6.831805139870082
+[02.08.26|19:34:52] 	train_mean_loss_bone: 7.2782160162565575
+[02.08.26|19:34:52] Training epoch: 10
+[02.08.26|19:34:57] 	Iter 3000 Done. | loss: 7.2292 | loss_motion: 7.2388 | loss_bone: 7.3338 | lr: 0.050000
+[02.08.26|19:35:20] 	Iter 3100 Done. | loss: 7.2757 | loss_motion: 7.1485 | loss_bone: 7.4109 | lr: 0.050000
+[02.08.26|19:35:43] 	Iter 3200 Done. | loss: 7.6160 | loss_motion: 7.2281 | loss_bone: 7.3525 | lr: 0.050000
+[02.08.26|19:36:05] 	Iter 3300 Done. | loss: 7.0967 | loss_motion: 7.5072 | loss_bone: 7.4362 | lr: 0.050000
+[02.08.26|19:36:07] 	train_mean_loss: 7.3641138465743055
+[02.08.26|19:36:07] 	train_mean_loss_motion: 7.199661250561025
+[02.08.26|19:36:07] 	train_mean_loss_bone: 7.403676139624097
+[02.08.26|19:36:08] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch10_model.pt.
+[02.08.26|19:36:08] Training epoch: 11
+[02.08.26|19:36:28] 	Iter 3400 Done. | loss: 6.8787 | loss_motion: 7.0859 | loss_bone: 7.4718 | lr: 0.050000
+[02.08.26|19:36:51] 	Iter 3500 Done. | loss: 6.7116 | loss_motion: 6.5899 | loss_bone: 7.2964 | lr: 0.050000
+[02.08.26|19:37:14] 	Iter 3600 Done. | loss: 6.5678 | loss_motion: 6.4005 | loss_bone: 7.4181 | lr: 0.050000
+[02.08.26|19:37:23] 	train_mean_loss: 6.765728358415679
+[02.08.26|19:37:23] 	train_mean_loss_motion: 6.692107069528355
+[02.08.26|19:37:23] 	train_mean_loss_bone: 7.4099040132274805
+[02.08.26|19:37:23] Training epoch: 12
+[02.08.26|19:37:36] 	Iter 3700 Done. | loss: 6.4883 | loss_motion: 6.2141 | loss_bone: 7.1709 | lr: 0.050000
+[02.08.26|19:37:59] 	Iter 3800 Done. | loss: 6.3736 | loss_motion: 6.2277 | loss_bone: 6.9897 | lr: 0.050000
+[02.08.26|19:38:22] 	Iter 3900 Done. | loss: 5.9794 | loss_motion: 5.9816 | loss_bone: 6.6956 | lr: 0.050000
+[02.08.26|19:38:39] 	train_mean_loss: 6.171227492594647
+[02.08.26|19:38:39] 	train_mean_loss_motion: 5.995311569951452
+[02.08.26|19:38:39] 	train_mean_loss_bone: 6.91008078871897
+[02.08.26|19:38:39] Training epoch: 13
+[02.08.26|19:38:45] 	Iter 4000 Done. | loss: 5.9786 | loss_motion: 6.0122 | loss_bone: 6.2050 | lr: 0.050000
+[02.08.26|19:39:08] 	Iter 4100 Done. | loss: 5.9503 | loss_motion: 5.9815 | loss_bone: 6.1901 | lr: 0.050000
+[02.08.26|19:39:31] 	Iter 4200 Done. | loss: 5.8864 | loss_motion: 5.9401 | loss_bone: 6.0100 | lr: 0.050000
+[02.08.26|19:39:53] 	Iter 4300 Done. | loss: 6.1394 | loss_motion: 5.8055 | loss_bone: 5.6329 | lr: 0.050000
+[02.08.26|19:39:54] 	train_mean_loss: 5.958465473889584
+[02.08.26|19:39:54] 	train_mean_loss_motion: 5.893587010144467
+[02.08.26|19:39:54] 	train_mean_loss_bone: 6.063502076889453
+[02.08.26|19:39:54] Training epoch: 14
+[02.08.26|19:40:16] 	Iter 4400 Done. | loss: 5.8921 | loss_motion: 6.0413 | loss_bone: 6.1744 | lr: 0.050000
+[02.08.26|19:40:39] 	Iter 4500 Done. | loss: 5.6987 | loss_motion: 5.6015 | loss_bone: 6.2268 | lr: 0.050000
+[02.08.26|19:41:02] 	Iter 4600 Done. | loss: 5.7417 | loss_motion: 5.9506 | loss_bone: 6.3174 | lr: 0.050000
+[02.08.26|19:41:09] 	train_mean_loss: 5.8583139811397675
+[02.08.26|19:41:09] 	train_mean_loss_motion: 5.836728960365687
+[02.08.26|19:41:09] 	train_mean_loss_bone: 6.15520454101332
+[02.08.26|19:41:09] Training epoch: 15
+[02.08.26|19:41:24] 	Iter 4700 Done. | loss: 5.8940 | loss_motion: 5.8110 | loss_bone: 6.1874 | lr: 0.050000
+[02.08.26|19:41:47] 	Iter 4800 Done. | loss: 5.6671 | loss_motion: 5.6529 | loss_bone: 6.2377 | lr: 0.050000
+[02.08.26|19:42:10] 	Iter 4900 Done. | loss: 5.7195 | loss_motion: 5.8264 | loss_bone: 6.3180 | lr: 0.050000
+[02.08.26|19:42:24] 	train_mean_loss: 5.7635822569855755
+[02.08.26|19:42:24] 	train_mean_loss_motion: 5.803546247165369
+[02.08.26|19:42:24] 	train_mean_loss_bone: 6.360179065577573
+[02.08.26|19:42:24] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch15_model.pt.
+[02.08.26|19:42:24] Training epoch: 16
+[02.08.26|19:42:32] 	Iter 5000 Done. | loss: 5.8341 | loss_motion: 5.8484 | loss_bone: 6.3214 | lr: 0.050000
+[02.08.26|19:42:55] 	Iter 5100 Done. | loss: 5.7416 | loss_motion: 5.9896 | loss_bone: 6.6376 | lr: 0.050000
+[02.08.26|19:43:17] 	Iter 5200 Done. | loss: 5.8263 | loss_motion: 5.6124 | loss_bone: 6.3053 | lr: 0.050000
+[02.08.26|19:43:38] 	train_mean_loss: 5.821106268199909
+[02.08.26|19:43:38] 	train_mean_loss_motion: 5.729017661777508
+[02.08.26|19:43:38] 	train_mean_loss_bone: 6.345722610496682
+[02.08.26|19:43:38] Training epoch: 17
+[02.08.26|19:43:40] 	Iter 5300 Done. | loss: 5.9753 | loss_motion: 5.7350 | loss_bone: 6.3503 | lr: 0.050000
+[02.08.26|19:44:02] 	Iter 5400 Done. | loss: 5.9805 | loss_motion: 5.7293 | loss_bone: 6.6358 | lr: 0.050000
+[02.08.26|19:44:24] 	Iter 5500 Done. | loss: 5.8638 | loss_motion: 6.0235 | loss_bone: 6.4604 | lr: 0.050000
+[02.08.26|19:44:46] 	Iter 5600 Done. | loss: 5.8449 | loss_motion: 5.7683 | loss_bone: 6.4388 | lr: 0.050000
+[02.08.26|19:44:52] 	train_mean_loss: 5.94693147451856
+[02.08.26|19:44:52] 	train_mean_loss_motion: 5.922420363411803
+[02.08.26|19:44:52] 	train_mean_loss_bone: 6.491992103369214
+[02.08.26|19:44:52] Training epoch: 18
+[02.08.26|19:45:09] 	Iter 5700 Done. | loss: 5.8122 | loss_motion: 5.7147 | loss_bone: 6.2210 | lr: 0.050000
+[02.08.26|19:45:31] 	Iter 5800 Done. | loss: 5.8485 | loss_motion: 5.7901 | loss_bone: 5.8564 | lr: 0.050000
+[02.08.26|19:45:53] 	Iter 5900 Done. | loss: 5.8320 | loss_motion: 5.7211 | loss_bone: 5.9217 | lr: 0.050000
+[02.08.26|19:46:06] 	train_mean_loss: 5.8894665723841
+[02.08.26|19:46:06] 	train_mean_loss_motion: 5.919652700424194
+[02.08.26|19:46:06] 	train_mean_loss_bone: 5.994529780304324
+[02.08.26|19:46:06] Training epoch: 19
+[02.08.26|19:46:16] 	Iter 6000 Done. | loss: 5.6577 | loss_motion: 5.8094 | loss_bone: 5.7443 | lr: 0.050000
+[02.08.26|19:46:38] 	Iter 6100 Done. | loss: 5.7464 | loss_motion: 5.9772 | loss_bone: 5.6677 | lr: 0.050000
+[02.08.26|19:47:00] 	Iter 6200 Done. | loss: 6.0227 | loss_motion: 5.8395 | loss_bone: 5.6634 | lr: 0.050000
+[02.08.26|19:47:20] 	train_mean_loss: 5.889132063194344
+[02.08.26|19:47:20] 	train_mean_loss_motion: 5.9778816606342975
+[02.08.26|19:47:20] 	train_mean_loss_bone: 5.779331633691701
+[02.08.26|19:47:20] Training epoch: 20
+[02.08.26|19:47:23] 	Iter 6300 Done. | loss: 6.1632 | loss_motion: 6.9082 | loss_bone: 5.9984 | lr: 0.050000
+[02.08.26|19:47:45] 	Iter 6400 Done. | loss: 6.0663 | loss_motion: 6.1085 | loss_bone: 6.0257 | lr: 0.050000
+[02.08.26|19:48:07] 	Iter 6500 Done. | loss: 6.1916 | loss_motion: 5.9723 | loss_bone: 5.8490 | lr: 0.050000
+[02.08.26|19:48:29] 	Iter 6600 Done. | loss: 6.8256 | loss_motion: 6.0643 | loss_bone: 5.9285 | lr: 0.050000
+[02.08.26|19:48:34] 	train_mean_loss: 6.154878861234267
+[02.08.26|19:48:34] 	train_mean_loss_motion: 6.1386575504372125
+[02.08.26|19:48:34] 	train_mean_loss_bone: 5.919981555996345
+[02.08.26|19:48:34] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch20_model.pt.
+[02.08.26|19:48:34] Training epoch: 21
+[02.08.26|19:48:52] 	Iter 6700 Done. | loss: 6.0533 | loss_motion: 6.6016 | loss_bone: 5.9325 | lr: 0.050000
+[02.08.26|19:49:14] 	Iter 6800 Done. | loss: 6.4197 | loss_motion: 5.7317 | loss_bone: 5.8298 | lr: 0.050000
+[02.08.26|19:49:36] 	Iter 6900 Done. | loss: 5.5460 | loss_motion: 6.0653 | loss_bone: 5.7996 | lr: 0.050000
+[02.08.26|19:49:48] 	train_mean_loss: 6.077299200155944
+[02.08.26|19:49:48] 	train_mean_loss_motion: 6.2351463496504955
+[02.08.26|19:49:48] 	train_mean_loss_bone: 5.992271444948779
+[02.08.26|19:49:48] Training epoch: 22
+[02.08.26|19:49:59] 	Iter 7000 Done. | loss: 5.6895 | loss_motion: 6.1589 | loss_bone: 5.5531 | lr: 0.050000
+[02.08.26|19:50:21] 	Iter 7100 Done. | loss: 5.4717 | loss_motion: 5.6835 | loss_bone: 6.3050 | lr: 0.050000
+[02.08.26|19:50:43] 	Iter 7200 Done. | loss: 5.5085 | loss_motion: 5.9825 | loss_bone: 6.1830 | lr: 0.050000
+[02.08.26|19:51:01] 	train_mean_loss: 5.531324300160941
+[02.08.26|19:51:01] 	train_mean_loss_motion: 5.946434003708946
+[02.08.26|19:51:01] 	train_mean_loss_bone: 6.094196524144659
+[02.08.26|19:51:01] Training epoch: 23
+[02.08.26|19:51:05] 	Iter 7300 Done. | loss: 5.3649 | loss_motion: 5.5352 | loss_bone: 5.6820 | lr: 0.050000
+[02.08.26|19:51:28] 	Iter 7400 Done. | loss: 5.2169 | loss_motion: 5.9102 | loss_bone: 5.8648 | lr: 0.050000
+[02.08.26|19:51:50] 	Iter 7500 Done. | loss: 5.1740 | loss_motion: 5.4095 | loss_bone: 5.2852 | lr: 0.050000
+[02.08.26|19:52:12] 	Iter 7600 Done. | loss: 5.1667 | loss_motion: 5.2529 | loss_bone: 5.4842 | lr: 0.050000
+[02.08.26|19:52:15] 	train_mean_loss: 5.269121834158537
+[02.08.26|19:52:15] 	train_mean_loss_motion: 5.669948261670116
+[02.08.26|19:52:15] 	train_mean_loss_bone: 5.75813452930969
+[02.08.26|19:52:15] Training epoch: 24
+[02.08.26|19:52:35] 	Iter 7700 Done. | loss: 5.5030 | loss_motion: 5.8224 | loss_bone: 5.2888 | lr: 0.050000
+[02.08.26|19:52:57] 	Iter 7800 Done. | loss: 5.2866 | loss_motion: 5.7638 | loss_bone: 5.4941 | lr: 0.050000
+[02.08.26|19:53:19] 	Iter 7900 Done. | loss: 5.5049 | loss_motion: 5.4608 | loss_bone: 5.2538 | lr: 0.050000
+[02.08.26|19:53:29] 	train_mean_loss: 5.301216867395038
+[02.08.26|19:53:29] 	train_mean_loss_motion: 5.500129512429598
+[02.08.26|19:53:29] 	train_mean_loss_bone: 5.666283248774595
+[02.08.26|19:53:29] Training epoch: 25
+[02.08.26|19:53:42] 	Iter 8000 Done. | loss: 5.0551 | loss_motion: 5.4600 | loss_bone: 6.0552 | lr: 0.050000
+[02.08.26|19:54:04] 	Iter 8100 Done. | loss: 5.0613 | loss_motion: 5.3311 | loss_bone: 5.8387 | lr: 0.050000
+[02.08.26|19:54:26] 	Iter 8200 Done. | loss: 5.7854 | loss_motion: 6.2064 | loss_bone: 5.8101 | lr: 0.050000
+[02.08.26|19:54:43] 	train_mean_loss: 5.251635560096211
+[02.08.26|19:54:43] 	train_mean_loss_motion: 5.553657428015395
+[02.08.26|19:54:43] 	train_mean_loss_bone: 5.614416025916615
+[02.08.26|19:54:43] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch25_model.pt.
+[02.08.26|19:54:43] Training epoch: 26
+[02.08.26|19:54:49] 	Iter 8300 Done. | loss: 5.3105 | loss_motion: 5.4061 | loss_bone: 5.2269 | lr: 0.050000
+[02.08.26|19:55:11] 	Iter 8400 Done. | loss: 5.4036 | loss_motion: 5.5774 | loss_bone: 5.6990 | lr: 0.050000
+[02.08.26|19:55:33] 	Iter 8500 Done. | loss: 5.3559 | loss_motion: 6.7647 | loss_bone: 5.7268 | lr: 0.050000
+[02.08.26|19:55:55] 	Iter 8600 Done. | loss: 5.3109 | loss_motion: 5.4723 | loss_bone: 5.8947 | lr: 0.050000
+[02.08.26|19:55:57] 	train_mean_loss: 5.165544466669826
+[02.08.26|19:55:57] 	train_mean_loss_motion: 5.46110212118604
+[02.08.26|19:55:57] 	train_mean_loss_bone: 5.323854259133699
+[02.08.26|19:55:57] Training epoch: 27
+[02.08.26|19:56:18] 	Iter 8700 Done. | loss: 5.2187 | loss_motion: 5.2303 | loss_bone: 5.2105 | lr: 0.050000
+[02.08.26|19:56:40] 	Iter 8800 Done. | loss: 5.2110 | loss_motion: 5.5156 | loss_bone: 5.2760 | lr: 0.050000
+[02.08.26|19:57:03] 	Iter 8900 Done. | loss: 5.1879 | loss_motion: 5.1199 | loss_bone: 5.4144 | lr: 0.050000
+[02.08.26|19:57:11] 	train_mean_loss: 5.250719135261375
+[02.08.26|19:57:11] 	train_mean_loss_motion: 5.399684382349343
+[02.08.26|19:57:11] 	train_mean_loss_bone: 5.33266327388337
+[02.08.26|19:57:11] Training epoch: 28
+[02.08.26|19:57:25] 	Iter 9000 Done. | loss: 5.1194 | loss_motion: 5.2040 | loss_bone: 5.1031 | lr: 0.050000
+[02.08.26|19:57:47] 	Iter 9100 Done. | loss: 5.0435 | loss_motion: 5.5006 | loss_bone: 4.9684 | lr: 0.050000
+[02.08.26|19:58:10] 	Iter 9200 Done. | loss: 5.3062 | loss_motion: 5.3776 | loss_bone: 5.3069 | lr: 0.050000
+[02.08.26|19:58:24] 	train_mean_loss: 5.191577023970036
+[02.08.26|19:58:24] 	train_mean_loss_motion: 5.360058737665505
+[02.08.26|19:58:24] 	train_mean_loss_bone: 5.183389035596588
+[02.08.26|19:58:24] Training epoch: 29
+[02.08.26|19:58:32] 	Iter 9300 Done. | loss: 5.0736 | loss_motion: 4.9545 | loss_bone: 5.1864 | lr: 0.050000
+[02.08.26|19:58:54] 	Iter 9400 Done. | loss: 5.3388 | loss_motion: 5.3074 | loss_bone: 5.6319 | lr: 0.050000
+[02.08.26|19:59:16] 	Iter 9500 Done. | loss: 5.5574 | loss_motion: 4.2767 | loss_bone: 5.5274 | lr: 0.050000
+[02.08.26|19:59:38] 	train_mean_loss: 5.323016152281055
+[02.08.26|19:59:38] 	train_mean_loss_motion: 5.318213740144252
+[02.08.26|19:59:38] 	train_mean_loss_bone: 5.220365982401407
+[02.08.26|19:59:38] Training epoch: 30
+[02.08.26|19:59:39] 	Iter 9600 Done. | loss: 4.9774 | loss_motion: 5.3283 | loss_bone: 4.9236 | lr: 0.050000
+[02.08.26|20:00:01] 	Iter 9700 Done. | loss: 5.0865 | loss_motion: 5.4490 | loss_bone: 5.1964 | lr: 0.050000
+[02.08.26|20:00:23] 	Iter 9800 Done. | loss: 5.4126 | loss_motion: 5.1665 | loss_bone: 5.4541 | lr: 0.050000
+[02.08.26|20:00:45] 	Iter 9900 Done. | loss: 5.0948 | loss_motion: 7.2192 | loss_bone: 5.1831 | lr: 0.050000
+[02.08.26|20:00:52] 	train_mean_loss: 5.16084469193058
+[02.08.26|20:00:52] 	train_mean_loss_motion: 5.311812237310265
+[02.08.26|20:00:52] 	train_mean_loss_bone: 5.192748186451431
+[02.08.26|20:00:52] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch30_model.pt.
+[02.08.26|20:00:52] Training epoch: 31
+[02.08.26|20:01:08] 	Iter 10000 Done. | loss: 5.2841 | loss_motion: 5.6025 | loss_bone: 5.2188 | lr: 0.050000
+[02.08.26|20:01:30] 	Iter 10100 Done. | loss: 4.9068 | loss_motion: 4.9842 | loss_bone: 4.9362 | lr: 0.050000
+[02.08.26|20:01:52] 	Iter 10200 Done. | loss: 4.7560 | loss_motion: 5.8236 | loss_bone: 5.8127 | lr: 0.050000
+[02.08.26|20:02:06] 	train_mean_loss: 5.01271875099113
+[02.08.26|20:02:06] 	train_mean_loss_motion: 5.271720745772393
+[02.08.26|20:02:06] 	train_mean_loss_bone: 5.175582557286381
+[02.08.26|20:02:06] Training epoch: 32
+[02.08.26|20:02:15] 	Iter 10300 Done. | loss: 5.1715 | loss_motion: 4.6976 | loss_bone: 4.9292 | lr: 0.050000
+[02.08.26|20:02:38] 	Iter 10400 Done. | loss: 5.1284 | loss_motion: 5.5367 | loss_bone: 4.7212 | lr: 0.050000
+[02.08.26|20:03:01] 	Iter 10500 Done. | loss: 4.9975 | loss_motion: 5.0926 | loss_bone: 4.6786 | lr: 0.050000
+[02.08.26|20:03:21] 	train_mean_loss: 5.083320127873262
+[02.08.26|20:03:21] 	train_mean_loss_motion: 5.1968827254822605
+[02.08.26|20:03:21] 	train_mean_loss_bone: 5.10266918574215
+[02.08.26|20:03:21] Training epoch: 33
+[02.08.26|20:03:23] 	Iter 10600 Done. | loss: 4.9778 | loss_motion: 5.0491 | loss_bone: 5.1994 | lr: 0.050000
+[02.08.26|20:03:46] 	Iter 10700 Done. | loss: 4.7483 | loss_motion: 4.9150 | loss_bone: 5.1617 | lr: 0.050000
+[02.08.26|20:04:09] 	Iter 10800 Done. | loss: 4.9451 | loss_motion: 4.9934 | loss_bone: 4.7213 | lr: 0.050000
+[02.08.26|20:04:32] 	Iter 10900 Done. | loss: 5.0068 | loss_motion: 5.3613 | loss_bone: 5.6115 | lr: 0.050000
+[02.08.26|20:04:37] 	train_mean_loss: 5.005883298971862
+[02.08.26|20:04:37] 	train_mean_loss_motion: 5.126404106076751
+[02.08.26|20:04:37] 	train_mean_loss_bone: 4.994997847116245
+[02.08.26|20:04:37] Training epoch: 34
+[02.08.26|20:04:54] 	Iter 11000 Done. | loss: 4.9769 | loss_motion: 5.0501 | loss_bone: 5.6723 | lr: 0.050000
+[02.08.26|20:05:17] 	Iter 11100 Done. | loss: 4.8419 | loss_motion: 5.0659 | loss_bone: 4.6156 | lr: 0.050000
+[02.08.26|20:05:40] 	Iter 11200 Done. | loss: 4.7782 | loss_motion: 5.1626 | loss_bone: 5.1383 | lr: 0.050000
+[02.08.26|20:05:52] 	train_mean_loss: 4.905871454682595
+[02.08.26|20:05:52] 	train_mean_loss_motion: 5.200199710638501
+[02.08.26|20:05:52] 	train_mean_loss_bone: 4.988342191517533
+[02.08.26|20:05:52] Training epoch: 35
+[02.08.26|20:06:02] 	Iter 11300 Done. | loss: 4.9273 | loss_motion: 4.5989 | loss_bone: 5.0619 | lr: 0.050000
+[02.08.26|20:06:25] 	Iter 11400 Done. | loss: 4.9453 | loss_motion: 5.6071 | loss_bone: 4.8245 | lr: 0.050000
+[02.08.26|20:06:48] 	Iter 11500 Done. | loss: 5.0580 | loss_motion: 4.9593 | loss_bone: 4.9335 | lr: 0.050000
+[02.08.26|20:07:07] 	train_mean_loss: 4.946617923114235
+[02.08.26|20:07:07] 	train_mean_loss_motion: 5.103722282046638
+[02.08.26|20:07:07] 	train_mean_loss_bone: 4.961374679000716
+[02.08.26|20:07:07] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch35_model.pt.
+[02.08.26|20:07:07] Training epoch: 36
+[02.08.26|20:07:11] 	Iter 11600 Done. | loss: 4.7993 | loss_motion: 4.9390 | loss_bone: 5.0820 | lr: 0.050000
+[02.08.26|20:07:33] 	Iter 11700 Done. | loss: 5.0231 | loss_motion: 4.7176 | loss_bone: 4.7611 | lr: 0.050000
+[02.08.26|20:07:56] 	Iter 11800 Done. | loss: 4.8506 | loss_motion: 5.4449 | loss_bone: 4.6326 | lr: 0.050000
+[02.08.26|20:08:19] 	Iter 11900 Done. | loss: 4.9610 | loss_motion: 5.0463 | loss_bone: 4.8409 | lr: 0.050000
+[02.08.26|20:08:22] 	train_mean_loss: 4.924222390097073
+[02.08.26|20:08:22] 	train_mean_loss_motion: 5.117208284193656
+[02.08.26|20:08:22] 	train_mean_loss_bone: 4.9182382559128035
+[02.08.26|20:08:22] Training epoch: 37
+[02.08.26|20:08:41] 	Iter 12000 Done. | loss: 4.8358 | loss_motion: 5.1855 | loss_bone: 4.9302 | lr: 0.050000
+[02.08.26|20:09:04] 	Iter 12100 Done. | loss: 5.0204 | loss_motion: 5.6217 | loss_bone: 6.1518 | lr: 0.050000
+[02.08.26|20:09:27] 	Iter 12200 Done. | loss: 4.7495 | loss_motion: 6.0397 | loss_bone: 4.9849 | lr: 0.050000
+[02.08.26|20:09:37] 	train_mean_loss: 4.9513662185553695
+[02.08.26|20:09:37] 	train_mean_loss_motion: 5.133592831764337
+[02.08.26|20:09:37] 	train_mean_loss_bone: 4.932919528189022
+[02.08.26|20:09:37] Training epoch: 38
+[02.08.26|20:09:50] 	Iter 12300 Done. | loss: 4.7710 | loss_motion: 4.4326 | loss_bone: 5.0653 | lr: 0.050000
+[02.08.26|20:10:12] 	Iter 12400 Done. | loss: 4.6008 | loss_motion: 4.8698 | loss_bone: 4.4945 | lr: 0.050000
+[02.08.26|20:10:35] 	Iter 12500 Done. | loss: 4.8809 | loss_motion: 4.7864 | loss_bone: 4.8510 | lr: 0.050000
+[02.08.26|20:10:53] 	train_mean_loss: 4.821566238864311
+[02.08.26|20:10:53] 	train_mean_loss_motion: 5.01859868689246
+[02.08.26|20:10:53] 	train_mean_loss_bone: 4.847560093842244
+[02.08.26|20:10:53] Training epoch: 39
+[02.08.26|20:10:58] 	Iter 12600 Done. | loss: 4.9347 | loss_motion: 4.9883 | loss_bone: 5.8366 | lr: 0.050000
+[02.08.26|20:11:20] 	Iter 12700 Done. | loss: 4.8413 | loss_motion: 4.7661 | loss_bone: 4.2378 | lr: 0.050000
+[02.08.26|20:11:43] 	Iter 12800 Done. | loss: 4.7395 | loss_motion: 4.7412 | loss_bone: 5.8350 | lr: 0.050000
+[02.08.26|20:12:06] 	Iter 12900 Done. | loss: 4.7887 | loss_motion: 5.2740 | loss_bone: 4.6687 | lr: 0.050000
+[02.08.26|20:12:08] 	train_mean_loss: 4.869667012885978
+[02.08.26|20:12:08] 	train_mean_loss_motion: 5.010102603370689
+[02.08.26|20:12:08] 	train_mean_loss_bone: 4.9032746571428465
+[02.08.26|20:12:08] Training epoch: 40
+[02.08.26|20:12:28] 	Iter 13000 Done. | loss: 4.9634 | loss_motion: 4.6554 | loss_bone: 4.7800 | lr: 0.050000
+[02.08.26|20:12:51] 	Iter 13100 Done. | loss: 4.8601 | loss_motion: 4.6609 | loss_bone: 4.7536 | lr: 0.050000
+[02.08.26|20:13:14] 	Iter 13200 Done. | loss: 5.0902 | loss_motion: 4.7686 | loss_bone: 4.7618 | lr: 0.050000
+[02.08.26|20:13:23] 	train_mean_loss: 4.968124186524451
+[02.08.26|20:13:23] 	train_mean_loss_motion: 4.9399736114859225
+[02.08.26|20:13:23] 	train_mean_loss_bone: 4.9035911574464555
+[02.08.26|20:13:23] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch40_model.pt.
+[02.08.26|20:13:23] Training epoch: 41
+[02.08.26|20:13:37] 	Iter 13300 Done. | loss: 4.8171 | loss_motion: 5.0343 | loss_bone: 4.6286 | lr: 0.050000
+[02.08.26|20:13:59] 	Iter 13400 Done. | loss: 4.7392 | loss_motion: 5.5170 | loss_bone: 5.4682 | lr: 0.050000
+[02.08.26|20:14:22] 	Iter 13500 Done. | loss: 4.8711 | loss_motion: 4.7997 | loss_bone: 5.1614 | lr: 0.050000
+[02.08.26|20:14:38] 	train_mean_loss: 4.836642344552585
+[02.08.26|20:14:38] 	train_mean_loss_motion: 4.924019614015101
+[02.08.26|20:14:38] 	train_mean_loss_bone: 4.864063690076062
+[02.08.26|20:14:38] Training epoch: 42
+[02.08.26|20:14:45] 	Iter 13600 Done. | loss: 4.5733 | loss_motion: 4.3324 | loss_bone: 4.6749 | lr: 0.050000
+[02.08.26|20:15:07] 	Iter 13700 Done. | loss: 4.8580 | loss_motion: 4.9484 | loss_bone: 4.3703 | lr: 0.050000
+[02.08.26|20:15:30] 	Iter 13800 Done. | loss: 4.9231 | loss_motion: 4.6444 | loss_bone: 4.9588 | lr: 0.050000
+[02.08.26|20:15:53] 	Iter 13900 Done. | loss: 5.2139 | loss_motion: 5.1537 | loss_bone: 4.6943 | lr: 0.050000
+[02.08.26|20:15:53] 	train_mean_loss: 4.853454334858321
+[02.08.26|20:15:53] 	train_mean_loss_motion: 4.920442236874399
+[02.08.26|20:15:53] 	train_mean_loss_bone: 4.791622573875588
+[02.08.26|20:15:53] Training epoch: 43
+[02.08.26|20:16:16] 	Iter 14000 Done. | loss: 5.0222 | loss_motion: 4.5236 | loss_bone: 4.6342 | lr: 0.050000
+[02.08.26|20:16:38] 	Iter 14100 Done. | loss: 4.9617 | loss_motion: 4.8316 | loss_bone: 4.7335 | lr: 0.050000
+[02.08.26|20:17:01] 	Iter 14200 Done. | loss: 5.1367 | loss_motion: 5.1759 | loss_bone: 5.8188 | lr: 0.050000
+[02.08.26|20:17:08] 	train_mean_loss: 4.908790556685802
+[02.08.26|20:17:08] 	train_mean_loss_motion: 4.828368171104131
+[02.08.26|20:17:08] 	train_mean_loss_bone: 4.861541811433083
+[02.08.26|20:17:08] Training epoch: 44
+[02.08.26|20:17:23] 	Iter 14300 Done. | loss: 5.0641 | loss_motion: 4.7827 | loss_bone: 5.3662 | lr: 0.050000
+[02.08.26|20:17:46] 	Iter 14400 Done. | loss: 4.7651 | loss_motion: 5.2114 | loss_bone: 4.6880 | lr: 0.050000
+[02.08.26|20:18:09] 	Iter 14500 Done. | loss: 4.8516 | loss_motion: 4.9129 | loss_bone: 4.7585 | lr: 0.050000
+[02.08.26|20:18:23] 	train_mean_loss: 4.885650098864045
+[02.08.26|20:18:23] 	train_mean_loss_motion: 4.881628934710408
+[02.08.26|20:18:23] 	train_mean_loss_bone: 4.833737620414204
+[02.08.26|20:18:23] Training epoch: 45
+[02.08.26|20:18:32] 	Iter 14600 Done. | loss: 4.7189 | loss_motion: 5.2675 | loss_bone: 5.0460 | lr: 0.050000
+[02.08.26|20:18:54] 	Iter 14700 Done. | loss: 4.7471 | loss_motion: 4.7251 | loss_bone: 4.3965 | lr: 0.050000
+[02.08.26|20:19:17] 	Iter 14800 Done. | loss: 4.5086 | loss_motion: 4.6453 | loss_bone: 4.2786 | lr: 0.050000
+[02.08.26|20:19:38] 	train_mean_loss: 4.715676167940445
+[02.08.26|20:19:38] 	train_mean_loss_motion: 4.775720100028277
+[02.08.26|20:19:38] 	train_mean_loss_bone: 4.729587570057895
+[02.08.26|20:19:39] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch45_model.pt.
+[02.08.26|20:19:39] Training epoch: 46
+[02.08.26|20:19:40] 	Iter 14900 Done. | loss: 4.6727 | loss_motion: 4.7223 | loss_bone: 4.3257 | lr: 0.050000
+[02.08.26|20:20:03] 	Iter 15000 Done. | loss: 4.6443 | loss_motion: 4.8200 | loss_bone: 5.0858 | lr: 0.050000
+[02.08.26|20:20:25] 	Iter 15100 Done. | loss: 4.7155 | loss_motion: 4.9289 | loss_bone: 4.8237 | lr: 0.050000
+[02.08.26|20:20:48] 	Iter 15200 Done. | loss: 4.4535 | loss_motion: 4.9895 | loss_bone: 4.8222 | lr: 0.050000
+[02.08.26|20:20:54] 	train_mean_loss: 4.687155095472076
+[02.08.26|20:20:54] 	train_mean_loss_motion: 4.755354762437481
+[02.08.26|20:20:54] 	train_mean_loss_bone: 4.720145736936356
+[02.08.26|20:20:54] Training epoch: 47
+[02.08.26|20:21:11] 	Iter 15300 Done. | loss: 4.4015 | loss_motion: 4.4715 | loss_bone: 4.5372 | lr: 0.050000
+[02.08.26|20:21:33] 	Iter 15400 Done. | loss: 4.7010 | loss_motion: 4.6738 | loss_bone: 4.8961 | lr: 0.050000
+[02.08.26|20:21:56] 	Iter 15500 Done. | loss: 4.6299 | loss_motion: 4.6507 | loss_bone: 4.4383 | lr: 0.050000
+[02.08.26|20:22:09] 	train_mean_loss: 4.600134091795031
+[02.08.26|20:22:09] 	train_mean_loss_motion: 4.757826535003063
+[02.08.26|20:22:09] 	train_mean_loss_bone: 4.65689554387349
+[02.08.26|20:22:09] Training epoch: 48
+[02.08.26|20:22:19] 	Iter 15600 Done. | loss: 4.8417 | loss_motion: 4.6276 | loss_bone: 5.9451 | lr: 0.050000
+[02.08.26|20:22:41] 	Iter 15700 Done. | loss: 4.5566 | loss_motion: 4.8006 | loss_bone: 4.6351 | lr: 0.050000
+[02.08.26|20:23:04] 	Iter 15800 Done. | loss: 4.6097 | loss_motion: 4.8444 | loss_bone: 5.1083 | lr: 0.050000
+[02.08.26|20:23:24] 	train_mean_loss: 4.6739360371385095
+[02.08.26|20:23:24] 	train_mean_loss_motion: 4.761873735762075
+[02.08.26|20:23:24] 	train_mean_loss_bone: 4.7350371380947145
+[02.08.26|20:23:24] Training epoch: 49
+[02.08.26|20:23:26] 	Iter 15900 Done. | loss: 4.4432 | loss_motion: 4.3891 | loss_bone: 4.7651 | lr: 0.050000
+[02.08.26|20:23:49] 	Iter 16000 Done. | loss: 4.3308 | loss_motion: 4.0811 | loss_bone: 4.1973 | lr: 0.050000
+[02.08.26|20:24:12] 	Iter 16100 Done. | loss: 4.8791 | loss_motion: 4.5516 | loss_bone: 4.9229 | lr: 0.050000
+[02.08.26|20:24:34] 	Iter 16200 Done. | loss: 4.4286 | loss_motion: 4.9434 | loss_bone: 4.4451 | lr: 0.050000
+[02.08.26|20:24:38] 	train_mean_loss: 4.5360583466705595
+[02.08.26|20:24:38] 	train_mean_loss_motion: 4.705114654904046
+[02.08.26|20:24:38] 	train_mean_loss_bone: 4.697101427349079
+[02.08.26|20:24:38] Training epoch: 50
+[02.08.26|20:24:57] 	Iter 16300 Done. | loss: 4.5252 | loss_motion: 4.8761 | loss_bone: 5.3236 | lr: 0.050000
+[02.08.26|20:25:20] 	Iter 16400 Done. | loss: 4.2942 | loss_motion: 4.8285 | loss_bone: 4.2704 | lr: 0.050000
+[02.08.26|20:25:42] 	Iter 16500 Done. | loss: 4.4154 | loss_motion: 4.3525 | loss_bone: 4.5106 | lr: 0.050000
+[02.08.26|20:25:53] 	train_mean_loss: 4.509167348510189
+[02.08.26|20:25:53] 	train_mean_loss_motion: 4.611169338226318
+[02.08.26|20:25:53] 	train_mean_loss_bone: 4.556152312056896
+[02.08.26|20:25:54] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch50_model.pt.
+[02.08.26|20:25:54] Training epoch: 51
+[02.08.26|20:26:05] 	Iter 16600 Done. | loss: 4.6528 | loss_motion: 4.6776 | loss_bone: 4.5037 | lr: 0.050000
+[02.08.26|20:26:28] 	Iter 16700 Done. | loss: 4.6564 | loss_motion: 5.7359 | loss_bone: 5.0514 | lr: 0.050000
+[02.08.26|20:26:51] 	Iter 16800 Done. | loss: 4.5640 | loss_motion: 4.4945 | loss_bone: 4.9334 | lr: 0.050000
+[02.08.26|20:27:09] 	train_mean_loss: 4.607830301152255
+[02.08.26|20:27:09] 	train_mean_loss_motion: 4.785481447179512
+[02.08.26|20:27:09] 	train_mean_loss_bone: 4.696365092096012
+[02.08.26|20:27:09] Training epoch: 52
+[02.08.26|20:27:14] 	Iter 16900 Done. | loss: 4.5054 | loss_motion: 4.8336 | loss_bone: 4.6299 | lr: 0.050000
+[02.08.26|20:27:36] 	Iter 17000 Done. | loss: 4.3457 | loss_motion: 4.3798 | loss_bone: 4.1225 | lr: 0.050000
+[02.08.26|20:27:59] 	Iter 17100 Done. | loss: 4.2387 | loss_motion: 3.9247 | loss_bone: 4.2457 | lr: 0.050000
+[02.08.26|20:28:22] 	Iter 17200 Done. | loss: 4.2499 | loss_motion: 4.2796 | loss_bone: 4.3025 | lr: 0.050000
+[02.08.26|20:28:24] 	train_mean_loss: 4.408427071355261
+[02.08.26|20:28:24] 	train_mean_loss_motion: 4.537005616098733
+[02.08.26|20:28:24] 	train_mean_loss_bone: 4.564642275928371
+[02.08.26|20:28:24] Training epoch: 53
+[02.08.26|20:28:44] 	Iter 17300 Done. | loss: 4.1317 | loss_motion: 4.3025 | loss_bone: 4.4066 | lr: 0.050000
+[02.08.26|20:29:07] 	Iter 17400 Done. | loss: 4.8645 | loss_motion: 4.1516 | loss_bone: 4.3105 | lr: 0.050000
+[02.08.26|20:29:30] 	Iter 17500 Done. | loss: 4.1523 | loss_motion: 4.6918 | loss_bone: 4.3718 | lr: 0.050000
+[02.08.26|20:29:39] 	train_mean_loss: 4.380966548112944
+[02.08.26|20:29:39] 	train_mean_loss_motion: 4.486445728745705
+[02.08.26|20:29:39] 	train_mean_loss_bone: 4.4330487164846
+[02.08.26|20:29:39] Training epoch: 54
+[02.08.26|20:29:53] 	Iter 17600 Done. | loss: 4.4736 | loss_motion: 4.1499 | loss_bone: 4.6492 | lr: 0.050000
+[02.08.26|20:30:15] 	Iter 17700 Done. | loss: 4.2633 | loss_motion: 4.3538 | loss_bone: 5.5835 | lr: 0.050000
+[02.08.26|20:30:38] 	Iter 17800 Done. | loss: 4.2692 | loss_motion: 3.8485 | loss_bone: 4.6513 | lr: 0.050000
+[02.08.26|20:30:55] 	train_mean_loss: 4.354232038976202
+[02.08.26|20:30:55] 	train_mean_loss_motion: 4.48915142163049
+[02.08.26|20:30:55] 	train_mean_loss_bone: 4.46471215807059
+[02.08.26|20:30:55] Training epoch: 55
+[02.08.26|20:31:01] 	Iter 17900 Done. | loss: 4.0241 | loss_motion: 4.1545 | loss_bone: 4.4420 | lr: 0.050000
+[02.08.26|20:31:24] 	Iter 18000 Done. | loss: 4.1879 | loss_motion: 4.5416 | loss_bone: 4.5554 | lr: 0.050000
+[02.08.26|20:31:46] 	Iter 18100 Done. | loss: 4.2996 | loss_motion: 3.8179 | loss_bone: 4.3620 | lr: 0.050000
+[02.08.26|20:32:09] 	Iter 18200 Done. | loss: 4.4613 | loss_motion: 4.0583 | loss_bone: 4.0801 | lr: 0.050000
+[02.08.26|20:32:10] 	train_mean_loss: 4.306199384960163
+[02.08.26|20:32:10] 	train_mean_loss_motion: 4.472583934259559
+[02.08.26|20:32:10] 	train_mean_loss_bone: 4.444241391928174
+[02.08.26|20:32:10] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch55_model.pt.
+[02.08.26|20:32:10] Training epoch: 56
+[02.08.26|20:32:32] 	Iter 18300 Done. | loss: 4.6297 | loss_motion: 4.9836 | loss_bone: 4.1157 | lr: 0.050000
+[02.08.26|20:32:55] 	Iter 18400 Done. | loss: 4.5671 | loss_motion: 5.2602 | loss_bone: 4.1699 | lr: 0.050000
+[02.08.26|20:33:17] 	Iter 18500 Done. | loss: 4.1802 | loss_motion: 4.2080 | loss_bone: 4.1463 | lr: 0.050000
+[02.08.26|20:33:25] 	train_mean_loss: 4.271557300832696
+[02.08.26|20:33:25] 	train_mean_loss_motion: 4.458101522526352
+[02.08.26|20:33:25] 	train_mean_loss_bone: 4.3509879947789125
+[02.08.26|20:33:25] Training epoch: 57
+[02.08.26|20:33:40] 	Iter 18600 Done. | loss: 4.1816 | loss_motion: 4.0263 | loss_bone: 4.0213 | lr: 0.050000
+[02.08.26|20:34:02] 	Iter 18700 Done. | loss: 4.3599 | loss_motion: 4.3183 | loss_bone: 3.8875 | lr: 0.050000
+[02.08.26|20:34:25] 	Iter 18800 Done. | loss: 3.9862 | loss_motion: 3.6441 | loss_bone: 4.6910 | lr: 0.050000
+[02.08.26|20:34:40] 	train_mean_loss: 4.2476636779992605
+[02.08.26|20:34:40] 	train_mean_loss_motion: 4.336454585239606
+[02.08.26|20:34:40] 	train_mean_loss_bone: 4.31634792028237
+[02.08.26|20:34:40] Training epoch: 58
+[02.08.26|20:34:48] 	Iter 18900 Done. | loss: 4.0556 | loss_motion: 4.7205 | loss_bone: 3.9294 | lr: 0.050000
+[02.08.26|20:35:11] 	Iter 19000 Done. | loss: 4.3640 | loss_motion: 3.6182 | loss_bone: 4.0360 | lr: 0.050000
+[02.08.26|20:35:33] 	Iter 19100 Done. | loss: 4.5910 | loss_motion: 4.2659 | loss_bone: 4.1914 | lr: 0.050000
+[02.08.26|20:35:55] 	train_mean_loss: 4.228296717848302
+[02.08.26|20:35:55] 	train_mean_loss_motion: 4.313259255850063
+[02.08.26|20:35:55] 	train_mean_loss_bone: 4.209337620576703
+[02.08.26|20:35:55] Training epoch: 59
+[02.08.26|20:35:56] 	Iter 19200 Done. | loss: 4.4542 | loss_motion: 4.2587 | loss_bone: 4.1711 | lr: 0.050000
+[02.08.26|20:36:19] 	Iter 19300 Done. | loss: 4.1009 | loss_motion: 3.9339 | loss_bone: 4.1590 | lr: 0.050000
+[02.08.26|20:36:41] 	Iter 19400 Done. | loss: 4.2191 | loss_motion: 4.4406 | loss_bone: 3.9636 | lr: 0.050000
+[02.08.26|20:37:04] 	Iter 19500 Done. | loss: 4.2833 | loss_motion: 4.1714 | loss_bone: 4.8806 | lr: 0.050000
+[02.08.26|20:37:10] 	train_mean_loss: 4.201054833806894
+[02.08.26|20:37:10] 	train_mean_loss_motion: 4.240887484161515
+[02.08.26|20:37:10] 	train_mean_loss_bone: 4.199359921170146
+[02.08.26|20:37:10] Training epoch: 60
+[02.08.26|20:37:27] 	Iter 19600 Done. | loss: 4.2612 | loss_motion: 4.1797 | loss_bone: 4.9036 | lr: 0.050000
+[02.08.26|20:37:49] 	Iter 19700 Done. | loss: 4.3889 | loss_motion: 4.0728 | loss_bone: 3.9332 | lr: 0.050000
+[02.08.26|20:38:12] 	Iter 19800 Done. | loss: 4.3750 | loss_motion: 4.6014 | loss_bone: 4.1405 | lr: 0.050000
+[02.08.26|20:38:25] 	train_mean_loss: 4.178509891573396
+[02.08.26|20:38:25] 	train_mean_loss_motion: 4.253513363552958
+[02.08.26|20:38:25] 	train_mean_loss_bone: 4.111493444874927
+[02.08.26|20:38:26] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch60_model.pt.
+[02.08.26|20:38:26] Training epoch: 61
+[02.08.26|20:38:35] 	Iter 19900 Done. | loss: 4.0217 | loss_motion: 4.2128 | loss_bone: 3.7051 | lr: 0.050000
+[02.08.26|20:38:57] 	Iter 20000 Done. | loss: 4.3529 | loss_motion: 4.1169 | loss_bone: 4.0811 | lr: 0.050000
+[02.08.26|20:39:20] 	Iter 20100 Done. | loss: 4.6536 | loss_motion: 4.0277 | loss_bone: 4.9921 | lr: 0.050000
+[02.08.26|20:39:41] 	train_mean_loss: 4.159926487239826
+[02.08.26|20:39:41] 	train_mean_loss_motion: 4.234933616171431
+[02.08.26|20:39:41] 	train_mean_loss_bone: 4.200233560314351
+[02.08.26|20:39:41] Training epoch: 62
+[02.08.26|20:39:43] 	Iter 20200 Done. | loss: 4.0791 | loss_motion: 3.6258 | loss_bone: 3.9410 | lr: 0.050000
+[02.08.26|20:40:06] 	Iter 20300 Done. | loss: 4.4540 | loss_motion: 4.1648 | loss_bone: 4.5072 | lr: 0.050000
+[02.08.26|20:40:29] 	Iter 20400 Done. | loss: 3.9772 | loss_motion: 4.1723 | loss_bone: 4.0362 | lr: 0.050000
+[02.08.26|20:40:51] 	Iter 20500 Done. | loss: 4.2995 | loss_motion: 4.5351 | loss_bone: 4.3218 | lr: 0.050000
+[02.08.26|20:40:56] 	train_mean_loss: 4.107333233709422
+[02.08.26|20:40:56] 	train_mean_loss_motion: 4.073226811302392
+[02.08.26|20:40:56] 	train_mean_loss_bone: 4.100985822360681
+[02.08.26|20:40:56] Training epoch: 63
+[02.08.26|20:41:14] 	Iter 20600 Done. | loss: 4.0485 | loss_motion: 3.8198 | loss_bone: 4.5425 | lr: 0.050000
+[02.08.26|20:41:37] 	Iter 20700 Done. | loss: 4.0591 | loss_motion: 4.2399 | loss_bone: 4.2384 | lr: 0.050000
+[02.08.26|20:41:59] 	Iter 20800 Done. | loss: 4.2650 | loss_motion: 4.3365 | loss_bone: 4.0551 | lr: 0.050000
+[02.08.26|20:42:11] 	train_mean_loss: 4.141367647222882
+[02.08.26|20:42:11] 	train_mean_loss_motion: 4.112541025858992
+[02.08.26|20:42:11] 	train_mean_loss_bone: 4.089808410027956
+[02.08.26|20:42:11] Training epoch: 64
+[02.08.26|20:42:22] 	Iter 20900 Done. | loss: 4.0083 | loss_motion: 3.3691 | loss_bone: 4.0848 | lr: 0.050000
+[02.08.26|20:42:45] 	Iter 21000 Done. | loss: 4.0127 | loss_motion: 3.9743 | loss_bone: 3.9821 | lr: 0.050000
+[02.08.26|20:43:08] 	Iter 21100 Done. | loss: 4.2113 | loss_motion: 4.3239 | loss_bone: 4.2583 | lr: 0.050000
+[02.08.26|20:43:27] 	train_mean_loss: 4.086937482983684
+[02.08.26|20:43:27] 	train_mean_loss_motion: 4.172243321410119
+[02.08.26|20:43:27] 	train_mean_loss_bone: 4.224834878639152
+[02.08.26|20:43:27] Training epoch: 65
+[02.08.26|20:43:30] 	Iter 21200 Done. | loss: 4.2938 | loss_motion: 3.8513 | loss_bone: 3.8454 | lr: 0.050000
+[02.08.26|20:43:53] 	Iter 21300 Done. | loss: 4.0121 | loss_motion: 3.8351 | loss_bone: 4.1509 | lr: 0.050000
+[02.08.26|20:44:16] 	Iter 21400 Done. | loss: 3.7478 | loss_motion: 3.9235 | loss_bone: 3.4843 | lr: 0.050000
+[02.08.26|20:44:39] 	Iter 21500 Done. | loss: 4.3193 | loss_motion: 4.1512 | loss_bone: 3.9786 | lr: 0.050000
+[02.08.26|20:44:42] 	train_mean_loss: 4.023814345414545
+[02.08.26|20:44:42] 	train_mean_loss_motion: 4.005189031992794
+[02.08.26|20:44:42] 	train_mean_loss_bone: 4.03716361702749
+[02.08.26|20:44:42] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch65_model.pt.
+[02.08.26|20:44:42] Training epoch: 66
+[02.08.26|20:45:02] 	Iter 21600 Done. | loss: 3.9082 | loss_motion: 4.7456 | loss_bone: 3.8301 | lr: 0.050000
+[02.08.26|20:45:24] 	Iter 21700 Done. | loss: 4.5017 | loss_motion: 3.4055 | loss_bone: 3.6265 | lr: 0.050000
+[02.08.26|20:45:47] 	Iter 21800 Done. | loss: 4.1538 | loss_motion: 3.9504 | loss_bone: 3.8684 | lr: 0.050000
+[02.08.26|20:45:57] 	train_mean_loss: 4.030087798023512
+[02.08.26|20:45:57] 	train_mean_loss_motion: 3.974519894562459
+[02.08.26|20:45:57] 	train_mean_loss_bone: 3.9560539369496692
+[02.08.26|20:45:57] Training epoch: 67
+[02.08.26|20:46:10] 	Iter 21900 Done. | loss: 3.9260 | loss_motion: 4.1481 | loss_bone: 3.7666 | lr: 0.050000
+[02.08.26|20:46:33] 	Iter 22000 Done. | loss: 3.8335 | loss_motion: 3.9710 | loss_bone: 3.9050 | lr: 0.050000
+[02.08.26|20:46:55] 	Iter 22100 Done. | loss: 3.9129 | loss_motion: 3.2604 | loss_bone: 3.9983 | lr: 0.050000
+[02.08.26|20:47:13] 	train_mean_loss: 3.980919057869119
+[02.08.26|20:47:13] 	train_mean_loss_motion: 3.987540023924721
+[02.08.26|20:47:13] 	train_mean_loss_bone: 3.949120485530519
+[02.08.26|20:47:13] Training epoch: 68
+[02.08.26|20:47:18] 	Iter 22200 Done. | loss: 4.0304 | loss_motion: 3.6591 | loss_bone: 3.8064 | lr: 0.050000
+[02.08.26|20:47:41] 	Iter 22300 Done. | loss: 4.0433 | loss_motion: 4.0063 | loss_bone: 3.7984 | lr: 0.050000
+[02.08.26|20:48:03] 	Iter 22400 Done. | loss: 3.9788 | loss_motion: 3.5808 | loss_bone: 3.5864 | lr: 0.050000
+[02.08.26|20:48:26] 	Iter 22500 Done. | loss: 3.9794 | loss_motion: 4.0723 | loss_bone: 4.0520 | lr: 0.050000
+[02.08.26|20:48:28] 	train_mean_loss: 3.9526338267542442
+[02.08.26|20:48:28] 	train_mean_loss_motion: 3.956564285243746
+[02.08.26|20:48:28] 	train_mean_loss_bone: 3.856559023756275
+[02.08.26|20:48:28] Training epoch: 69
+[02.08.26|20:48:49] 	Iter 22600 Done. | loss: 4.0230 | loss_motion: 3.9160 | loss_bone: 3.4168 | lr: 0.050000
+[02.08.26|20:49:12] 	Iter 22700 Done. | loss: 3.7719 | loss_motion: 4.8830 | loss_bone: 3.6223 | lr: 0.050000
+[02.08.26|20:49:34] 	Iter 22800 Done. | loss: 3.8299 | loss_motion: 3.6961 | loss_bone: 5.1099 | lr: 0.050000
+[02.08.26|20:49:43] 	train_mean_loss: 3.878338956400707
+[02.08.26|20:49:43] 	train_mean_loss_motion: 3.8688591160442893
+[02.08.26|20:49:43] 	train_mean_loss_bone: 3.8246657351352655
+[02.08.26|20:49:43] Training epoch: 70
+[02.08.26|20:49:57] 	Iter 22900 Done. | loss: 3.7968 | loss_motion: 4.4730 | loss_bone: 3.8091 | lr: 0.050000
+[02.08.26|20:50:20] 	Iter 23000 Done. | loss: 3.9159 | loss_motion: 3.6534 | loss_bone: 3.9514 | lr: 0.050000
+[02.08.26|20:50:43] 	Iter 23100 Done. | loss: 3.9963 | loss_motion: 4.3452 | loss_bone: 4.2542 | lr: 0.050000
+[02.08.26|20:50:59] 	train_mean_loss: 3.933918044646341
+[02.08.26|20:50:59] 	train_mean_loss_motion: 3.9090992892976972
+[02.08.26|20:50:59] 	train_mean_loss_bone: 3.893493170464507
+[02.08.26|20:50:59] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch70_model.pt.
+[02.08.26|20:50:59] Training epoch: 71
+[02.08.26|20:51:06] 	Iter 23200 Done. | loss: 3.8982 | loss_motion: 3.5171 | loss_bone: 3.3093 | lr: 0.050000
+[02.08.26|20:51:29] 	Iter 23300 Done. | loss: 3.9036 | loss_motion: 4.7678 | loss_bone: 3.4700 | lr: 0.050000
+[02.08.26|20:51:52] 	Iter 23400 Done. | loss: 4.0946 | loss_motion: 3.0055 | loss_bone: 3.5598 | lr: 0.050000
+[02.08.26|20:52:15] 	Iter 23500 Done. | loss: 3.8705 | loss_motion: 3.7793 | loss_bone: 5.1329 | lr: 0.050000
+[02.08.26|20:52:15] 	train_mean_loss: 3.8001014653289427
+[02.08.26|20:52:15] 	train_mean_loss_motion: 3.825731708203918
+[02.08.26|20:52:15] 	train_mean_loss_bone: 3.647166579151442
+[02.08.26|20:52:15] Training epoch: 72
+[02.08.26|20:52:37] 	Iter 23600 Done. | loss: 3.6473 | loss_motion: 3.8231 | loss_bone: 4.5183 | lr: 0.050000
+[02.08.26|20:53:00] 	Iter 23700 Done. | loss: 3.8183 | loss_motion: 3.6198 | loss_bone: 3.7047 | lr: 0.050000
+[02.08.26|20:53:23] 	Iter 23800 Done. | loss: 3.9952 | loss_motion: 3.5930 | loss_bone: 3.4777 | lr: 0.050000
+[02.08.26|20:53:30] 	train_mean_loss: 3.821971592226057
+[02.08.26|20:53:30] 	train_mean_loss_motion: 3.7834306051363757
+[02.08.26|20:53:30] 	train_mean_loss_bone: 3.6972267404423738
+[02.08.26|20:53:30] Training epoch: 73
+[02.08.26|20:53:46] 	Iter 23900 Done. | loss: 3.6832 | loss_motion: 4.1354 | loss_bone: 3.4264 | lr: 0.050000
+[02.08.26|20:54:08] 	Iter 24000 Done. | loss: 3.8617 | loss_motion: 3.5580 | loss_bone: 3.8839 | lr: 0.050000
+[02.08.26|20:54:31] 	Iter 24100 Done. | loss: 3.8382 | loss_motion: 3.6786 | loss_bone: 4.9966 | lr: 0.050000
+[02.08.26|20:54:45] 	train_mean_loss: 3.6895031835377394
+[02.08.26|20:54:45] 	train_mean_loss_motion: 3.7720818922959065
+[02.08.26|20:54:45] 	train_mean_loss_bone: 3.5606602246667682
+[02.08.26|20:54:45] Training epoch: 74
+[02.08.26|20:54:54] 	Iter 24200 Done. | loss: 3.5051 | loss_motion: 3.8340 | loss_bone: 3.2954 | lr: 0.050000
+[02.08.26|20:55:17] 	Iter 24300 Done. | loss: 3.7544 | loss_motion: 3.5455 | loss_bone: 3.7649 | lr: 0.050000
+[02.08.26|20:55:40] 	Iter 24400 Done. | loss: 3.5462 | loss_motion: 3.4198 | loss_bone: 4.2004 | lr: 0.050000
+[02.08.26|20:56:01] 	train_mean_loss: 3.7311715258572398
+[02.08.26|20:56:01] 	train_mean_loss_motion: 3.765801741637492
+[02.08.26|20:56:01] 	train_mean_loss_bone: 3.5995995162837096
+[02.08.26|20:56:01] Training epoch: 75
+[02.08.26|20:56:02] 	Iter 24500 Done. | loss: 4.1939 | loss_motion: 3.7811 | loss_bone: 2.7978 | lr: 0.050000
+[02.08.26|20:56:25] 	Iter 24600 Done. | loss: 3.8549 | loss_motion: 4.0534 | loss_bone: 3.3741 | lr: 0.050000
+[02.08.26|20:56:48] 	Iter 24700 Done. | loss: 3.8490 | loss_motion: 3.8098 | loss_bone: 3.6430 | lr: 0.050000
+[02.08.26|20:57:10] 	Iter 24800 Done. | loss: 3.8102 | loss_motion: 3.8903 | loss_bone: 3.1529 | lr: 0.050000
+[02.08.26|20:57:16] 	train_mean_loss: 3.6941939696804633
+[02.08.26|20:57:16] 	train_mean_loss_motion: 3.7048339742908305
+[02.08.26|20:57:16] 	train_mean_loss_bone: 3.5196888634085295
+[02.08.26|20:57:16] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch75_model.pt.
+[02.08.26|20:57:16] Training epoch: 76
+[02.08.26|20:57:33] 	Iter 24900 Done. | loss: 3.7751 | loss_motion: 3.6373 | loss_bone: 3.7508 | lr: 0.050000
+[02.08.26|20:57:56] 	Iter 25000 Done. | loss: 3.5860 | loss_motion: 3.7270 | loss_bone: 3.4555 | lr: 0.050000
+[02.08.26|20:58:19] 	Iter 25100 Done. | loss: 3.4771 | loss_motion: 3.5070 | loss_bone: 3.8741 | lr: 0.050000
+[02.08.26|20:58:31] 	train_mean_loss: 3.629955748416866
+[02.08.26|20:58:31] 	train_mean_loss_motion: 3.7243398359534963
+[02.08.26|20:58:31] 	train_mean_loss_bone: 3.5500633622944533
+[02.08.26|20:58:31] Training epoch: 77
+[02.08.26|20:58:41] 	Iter 25200 Done. | loss: 3.8755 | loss_motion: 3.5164 | loss_bone: 3.4912 | lr: 0.050000
+[02.08.26|20:59:04] 	Iter 25300 Done. | loss: 3.4568 | loss_motion: 3.6786 | loss_bone: 3.2402 | lr: 0.050000
+[02.08.26|20:59:27] 	Iter 25400 Done. | loss: 3.6833 | loss_motion: 3.6636 | loss_bone: 3.2636 | lr: 0.050000
+[02.08.26|20:59:47] 	train_mean_loss: 3.662237528227607
+[02.08.26|20:59:47] 	train_mean_loss_motion: 3.6406689136770196
+[02.08.26|20:59:47] 	train_mean_loss_bone: 3.5656208588637615
+[02.08.26|20:59:47] Training epoch: 78
+[02.08.26|20:59:50] 	Iter 25500 Done. | loss: 3.5777 | loss_motion: 3.5861 | loss_bone: 3.1503 | lr: 0.050000
+[02.08.26|21:00:13] 	Iter 25600 Done. | loss: 3.5940 | loss_motion: 3.9722 | loss_bone: 4.2632 | lr: 0.050000
+[02.08.26|21:00:35] 	Iter 25700 Done. | loss: 3.5945 | loss_motion: 3.6687 | loss_bone: 3.4003 | lr: 0.050000
+[02.08.26|21:00:58] 	Iter 25800 Done. | loss: 3.7699 | loss_motion: 3.6602 | loss_bone: 3.5398 | lr: 0.050000
+[02.08.26|21:01:02] 	train_mean_loss: 3.6182152317369813
+[02.08.26|21:01:02] 	train_mean_loss_motion: 3.6515293956883363
+[02.08.26|21:01:02] 	train_mean_loss_bone: 3.575713284426225
+[02.08.26|21:01:02] Training epoch: 79
+[02.08.26|21:01:21] 	Iter 25900 Done. | loss: 3.8318 | loss_motion: 3.8031 | loss_bone: 3.4675 | lr: 0.050000
+[02.08.26|21:01:43] 	Iter 26000 Done. | loss: 3.8028 | loss_motion: 3.6989 | loss_bone: 3.2455 | lr: 0.050000
+[02.08.26|21:02:06] 	Iter 26100 Done. | loss: 3.4192 | loss_motion: 3.8631 | loss_bone: 3.0419 | lr: 0.050000
+[02.08.26|21:02:17] 	train_mean_loss: 3.5934751696456955
+[02.08.26|21:02:17] 	train_mean_loss_motion: 3.613744691779606
+[02.08.26|21:02:17] 	train_mean_loss_bone: 3.469307481702361
+[02.08.26|21:02:17] Training epoch: 80
+[02.08.26|21:02:29] 	Iter 26200 Done. | loss: 3.6389 | loss_motion: 3.0963 | loss_bone: 3.5252 | lr: 0.050000
+[02.08.26|21:02:52] 	Iter 26300 Done. | loss: 3.7215 | loss_motion: 3.3622 | loss_bone: 3.3778 | lr: 0.050000
+[02.08.26|21:03:14] 	Iter 26400 Done. | loss: 3.9304 | loss_motion: 3.3529 | loss_bone: 3.9046 | lr: 0.050000
+[02.08.26|21:03:32] 	train_mean_loss: 3.585357964939221
+[02.08.26|21:03:32] 	train_mean_loss_motion: 3.58786752072706
+[02.08.26|21:03:32] 	train_mean_loss_bone: 3.490649525852722
+[02.08.26|21:03:33] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch80_model.pt.
+[02.08.26|21:03:33] Training epoch: 81
+[02.08.26|21:03:37] 	Iter 26500 Done. | loss: 3.7833 | loss_motion: 3.7805 | loss_bone: 3.1318 | lr: 0.050000
+[02.08.26|21:04:00] 	Iter 26600 Done. | loss: 3.5851 | loss_motion: 3.5896 | loss_bone: 3.3259 | lr: 0.050000
+[02.08.26|21:04:23] 	Iter 26700 Done. | loss: 3.3883 | loss_motion: 3.4402 | loss_bone: 2.8649 | lr: 0.050000
+[02.08.26|21:04:46] 	Iter 26800 Done. | loss: 3.3481 | loss_motion: 3.4416 | loss_bone: 3.0818 | lr: 0.050000
+[02.08.26|21:04:48] 	train_mean_loss: 3.512136641585935
+[02.08.26|21:04:48] 	train_mean_loss_motion: 3.5439253148715664
+[02.08.26|21:04:48] 	train_mean_loss_bone: 3.3565004188848766
+[02.08.26|21:04:48] Training epoch: 82
+[02.08.26|21:05:08] 	Iter 26900 Done. | loss: 3.5395 | loss_motion: 3.4417 | loss_bone: 3.4162 | lr: 0.050000
+[02.08.26|21:05:31] 	Iter 27000 Done. | loss: 3.5938 | loss_motion: 3.6341 | loss_bone: 3.4734 | lr: 0.050000
+[02.08.26|21:05:54] 	Iter 27100 Done. | loss: 3.7057 | loss_motion: 4.2130 | loss_bone: 3.3966 | lr: 0.050000
+[02.08.26|21:06:03] 	train_mean_loss: 3.51281329512236
+[02.08.26|21:06:03] 	train_mean_loss_motion: 3.5601489219780773
+[02.08.26|21:06:03] 	train_mean_loss_bone: 3.375806543402081
+[02.08.26|21:06:03] Training epoch: 83
+[02.08.26|21:06:16] 	Iter 27200 Done. | loss: 3.4276 | loss_motion: 3.8917 | loss_bone: 3.0695 | lr: 0.050000
+[02.08.26|21:06:39] 	Iter 27300 Done. | loss: 3.3705 | loss_motion: 3.8580 | loss_bone: 2.9893 | lr: 0.050000
+[02.08.26|21:07:02] 	Iter 27400 Done. | loss: 3.3550 | loss_motion: 3.5513 | loss_bone: 3.3318 | lr: 0.050000
+[02.08.26|21:07:19] 	train_mean_loss: 3.391161139998191
+[02.08.26|21:07:19] 	train_mean_loss_motion: 3.3775096263770252
+[02.08.26|21:07:19] 	train_mean_loss_bone: 3.302813961426657
+[02.08.26|21:07:19] Training epoch: 84
+[02.08.26|21:07:25] 	Iter 27500 Done. | loss: 3.2317 | loss_motion: 3.4055 | loss_bone: 3.3015 | lr: 0.050000
+[02.08.26|21:07:48] 	Iter 27600 Done. | loss: 3.6323 | loss_motion: 4.2130 | loss_bone: 2.9177 | lr: 0.050000
+[02.08.26|21:08:11] 	Iter 27700 Done. | loss: 3.3480 | loss_motion: 3.8393 | loss_bone: 3.7230 | lr: 0.050000
+[02.08.26|21:08:34] 	Iter 27800 Done. | loss: 3.3332 | loss_motion: 3.3915 | loss_bone: 3.6005 | lr: 0.050000
+[02.08.26|21:08:34] 	train_mean_loss: 3.396150508315902
+[02.08.26|21:08:34] 	train_mean_loss_motion: 3.450116992356914
+[02.08.26|21:08:34] 	train_mean_loss_bone: 3.2856275826422467
+[02.08.26|21:08:34] Training epoch: 85
+[02.08.26|21:08:56] 	Iter 27900 Done. | loss: 3.5350 | loss_motion: 4.4381 | loss_bone: 2.9098 | lr: 0.050000
+[02.08.26|21:09:19] 	Iter 28000 Done. | loss: 3.1847 | loss_motion: 3.2093 | loss_bone: 2.9711 | lr: 0.050000
+[02.08.26|21:09:42] 	Iter 28100 Done. | loss: 3.3086 | loss_motion: 3.1194 | loss_bone: 2.8921 | lr: 0.050000
+[02.08.26|21:09:50] 	train_mean_loss: 3.332120159241368
+[02.08.26|21:09:50] 	train_mean_loss_motion: 3.3970641902566316
+[02.08.26|21:09:50] 	train_mean_loss_bone: 3.1909199906259866
+[02.08.26|21:09:50] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch85_model.pt.
+[02.08.26|21:09:50] Training epoch: 86
+[02.08.26|21:10:05] 	Iter 28200 Done. | loss: 3.2955 | loss_motion: 2.7978 | loss_bone: 3.7166 | lr: 0.050000
+[02.08.26|21:10:28] 	Iter 28300 Done. | loss: 3.3432 | loss_motion: 3.5749 | loss_bone: 3.1339 | lr: 0.050000
+[02.08.26|21:10:51] 	Iter 28400 Done. | loss: 3.4762 | loss_motion: 2.9136 | loss_bone: 3.3509 | lr: 0.050000
+[02.08.26|21:11:05] 	train_mean_loss: 3.3631042634612482
+[02.08.26|21:11:05] 	train_mean_loss_motion: 3.377492912586362
+[02.08.26|21:11:05] 	train_mean_loss_bone: 3.224069382128759
+[02.08.26|21:11:05] Training epoch: 87
+[02.08.26|21:11:13] 	Iter 28500 Done. | loss: 3.0926 | loss_motion: 3.2361 | loss_bone: 2.9367 | lr: 0.050000
+[02.08.26|21:11:36] 	Iter 28600 Done. | loss: 3.0320 | loss_motion: 3.2503 | loss_bone: 2.8880 | lr: 0.050000
+[02.08.26|21:11:59] 	Iter 28700 Done. | loss: 3.2469 | loss_motion: 3.3767 | loss_bone: 3.2234 | lr: 0.050000
+[02.08.26|21:12:21] 	train_mean_loss: 3.33192095007421
+[02.08.26|21:12:21] 	train_mean_loss_motion: 3.338480100891021
+[02.08.26|21:12:21] 	train_mean_loss_bone: 3.160975740035135
+[02.08.26|21:12:21] Training epoch: 88
+[02.08.26|21:12:22] 	Iter 28800 Done. | loss: 3.4228 | loss_motion: 3.2638 | loss_bone: 3.4364 | lr: 0.050000
+[02.08.26|21:12:44] 	Iter 28900 Done. | loss: 3.1968 | loss_motion: 2.8953 | loss_bone: 3.0936 | lr: 0.050000
+[02.08.26|21:13:07] 	Iter 29000 Done. | loss: 3.0810 | loss_motion: 4.2778 | loss_bone: 3.5866 | lr: 0.050000
+[02.08.26|21:13:30] 	Iter 29100 Done. | loss: 3.4932 | loss_motion: 3.3180 | loss_bone: 3.2795 | lr: 0.050000
+[02.08.26|21:13:36] 	train_mean_loss: 3.2660639552551456
+[02.08.26|21:13:36] 	train_mean_loss_motion: 3.343133421462828
+[02.08.26|21:13:36] 	train_mean_loss_bone: 3.1683041206659506
+[02.08.26|21:13:36] Training epoch: 89
+[02.08.26|21:13:52] 	Iter 29200 Done. | loss: 3.3405 | loss_motion: 3.4491 | loss_bone: 3.4732 | lr: 0.050000
+[02.08.26|21:14:15] 	Iter 29300 Done. | loss: 3.2159 | loss_motion: 3.5913 | loss_bone: 3.1705 | lr: 0.050000
+[02.08.26|21:14:38] 	Iter 29400 Done. | loss: 3.2753 | loss_motion: 3.1812 | loss_bone: 3.4711 | lr: 0.050000
+[02.08.26|21:14:51] 	train_mean_loss: 3.3079160498708395
+[02.08.26|21:14:51] 	train_mean_loss_motion: 3.329024577789076
+[02.08.26|21:14:51] 	train_mean_loss_bone: 3.1973537203048292
+[02.08.26|21:14:51] Training epoch: 90
+[02.08.26|21:15:01] 	Iter 29500 Done. | loss: 3.0516 | loss_motion: 3.2079 | loss_bone: 3.1799 | lr: 0.050000
+[02.08.26|21:15:23] 	Iter 29600 Done. | loss: 3.4199 | loss_motion: 2.9197 | loss_bone: 3.0627 | lr: 0.050000
+[02.08.26|21:15:46] 	Iter 29700 Done. | loss: 3.4906 | loss_motion: 3.0568 | loss_bone: 2.8755 | lr: 0.050000
+[02.08.26|21:16:06] 	train_mean_loss: 3.2205053593096777
+[02.08.26|21:16:06] 	train_mean_loss_motion: 3.2100023747931075
+[02.08.26|21:16:06] 	train_mean_loss_bone: 3.085209979751679
+[02.08.26|21:16:07] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch90_model.pt.
+[02.08.26|21:16:07] Training epoch: 91
+[02.08.26|21:16:09] 	Iter 29800 Done. | loss: 3.5865 | loss_motion: 2.8870 | loss_bone: 2.7026 | lr: 0.050000
+[02.08.26|21:16:32] 	Iter 29900 Done. | loss: 3.2351 | loss_motion: 3.3433 | loss_bone: 3.3278 | lr: 0.050000
+[02.08.26|21:16:55] 	Iter 30000 Done. | loss: 3.4345 | loss_motion: 3.1725 | loss_bone: 3.1344 | lr: 0.050000
+[02.08.26|21:17:17] 	Iter 30100 Done. | loss: 3.1022 | loss_motion: 3.0793 | loss_bone: 3.0078 | lr: 0.050000
+[02.08.26|21:17:22] 	train_mean_loss: 3.1749687382101652
+[02.08.26|21:17:22] 	train_mean_loss_motion: 3.1916659461767654
+[02.08.26|21:17:22] 	train_mean_loss_bone: 3.0847398557691776
+[02.08.26|21:17:22] Training epoch: 92
+[02.08.26|21:17:40] 	Iter 30200 Done. | loss: 3.2531 | loss_motion: 3.6085 | loss_bone: 3.1186 | lr: 0.050000
+[02.08.26|21:18:03] 	Iter 30300 Done. | loss: 3.1007 | loss_motion: 3.0469 | loss_bone: 2.8866 | lr: 0.050000
+[02.08.26|21:18:26] 	Iter 30400 Done. | loss: 2.9562 | loss_motion: 3.3348 | loss_bone: 2.5661 | lr: 0.050000
+[02.08.26|21:18:37] 	train_mean_loss: 3.1229479442550336
+[02.08.26|21:18:37] 	train_mean_loss_motion: 3.124555007928808
+[02.08.26|21:18:37] 	train_mean_loss_bone: 3.0522865593613453
+[02.08.26|21:18:37] Training epoch: 93
+[02.08.26|21:18:49] 	Iter 30500 Done. | loss: 3.2068 | loss_motion: 3.1984 | loss_bone: 3.4609 | lr: 0.050000
+[02.08.26|21:19:11] 	Iter 30600 Done. | loss: 3.1227 | loss_motion: 2.7032 | loss_bone: 3.2200 | lr: 0.050000
+[02.08.26|21:19:34] 	Iter 30700 Done. | loss: 3.1365 | loss_motion: 2.7026 | loss_bone: 2.8121 | lr: 0.050000
+[02.08.26|21:19:53] 	train_mean_loss: 3.1611425912632325
+[02.08.26|21:19:53] 	train_mean_loss_motion: 3.1536270714958627
+[02.08.26|21:19:53] 	train_mean_loss_bone: 3.0235544439529005
+[02.08.26|21:19:53] Training epoch: 94
+[02.08.26|21:19:57] 	Iter 30800 Done. | loss: 3.0974 | loss_motion: 2.9834 | loss_bone: 3.1402 | lr: 0.050000
+[02.08.26|21:20:20] 	Iter 30900 Done. | loss: 2.9392 | loss_motion: 4.8319 | loss_bone: 2.8083 | lr: 0.050000
+[02.08.26|21:20:43] 	Iter 31000 Done. | loss: 2.8955 | loss_motion: 2.6706 | loss_bone: 3.0179 | lr: 0.050000
+[02.08.26|21:21:05] 	Iter 31100 Done. | loss: 3.1074 | loss_motion: 2.7229 | loss_bone: 2.7572 | lr: 0.050000
+[02.08.26|21:21:08] 	train_mean_loss: 3.024061760513444
+[02.08.26|21:21:08] 	train_mean_loss_motion: 3.0534589657970788
+[02.08.26|21:21:08] 	train_mean_loss_bone: 2.96233003089075
+[02.08.26|21:21:08] Training epoch: 95
+[02.08.26|21:21:28] 	Iter 31200 Done. | loss: 3.3882 | loss_motion: 2.9914 | loss_bone: 2.7446 | lr: 0.050000
+[02.08.26|21:21:51] 	Iter 31300 Done. | loss: 3.0508 | loss_motion: 3.3220 | loss_bone: 2.7259 | lr: 0.050000
+[02.08.26|21:22:13] 	Iter 31400 Done. | loss: 3.0214 | loss_motion: 3.2979 | loss_bone: 3.3099 | lr: 0.050000
+[02.08.26|21:22:23] 	train_mean_loss: 3.036468580050051
+[02.08.26|21:22:23] 	train_mean_loss_motion: 3.042950185043934
+[02.08.26|21:22:23] 	train_mean_loss_bone: 2.960505772933499
+[02.08.26|21:22:24] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch95_model.pt.
+[02.08.26|21:22:24] Training epoch: 96
+[02.08.26|21:22:36] 	Iter 31500 Done. | loss: 2.9666 | loss_motion: 3.2082 | loss_bone: 2.8063 | lr: 0.050000
+[02.08.26|21:22:59] 	Iter 31600 Done. | loss: 3.1338 | loss_motion: 3.0148 | loss_bone: 2.7285 | lr: 0.050000
+[02.08.26|21:23:22] 	Iter 31700 Done. | loss: 2.9344 | loss_motion: 3.1292 | loss_bone: 2.7603 | lr: 0.050000
+[02.08.26|21:23:39] 	train_mean_loss: 3.0054347543918114
+[02.08.26|21:23:39] 	train_mean_loss_motion: 3.0702893399039786
+[02.08.26|21:23:39] 	train_mean_loss_bone: 2.939208078960638
+[02.08.26|21:23:39] Training epoch: 97
+[02.08.26|21:23:45] 	Iter 31800 Done. | loss: 3.0284 | loss_motion: 3.3696 | loss_bone: 2.9642 | lr: 0.050000
+[02.08.26|21:24:08] 	Iter 31900 Done. | loss: 2.9201 | loss_motion: 2.8542 | loss_bone: 2.2676 | lr: 0.050000
+[02.08.26|21:24:30] 	Iter 32000 Done. | loss: 3.3956 | loss_motion: 2.7544 | loss_bone: 2.7853 | lr: 0.050000
+[02.08.26|21:24:53] 	Iter 32100 Done. | loss: 2.8927 | loss_motion: 3.0075 | loss_bone: 3.1921 | lr: 0.050000
+[02.08.26|21:24:54] 	train_mean_loss: 2.9416921109951515
+[02.08.26|21:24:54] 	train_mean_loss_motion: 2.8929663957785983
+[02.08.26|21:24:54] 	train_mean_loss_bone: 2.93571486645955
+[02.08.26|21:24:54] Training epoch: 98
+[02.08.26|21:25:16] 	Iter 32200 Done. | loss: 2.7924 | loss_motion: 2.9730 | loss_bone: 2.5041 | lr: 0.050000
+[02.08.26|21:25:38] 	Iter 32300 Done. | loss: 2.7755 | loss_motion: 2.9280 | loss_bone: 2.4209 | lr: 0.050000
+[02.08.26|21:26:01] 	Iter 32400 Done. | loss: 2.7356 | loss_motion: 3.0108 | loss_bone: 2.6215 | lr: 0.050000
+[02.08.26|21:26:10] 	train_mean_loss: 2.911816322551393
+[02.08.26|21:26:10] 	train_mean_loss_motion: 2.9428185941229414
+[02.08.26|21:26:10] 	train_mean_loss_bone: 2.8424272205894447
+[02.08.26|21:26:10] Training epoch: 99
+[02.08.26|21:26:24] 	Iter 32500 Done. | loss: 2.9871 | loss_motion: 2.9784 | loss_bone: 2.8607 | lr: 0.050000
+[02.08.26|21:26:47] 	Iter 32600 Done. | loss: 2.7533 | loss_motion: 3.2637 | loss_bone: 2.6912 | lr: 0.050000
+[02.08.26|21:27:10] 	Iter 32700 Done. | loss: 2.8476 | loss_motion: 2.7824 | loss_bone: 2.8582 | lr: 0.050000
+[02.08.26|21:27:25] 	train_mean_loss: 2.910501574461554
+[02.08.26|21:27:25] 	train_mean_loss_motion: 2.924094655362501
+[02.08.26|21:27:25] 	train_mean_loss_bone: 2.884619918114469
+[02.08.26|21:27:25] Training epoch: 100
+[02.08.26|21:27:32] 	Iter 32800 Done. | loss: 3.1365 | loss_motion: 3.2296 | loss_bone: 3.0050 | lr: 0.050000
+[02.08.26|21:27:55] 	Iter 32900 Done. | loss: 2.8771 | loss_motion: 2.7796 | loss_bone: 2.6631 | lr: 0.050000
+[02.08.26|21:28:18] 	Iter 33000 Done. | loss: 2.7625 | loss_motion: 2.8239 | loss_bone: 3.2103 | lr: 0.050000
+[02.08.26|21:28:40] 	train_mean_loss: 2.828524454122584
+[02.08.26|21:28:40] 	train_mean_loss_motion: 2.802355496905001
+[02.08.26|21:28:40] 	train_mean_loss_bone: 2.8114305536552497
+[02.08.26|21:28:41] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch100_model.pt.
+[02.08.26|21:28:41] Training epoch: 101
+[02.08.26|21:28:41] 	Iter 33100 Done. | loss: 2.9943 | loss_motion: 3.4339 | loss_bone: 2.6490 | lr: 0.050000
+[02.08.26|21:29:03] 	Iter 33200 Done. | loss: 2.9288 | loss_motion: 2.1015 | loss_bone: 2.1496 | lr: 0.050000
+[02.08.26|21:29:26] 	Iter 33300 Done. | loss: 2.6315 | loss_motion: 2.6789 | loss_bone: 2.7507 | lr: 0.050000
+[02.08.26|21:29:49] 	Iter 33400 Done. | loss: 2.6485 | loss_motion: 2.5504 | loss_bone: 2.4865 | lr: 0.050000
+[02.08.26|21:29:56] 	train_mean_loss: 2.8175738138734756
+[02.08.26|21:29:56] 	train_mean_loss_motion: 2.787473978953059
+[02.08.26|21:29:56] 	train_mean_loss_bone: 2.7836465043243686
+[02.08.26|21:29:56] Training epoch: 102
+[02.08.26|21:30:12] 	Iter 33500 Done. | loss: 2.8776 | loss_motion: 2.9463 | loss_bone: 2.6351 | lr: 0.050000
+[02.08.26|21:30:35] 	Iter 33600 Done. | loss: 2.6350 | loss_motion: 2.6929 | loss_bone: 3.3313 | lr: 0.050000
+[02.08.26|21:30:58] 	Iter 33700 Done. | loss: 2.7692 | loss_motion: 3.1704 | loss_bone: 2.8233 | lr: 0.050000
+[02.08.26|21:31:11] 	train_mean_loss: 2.8095553050948774
+[02.08.26|21:31:11] 	train_mean_loss_motion: 2.812046227498357
+[02.08.26|21:31:11] 	train_mean_loss_bone: 2.7784413614301884
+[02.08.26|21:31:11] Training epoch: 103
+[02.08.26|21:31:20] 	Iter 33800 Done. | loss: 2.6620 | loss_motion: 2.7182 | loss_bone: 2.3024 | lr: 0.050000
+[02.08.26|21:31:43] 	Iter 33900 Done. | loss: 2.7995 | loss_motion: 2.8348 | loss_bone: 2.7196 | lr: 0.050000
+[02.08.26|21:32:06] 	Iter 34000 Done. | loss: 2.6340 | loss_motion: 3.2912 | loss_bone: 2.4385 | lr: 0.050000
+[02.08.26|21:32:27] 	train_mean_loss: 2.7101440602558977
+[02.08.26|21:32:27] 	train_mean_loss_motion: 2.719080285003178
+[02.08.26|21:32:27] 	train_mean_loss_bone: 2.6993500502087917
+[02.08.26|21:32:27] Training epoch: 104
+[02.08.26|21:32:29] 	Iter 34100 Done. | loss: 2.6669 | loss_motion: 3.0886 | loss_bone: 2.7414 | lr: 0.050000
+[02.08.26|21:32:51] 	Iter 34200 Done. | loss: 2.8411 | loss_motion: 2.7314 | loss_bone: 2.7908 | lr: 0.050000
+[02.08.26|21:33:14] 	Iter 34300 Done. | loss: 2.6129 | loss_motion: 2.5569 | loss_bone: 2.1425 | lr: 0.050000
+[02.08.26|21:33:37] 	Iter 34400 Done. | loss: 2.5599 | loss_motion: 2.3951 | loss_bone: 2.4634 | lr: 0.050000
+[02.08.26|21:33:42] 	train_mean_loss: 2.746348634587314
+[02.08.26|21:33:42] 	train_mean_loss_motion: 2.7502272352351165
+[02.08.26|21:33:42] 	train_mean_loss_bone: 2.6874247022265756
+[02.08.26|21:33:42] Training epoch: 105
+[02.08.26|21:33:59] 	Iter 34500 Done. | loss: 2.6510 | loss_motion: 2.5833 | loss_bone: 2.2693 | lr: 0.050000
+[02.08.26|21:34:22] 	Iter 34600 Done. | loss: 2.8074 | loss_motion: 2.6364 | loss_bone: 2.2918 | lr: 0.050000
+[02.08.26|21:34:45] 	Iter 34700 Done. | loss: 2.8096 | loss_motion: 2.4477 | loss_bone: 2.4566 | lr: 0.050000
+[02.08.26|21:34:57] 	train_mean_loss: 2.6877258457806175
+[02.08.26|21:34:57] 	train_mean_loss_motion: 2.704782838907847
+[02.08.26|21:34:57] 	train_mean_loss_bone: 2.7149824094916397
+[02.08.26|21:34:58] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch105_model.pt.
+[02.08.26|21:34:58] Training epoch: 106
+[02.08.26|21:35:08] 	Iter 34800 Done. | loss: 2.5811 | loss_motion: 2.8043 | loss_bone: 2.3475 | lr: 0.050000
+[02.08.26|21:35:31] 	Iter 34900 Done. | loss: 2.4059 | loss_motion: 2.4034 | loss_bone: 2.5288 | lr: 0.050000
+[02.08.26|21:35:54] 	Iter 35000 Done. | loss: 2.8566 | loss_motion: 2.8312 | loss_bone: 2.5020 | lr: 0.050000
+[02.08.26|21:36:13] 	train_mean_loss: 2.6403975551582177
+[02.08.26|21:36:13] 	train_mean_loss_motion: 2.618004095518337
+[02.08.26|21:36:13] 	train_mean_loss_bone: 2.660478743541637
+[02.08.26|21:36:13] Training epoch: 107
+[02.08.26|21:36:16] 	Iter 35100 Done. | loss: 2.5404 | loss_motion: 2.3624 | loss_bone: 2.6636 | lr: 0.050000
+[02.08.26|21:36:39] 	Iter 35200 Done. | loss: 2.8267 | loss_motion: 2.6534 | loss_bone: 2.1860 | lr: 0.050000
+[02.08.26|21:37:02] 	Iter 35300 Done. | loss: 2.5065 | loss_motion: 2.6684 | loss_bone: 2.6284 | lr: 0.050000
+[02.08.26|21:37:25] 	Iter 35400 Done. | loss: 2.4392 | loss_motion: 2.5102 | loss_bone: 3.1249 | lr: 0.050000
+[02.08.26|21:37:28] 	train_mean_loss: 2.580952885647915
+[02.08.26|21:37:28] 	train_mean_loss_motion: 2.5934376381675284
+[02.08.26|21:37:28] 	train_mean_loss_bone: 2.5629139018562985
+[02.08.26|21:37:28] Training epoch: 108
+[02.08.26|21:37:47] 	Iter 35500 Done. | loss: 2.5556 | loss_motion: 2.4503 | loss_bone: 2.4721 | lr: 0.050000
+[02.08.26|21:38:10] 	Iter 35600 Done. | loss: 2.6217 | loss_motion: 2.5724 | loss_bone: 2.1754 | lr: 0.050000
+[02.08.26|21:38:33] 	Iter 35700 Done. | loss: 2.8709 | loss_motion: 2.9801 | loss_bone: 2.5481 | lr: 0.050000
+[02.08.26|21:38:44] 	train_mean_loss: 2.5414820776245026
+[02.08.26|21:38:44] 	train_mean_loss_motion: 2.568008416368882
+[02.08.26|21:38:44] 	train_mean_loss_bone: 2.5743786953727286
+[02.08.26|21:38:44] Training epoch: 109
+[02.08.26|21:38:56] 	Iter 35800 Done. | loss: 2.6013 | loss_motion: 2.3576 | loss_bone: 2.2841 | lr: 0.050000
+[02.08.26|21:39:19] 	Iter 35900 Done. | loss: 2.3509 | loss_motion: 2.3418 | loss_bone: 3.0260 | lr: 0.050000
+[02.08.26|21:39:41] 	Iter 36000 Done. | loss: 2.6384 | loss_motion: 2.1178 | loss_bone: 2.3292 | lr: 0.050000
+[02.08.26|21:39:59] 	train_mean_loss: 2.5377730077126954
+[02.08.26|21:39:59] 	train_mean_loss_motion: 2.536650453809525
+[02.08.26|21:39:59] 	train_mean_loss_bone: 2.5530054907784363
+[02.08.26|21:39:59] Training epoch: 110
+[02.08.26|21:40:04] 	Iter 36100 Done. | loss: 2.5102 | loss_motion: 2.4061 | loss_bone: 3.1027 | lr: 0.050000
+[02.08.26|21:40:27] 	Iter 36200 Done. | loss: 2.4505 | loss_motion: 2.3768 | loss_bone: 2.3402 | lr: 0.050000
+[02.08.26|21:40:50] 	Iter 36300 Done. | loss: 2.7169 | loss_motion: 3.2248 | loss_bone: 2.6245 | lr: 0.050000
+[02.08.26|21:41:13] 	Iter 36400 Done. | loss: 2.7050 | loss_motion: 2.5579 | loss_bone: 2.4643 | lr: 0.050000
+[02.08.26|21:41:15] 	train_mean_loss: 2.479616382691075
+[02.08.26|21:41:15] 	train_mean_loss_motion: 2.5038188090857423
+[02.08.26|21:41:15] 	train_mean_loss_bone: 2.476298254062042
+[02.08.26|21:41:15] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch110_model.pt.
+[02.08.26|21:41:15] Training epoch: 111
+[02.08.26|21:41:36] 	Iter 36500 Done. | loss: 2.4267 | loss_motion: 2.3645 | loss_bone: 2.6598 | lr: 0.050000
+[02.08.26|21:41:58] 	Iter 36600 Done. | loss: 2.6631 | loss_motion: 2.5729 | loss_bone: 2.5132 | lr: 0.050000
+[02.08.26|21:42:21] 	Iter 36700 Done. | loss: 2.5813 | loss_motion: 2.4089 | loss_bone: 2.4549 | lr: 0.050000
+[02.08.26|21:42:30] 	train_mean_loss: 2.450175785226044
+[02.08.26|21:42:30] 	train_mean_loss_motion: 2.467956596991087
+[02.08.26|21:42:30] 	train_mean_loss_bone: 2.471874236700398
+[02.08.26|21:42:30] Training epoch: 112
+[02.08.26|21:42:44] 	Iter 36800 Done. | loss: 2.7001 | loss_motion: 2.2994 | loss_bone: 2.0810 | lr: 0.050000
+[02.08.26|21:43:07] 	Iter 36900 Done. | loss: 2.4176 | loss_motion: 2.2325 | loss_bone: 2.9251 | lr: 0.050000
+[02.08.26|21:43:29] 	Iter 37000 Done. | loss: 2.2015 | loss_motion: 1.9790 | loss_bone: 1.9580 | lr: 0.050000
+[02.08.26|21:43:45] 	train_mean_loss: 2.4185705177733543
+[02.08.26|21:43:45] 	train_mean_loss_motion: 2.451504536625842
+[02.08.26|21:43:45] 	train_mean_loss_bone: 2.4392102358924657
+[02.08.26|21:43:45] Training epoch: 113
+[02.08.26|21:43:52] 	Iter 37100 Done. | loss: 2.6833 | loss_motion: 2.6060 | loss_bone: 3.1839 | lr: 0.050000
+[02.08.26|21:44:15] 	Iter 37200 Done. | loss: 2.4176 | loss_motion: 1.9647 | loss_bone: 1.9303 | lr: 0.050000
+[02.08.26|21:44:37] 	Iter 37300 Done. | loss: 2.4035 | loss_motion: 2.6902 | loss_bone: 2.5996 | lr: 0.050000
+[02.08.26|21:45:00] 	Iter 37400 Done. | loss: 2.3751 | loss_motion: 2.4523 | loss_bone: 2.6231 | lr: 0.050000
+[02.08.26|21:45:01] 	train_mean_loss: 2.4020373129772636
+[02.08.26|21:45:01] 	train_mean_loss_motion: 2.3822550435080627
+[02.08.26|21:45:01] 	train_mean_loss_bone: 2.4217858292905223
+[02.08.26|21:45:01] Training epoch: 114
+[02.08.26|21:45:23] 	Iter 37500 Done. | loss: 2.1898 | loss_motion: 2.0089 | loss_bone: 2.1886 | lr: 0.050000
+[02.08.26|21:45:46] 	Iter 37600 Done. | loss: 2.3046 | loss_motion: 2.2981 | loss_bone: 1.8930 | lr: 0.050000
+[02.08.26|21:46:08] 	Iter 37700 Done. | loss: 2.1857 | loss_motion: 2.5124 | loss_bone: 2.1454 | lr: 0.050000
+[02.08.26|21:46:16] 	train_mean_loss: 2.3415855374581143
+[02.08.26|21:46:16] 	train_mean_loss_motion: 2.39498257276875
+[02.08.26|21:46:16] 	train_mean_loss_bone: 2.3504815422156065
+[02.08.26|21:46:16] Training epoch: 115
+[02.08.26|21:46:31] 	Iter 37800 Done. | loss: 2.4381 | loss_motion: 2.5106 | loss_bone: 1.9624 | lr: 0.050000
+[02.08.26|21:46:54] 	Iter 37900 Done. | loss: 2.5819 | loss_motion: 2.2242 | loss_bone: 2.2592 | lr: 0.050000
+[02.08.26|21:47:17] 	Iter 38000 Done. | loss: 1.9879 | loss_motion: 2.1374 | loss_bone: 2.0127 | lr: 0.050000
+[02.08.26|21:47:31] 	train_mean_loss: 2.317706033542437
+[02.08.26|21:47:31] 	train_mean_loss_motion: 2.329020310744778
+[02.08.26|21:47:31] 	train_mean_loss_bone: 2.31848850963339
+[02.08.26|21:47:32] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch115_model.pt.
+[02.08.26|21:47:32] Training epoch: 116
+[02.08.26|21:47:40] 	Iter 38100 Done. | loss: 2.4843 | loss_motion: 1.8597 | loss_bone: 2.0574 | lr: 0.050000
+[02.08.26|21:48:02] 	Iter 38200 Done. | loss: 2.3271 | loss_motion: 2.6109 | loss_bone: 2.4453 | lr: 0.050000
+[02.08.26|21:48:25] 	Iter 38300 Done. | loss: 2.3104 | loss_motion: 2.1354 | loss_bone: 2.2237 | lr: 0.050000
+[02.08.26|21:48:47] 	train_mean_loss: 2.3062193768262143
+[02.08.26|21:48:47] 	train_mean_loss_motion: 2.3345268561400676
+[02.08.26|21:48:47] 	train_mean_loss_bone: 2.318575236372357
+[02.08.26|21:48:47] Training epoch: 117
+[02.08.26|21:48:48] 	Iter 38400 Done. | loss: 2.3609 | loss_motion: 2.1193 | loss_bone: 2.2600 | lr: 0.050000
+[02.08.26|21:49:10] 	Iter 38500 Done. | loss: 2.0760 | loss_motion: 1.9052 | loss_bone: 1.9772 | lr: 0.050000
+[02.08.26|21:49:33] 	Iter 38600 Done. | loss: 2.1033 | loss_motion: 2.1141 | loss_bone: 2.8576 | lr: 0.050000
+[02.08.26|21:49:56] 	Iter 38700 Done. | loss: 2.2320 | loss_motion: 1.9462 | loss_bone: 2.1018 | lr: 0.050000
+[02.08.26|21:50:02] 	train_mean_loss: 2.25808189138545
+[02.08.26|21:50:02] 	train_mean_loss_motion: 2.285924483642117
+[02.08.26|21:50:02] 	train_mean_loss_bone: 2.275097946025814
+[02.08.26|21:50:02] Training epoch: 118
+[02.08.26|21:50:18] 	Iter 38800 Done. | loss: 2.1123 | loss_motion: 1.9812 | loss_bone: 1.9372 | lr: 0.050000
+[02.08.26|21:50:41] 	Iter 38900 Done. | loss: 2.1783 | loss_motion: 2.4393 | loss_bone: 1.7634 | lr: 0.050000
+[02.08.26|21:51:04] 	Iter 39000 Done. | loss: 2.1943 | loss_motion: 2.1810 | loss_bone: 1.8333 | lr: 0.050000
+[02.08.26|21:51:17] 	train_mean_loss: 2.1869940592082964
+[02.08.26|21:51:17] 	train_mean_loss_motion: 2.1806562191770156
+[02.08.26|21:51:17] 	train_mean_loss_bone: 2.2130285602321798
+[02.08.26|21:51:17] Training epoch: 119
+[02.08.26|21:51:26] 	Iter 39100 Done. | loss: 2.1311 | loss_motion: 2.0603 | loss_bone: 2.0463 | lr: 0.050000
+[02.08.26|21:51:56] 	Iter 39200 Done. | loss: 2.2299 | loss_motion: 2.5448 | loss_bone: 3.2177 | lr: 0.050000
+[02.08.26|21:52:36] 	Iter 39300 Done. | loss: 1.9959 | loss_motion: 2.7120 | loss_bone: 1.9085 | lr: 0.050000
+[02.08.26|21:53:12] 	train_mean_loss: 2.194116956517776
+[02.08.26|21:53:12] 	train_mean_loss_motion: 2.2173592842597616
+[02.08.26|21:53:12] 	train_mean_loss_bone: 2.2619919614849495
+[02.08.26|21:53:12] Training epoch: 120
+[02.08.26|21:53:17] 	Iter 39400 Done. | loss: 2.0450 | loss_motion: 2.2501 | loss_bone: 2.0538 | lr: 0.050000
+[02.08.26|21:53:57] 	Iter 39500 Done. | loss: 2.2945 | loss_motion: 2.0415 | loss_bone: 2.5574 | lr: 0.050000
+[02.08.26|21:54:39] 	Iter 39600 Done. | loss: 2.1340 | loss_motion: 1.9110 | loss_bone: 2.0691 | lr: 0.050000
+[02.08.26|21:55:19] 	Iter 39700 Done. | loss: 2.0361 | loss_motion: 2.0749 | loss_bone: 2.4073 | lr: 0.050000
+[02.08.26|21:55:28] 	train_mean_loss: 2.1146543602208716
+[02.08.26|21:55:28] 	train_mean_loss_motion: 2.1059993627928537
+[02.08.26|21:55:28] 	train_mean_loss_bone: 2.1401899962987065
+[02.08.26|21:55:28] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch120_model.pt.
+[02.08.26|21:55:28] Training epoch: 121
+[02.08.26|21:56:01] 	Iter 39800 Done. | loss: 2.3913 | loss_motion: 2.2763 | loss_bone: 1.8601 | lr: 0.050000
+[02.08.26|21:56:43] 	Iter 39900 Done. | loss: 2.0797 | loss_motion: 2.0204 | loss_bone: 2.1558 | lr: 0.050000
+[02.08.26|21:57:25] 	Iter 40000 Done. | loss: 2.1340 | loss_motion: 1.9052 | loss_bone: 2.0524 | lr: 0.050000
+[02.08.26|21:57:46] 	train_mean_loss: 2.1102590553710106
+[02.08.26|21:57:46] 	train_mean_loss_motion: 2.121465669657889
+[02.08.26|21:57:46] 	train_mean_loss_bone: 2.165383645775095
+[02.08.26|21:57:46] Training epoch: 122
+[02.08.26|21:58:07] 	Iter 40100 Done. | loss: 2.0613 | loss_motion: 1.9655 | loss_bone: 2.0021 | lr: 0.050000
+[02.08.26|21:58:48] 	Iter 40200 Done. | loss: 2.1228 | loss_motion: 1.9515 | loss_bone: 1.5775 | lr: 0.050000
+[02.08.26|21:59:28] 	Iter 40300 Done. | loss: 1.9790 | loss_motion: 3.1670 | loss_bone: 1.8693 | lr: 0.050000
+[02.08.26|22:00:00] 	train_mean_loss: 2.0571236981365977
+[02.08.26|22:00:00] 	train_mean_loss_motion: 2.1515679960884717
+[02.08.26|22:00:00] 	train_mean_loss_bone: 2.119085025211115
+[02.08.26|22:00:00] Training epoch: 123
+[02.08.26|22:00:04] 	Iter 40400 Done. | loss: 2.0488 | loss_motion: 2.0802 | loss_bone: 1.9154 | lr: 0.050000
+[02.08.26|22:00:27] 	Iter 40500 Done. | loss: 2.0719 | loss_motion: 1.8915 | loss_bone: 2.7588 | lr: 0.050000
+[02.08.26|22:00:49] 	Iter 40600 Done. | loss: 1.9977 | loss_motion: 2.4079 | loss_bone: 2.5381 | lr: 0.050000
+[02.08.26|22:01:12] 	Iter 40700 Done. | loss: 2.0866 | loss_motion: 1.7414 | loss_bone: 2.0606 | lr: 0.050000
+[02.08.26|22:01:15] 	train_mean_loss: 2.01898845877172
+[02.08.26|22:01:15] 	train_mean_loss_motion: 2.0991708403987825
+[02.08.26|22:01:15] 	train_mean_loss_bone: 2.121993186610703
+[02.08.26|22:01:15] Training epoch: 124
+[02.08.26|22:01:34] 	Iter 40800 Done. | loss: 1.9761 | loss_motion: 1.5377 | loss_bone: 1.7016 | lr: 0.050000
+[02.08.26|22:01:57] 	Iter 40900 Done. | loss: 1.7818 | loss_motion: 1.9711 | loss_bone: 3.0292 | lr: 0.050000
+[02.08.26|22:02:20] 	Iter 41000 Done. | loss: 1.7267 | loss_motion: 1.6499 | loss_bone: 1.7682 | lr: 0.050000
+[02.08.26|22:02:30] 	train_mean_loss: 1.982596220206638
+[02.08.26|22:02:30] 	train_mean_loss_motion: 1.9968643552226963
+[02.08.26|22:02:30] 	train_mean_loss_bone: 2.112505826705172
+[02.08.26|22:02:30] Training epoch: 125
+[02.08.26|22:02:42] 	Iter 41100 Done. | loss: 1.7831 | loss_motion: 2.3721 | loss_bone: 1.8689 | lr: 0.050000
+[02.08.26|22:03:05] 	Iter 41200 Done. | loss: 2.2012 | loss_motion: 2.1482 | loss_bone: 2.2450 | lr: 0.050000
+[02.08.26|22:03:28] 	Iter 41300 Done. | loss: 1.7200 | loss_motion: 1.9711 | loss_bone: 1.5100 | lr: 0.050000
+[02.08.26|22:03:45] 	train_mean_loss: 1.9763443632068232
+[02.08.26|22:03:45] 	train_mean_loss_motion: 2.000928715996872
+[02.08.26|22:03:45] 	train_mean_loss_bone: 2.0054870422513105
+[02.08.26|22:03:45] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch125_model.pt.
+[02.08.26|22:03:45] Training epoch: 126
+[02.08.26|22:03:51] 	Iter 41400 Done. | loss: 1.8999 | loss_motion: 1.8691 | loss_bone: 2.6475 | lr: 0.050000
+[02.08.26|22:04:13] 	Iter 41500 Done. | loss: 1.8004 | loss_motion: 2.0324 | loss_bone: 1.8449 | lr: 0.050000
+[02.08.26|22:04:36] 	Iter 41600 Done. | loss: 1.5985 | loss_motion: 2.2126 | loss_bone: 1.9219 | lr: 0.050000
+[02.08.26|22:04:59] 	Iter 41700 Done. | loss: 2.2237 | loss_motion: 2.6932 | loss_bone: 2.1351 | lr: 0.050000
+[02.08.26|22:05:00] 	train_mean_loss: 1.9221732205854802
+[02.08.26|22:05:00] 	train_mean_loss_motion: 2.0430541204181685
+[02.08.26|22:05:00] 	train_mean_loss_bone: 2.02411602703106
+[02.08.26|22:05:00] Training epoch: 127
+[02.08.26|22:05:21] 	Iter 41800 Done. | loss: 1.8393 | loss_motion: 2.4420 | loss_bone: 1.5368 | lr: 0.050000
+[02.08.26|22:05:44] 	Iter 41900 Done. | loss: 2.0562 | loss_motion: 1.6592 | loss_bone: 1.9115 | lr: 0.050000
+[02.08.26|22:06:07] 	Iter 42000 Done. | loss: 1.5931 | loss_motion: 1.5745 | loss_bone: 1.5701 | lr: 0.050000
+[02.08.26|22:06:15] 	train_mean_loss: 1.8703671809049531
+[02.08.26|22:06:15] 	train_mean_loss_motion: 1.958489204101332
+[02.08.26|22:06:15] 	train_mean_loss_bone: 2.030340009585608
+[02.08.26|22:06:15] Training epoch: 128
+[02.08.26|22:06:29] 	Iter 42100 Done. | loss: 1.8697 | loss_motion: 1.9551 | loss_bone: 2.8388 | lr: 0.050000
+[02.08.26|22:06:52] 	Iter 42200 Done. | loss: 2.0118 | loss_motion: 1.8081 | loss_bone: 1.9459 | lr: 0.050000
+[02.08.26|22:07:15] 	Iter 42300 Done. | loss: 1.7772 | loss_motion: 1.7773 | loss_bone: 1.3037 | lr: 0.050000
+[02.08.26|22:07:30] 	train_mean_loss: 1.8559928729094768
+[02.08.26|22:07:30] 	train_mean_loss_motion: 1.8912440970585065
+[02.08.26|22:07:30] 	train_mean_loss_bone: 1.9540433613555308
+[02.08.26|22:07:30] Training epoch: 129
+[02.08.26|22:07:37] 	Iter 42400 Done. | loss: 1.9757 | loss_motion: 1.6082 | loss_bone: 1.6379 | lr: 0.050000
+[02.08.26|22:08:00] 	Iter 42500 Done. | loss: 1.9375 | loss_motion: 1.9420 | loss_bone: 1.9862 | lr: 0.050000
+[02.08.26|22:08:23] 	Iter 42600 Done. | loss: 1.6846 | loss_motion: 1.7974 | loss_bone: 1.6966 | lr: 0.050000
+[02.08.26|22:08:45] 	train_mean_loss: 1.8024647534793958
+[02.08.26|22:08:45] 	train_mean_loss_motion: 1.852578007922792
+[02.08.26|22:08:45] 	train_mean_loss_bone: 1.9545486643235128
+[02.08.26|22:08:45] Training epoch: 130
+[02.08.26|22:08:46] 	Iter 42700 Done. | loss: 1.7267 | loss_motion: 1.6807 | loss_bone: 2.6050 | lr: 0.050000
+[02.08.26|22:09:09] 	Iter 42800 Done. | loss: 1.8972 | loss_motion: 1.8496 | loss_bone: 1.5554 | lr: 0.050000
+[02.08.26|22:09:31] 	Iter 42900 Done. | loss: 1.5321 | loss_motion: 1.9040 | loss_bone: 1.7145 | lr: 0.050000
+[02.08.26|22:09:54] 	Iter 43000 Done. | loss: 1.8096 | loss_motion: 1.8652 | loss_bone: 2.3055 | lr: 0.050000
+[02.08.26|22:10:00] 	train_mean_loss: 1.816774917873371
+[02.08.26|22:10:00] 	train_mean_loss_motion: 1.8610719449570532
+[02.08.26|22:10:00] 	train_mean_loss_bone: 1.907524071431232
+[02.08.26|22:10:01] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch130_model.pt.
+[02.08.26|22:10:01] Training epoch: 131
+[02.08.26|22:10:17] 	Iter 43100 Done. | loss: 1.8158 | loss_motion: 1.7053 | loss_bone: 1.6354 | lr: 0.050000
+[02.08.26|22:10:39] 	Iter 43200 Done. | loss: 1.5976 | loss_motion: 1.6080 | loss_bone: 1.9521 | lr: 0.050000
+[02.08.26|22:11:02] 	Iter 43300 Done. | loss: 1.6189 | loss_motion: 1.6574 | loss_bone: 2.3125 | lr: 0.050000
+[02.08.26|22:11:16] 	train_mean_loss: 1.7606870609467844
+[02.08.26|22:11:16] 	train_mean_loss_motion: 1.8405868755006358
+[02.08.26|22:11:16] 	train_mean_loss_bone: 1.8774766208902227
+[02.08.26|22:11:16] Training epoch: 132
+[02.08.26|22:11:25] 	Iter 43400 Done. | loss: 2.2520 | loss_motion: 2.0062 | loss_bone: 2.1643 | lr: 0.050000
+[02.08.26|22:11:48] 	Iter 43500 Done. | loss: 1.4951 | loss_motion: 1.6690 | loss_bone: 2.0527 | lr: 0.050000
+[02.08.26|22:12:11] 	Iter 43600 Done. | loss: 1.6114 | loss_motion: 2.0247 | loss_bone: 1.6602 | lr: 0.050000
+[02.08.26|22:12:31] 	train_mean_loss: 1.7601759124018275
+[02.08.26|22:12:31] 	train_mean_loss_motion: 1.7829143212280965
+[02.08.26|22:12:31] 	train_mean_loss_bone: 1.8644941357327371
+[02.08.26|22:12:31] Training epoch: 133
+[02.08.26|22:12:33] 	Iter 43700 Done. | loss: 1.8003 | loss_motion: 1.8455 | loss_bone: 1.5313 | lr: 0.050000
+[02.08.26|22:12:56] 	Iter 43800 Done. | loss: 1.7052 | loss_motion: 1.7072 | loss_bone: 1.6018 | lr: 0.050000
+[02.08.26|22:13:18] 	Iter 43900 Done. | loss: 1.5432 | loss_motion: 1.6320 | loss_bone: 2.2565 | lr: 0.050000
+[02.08.26|22:13:41] 	Iter 44000 Done. | loss: 1.6647 | loss_motion: 1.8420 | loss_bone: 1.6523 | lr: 0.050000
+[02.08.26|22:13:46] 	train_mean_loss: 1.7198049946493972
+[02.08.26|22:13:46] 	train_mean_loss_motion: 1.8408046525050505
+[02.08.26|22:13:46] 	train_mean_loss_bone: 1.824501738087288
+[02.08.26|22:13:46] Training epoch: 134
+[02.08.26|22:14:04] 	Iter 44100 Done. | loss: 1.7707 | loss_motion: 2.2026 | loss_bone: 1.6630 | lr: 0.050000
+[02.08.26|22:14:27] 	Iter 44200 Done. | loss: 1.5855 | loss_motion: 1.5930 | loss_bone: 1.4137 | lr: 0.050000
+[02.08.26|22:14:49] 	Iter 44300 Done. | loss: 1.8811 | loss_motion: 1.4705 | loss_bone: 2.1511 | lr: 0.050000
+[02.08.26|22:15:01] 	train_mean_loss: 1.6918892910833445
+[02.08.26|22:15:01] 	train_mean_loss_motion: 1.752320028143707
+[02.08.26|22:15:01] 	train_mean_loss_bone: 1.8377811620602795
+[02.08.26|22:15:01] Training epoch: 135
+[02.08.26|22:15:12] 	Iter 44400 Done. | loss: 1.8294 | loss_motion: 2.0877 | loss_bone: 1.4111 | lr: 0.050000
+[02.08.26|22:15:35] 	Iter 44500 Done. | loss: 1.7235 | loss_motion: 1.4774 | loss_bone: 1.9744 | lr: 0.050000
+[02.08.26|22:15:57] 	Iter 44600 Done. | loss: 1.6739 | loss_motion: 1.8520 | loss_bone: 1.9641 | lr: 0.050000
+[02.08.26|22:16:16] 	train_mean_loss: 1.6592083024114281
+[02.08.26|22:16:16] 	train_mean_loss_motion: 1.7159613432120702
+[02.08.26|22:16:16] 	train_mean_loss_bone: 1.7940722203326729
+[02.08.26|22:16:17] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch135_model.pt.
+[02.08.26|22:16:17] Training epoch: 136
+[02.08.26|22:16:20] 	Iter 44700 Done. | loss: 1.8118 | loss_motion: 1.5703 | loss_bone: 2.6063 | lr: 0.050000
+[02.08.26|22:16:43] 	Iter 44800 Done. | loss: 1.7604 | loss_motion: 1.6936 | loss_bone: 1.9644 | lr: 0.050000
+[02.08.26|22:17:06] 	Iter 44900 Done. | loss: 1.3165 | loss_motion: 1.5513 | loss_bone: 1.9553 | lr: 0.050000
+[02.08.26|22:17:29] 	Iter 45000 Done. | loss: 1.4996 | loss_motion: 1.5139 | loss_bone: 1.7826 | lr: 0.050000
+[02.08.26|22:17:32] 	train_mean_loss: 1.642865040871312
+[02.08.26|22:17:32] 	train_mean_loss_motion: 1.6773769282862498
+[02.08.26|22:17:32] 	train_mean_loss_bone: 2.1443335026772723
+[02.08.26|22:17:32] Training epoch: 137
+[02.08.26|22:17:51] 	Iter 45100 Done. | loss: 1.7948 | loss_motion: 1.8831 | loss_bone: 2.3072 | lr: 0.050000
+[02.08.26|22:18:14] 	Iter 45200 Done. | loss: 1.8343 | loss_motion: 1.6503 | loss_bone: 2.4222 | lr: 0.050000
+[02.08.26|22:18:37] 	Iter 45300 Done. | loss: 1.4832 | loss_motion: 1.5866 | loss_bone: 2.2549 | lr: 0.050000
+[02.08.26|22:18:47] 	train_mean_loss: 1.6053553167786843
+[02.08.26|22:18:47] 	train_mean_loss_motion: 1.6570915257462562
+[02.08.26|22:18:47] 	train_mean_loss_bone: 2.1848560344776717
+[02.08.26|22:18:47] Training epoch: 138
+[02.08.26|22:19:00] 	Iter 45400 Done. | loss: 1.6563 | loss_motion: 1.6315 | loss_bone: 2.0778 | lr: 0.050000
+[02.08.26|22:19:23] 	Iter 45500 Done. | loss: 1.4698 | loss_motion: 1.8192 | loss_bone: 1.9642 | lr: 0.050000
+[02.08.26|22:19:45] 	Iter 45600 Done. | loss: 1.7723 | loss_motion: 1.6654 | loss_bone: 1.4783 | lr: 0.050000
+[02.08.26|22:20:03] 	train_mean_loss: 1.5690004415022283
+[02.08.26|22:20:03] 	train_mean_loss_motion: 1.6343816338709114
+[02.08.26|22:20:03] 	train_mean_loss_bone: 2.0681144510511187
+[02.08.26|22:20:03] Training epoch: 139
+[02.08.26|22:20:08] 	Iter 45700 Done. | loss: 1.4487 | loss_motion: 1.8448 | loss_bone: 1.7305 | lr: 0.050000
+[02.08.26|22:20:31] 	Iter 45800 Done. | loss: 1.5236 | loss_motion: 1.5511 | loss_bone: 2.1923 | lr: 0.050000
+[02.08.26|22:20:54] 	Iter 45900 Done. | loss: 1.8105 | loss_motion: 1.6572 | loss_bone: 2.5594 | lr: 0.050000
+[02.08.26|22:21:16] 	Iter 46000 Done. | loss: 1.4410 | loss_motion: 1.4649 | loss_bone: 1.6462 | lr: 0.050000
+[02.08.26|22:21:18] 	train_mean_loss: 1.5400555522780404
+[02.08.26|22:21:18] 	train_mean_loss_motion: 1.6587518392372707
+[02.08.26|22:21:18] 	train_mean_loss_bone: 1.9514982001659014
+[02.08.26|22:21:18] Training epoch: 140
+[02.08.26|22:21:39] 	Iter 46100 Done. | loss: 1.7985 | loss_motion: 1.7271 | loss_bone: 1.9775 | lr: 0.050000
+[02.08.26|22:22:02] 	Iter 46200 Done. | loss: 1.6051 | loss_motion: 1.7424 | loss_bone: 1.5982 | lr: 0.050000
+[02.08.26|22:22:24] 	Iter 46300 Done. | loss: 1.4315 | loss_motion: 1.4665 | loss_bone: 1.7033 | lr: 0.050000
+[02.08.26|22:22:33] 	train_mean_loss: 1.520102947140028
+[02.08.26|22:22:33] 	train_mean_loss_motion: 1.6461103826851282
+[02.08.26|22:22:33] 	train_mean_loss_bone: 1.8618603527005706
+[02.08.26|22:22:34] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch140_model.pt.
+[02.08.26|22:22:34] Training epoch: 141
+[02.08.26|22:22:47] 	Iter 46400 Done. | loss: 1.2974 | loss_motion: 1.6312 | loss_bone: 3.3472 | lr: 0.050000
+[02.08.26|22:23:10] 	Iter 46500 Done. | loss: 1.4180 | loss_motion: 1.4865 | loss_bone: 1.8105 | lr: 0.050000
+[02.08.26|22:23:33] 	Iter 46600 Done. | loss: 1.1537 | loss_motion: 1.6595 | loss_bone: 1.7839 | lr: 0.050000
+[02.08.26|22:23:49] 	train_mean_loss: 1.5415920325276355
+[02.08.26|22:23:49] 	train_mean_loss_motion: 1.576702360660288
+[02.08.26|22:23:49] 	train_mean_loss_bone: 1.8246044511161181
+[02.08.26|22:23:49] Training epoch: 142
+[02.08.26|22:23:56] 	Iter 46700 Done. | loss: 1.6129 | loss_motion: 1.4834 | loss_bone: 1.6517 | lr: 0.050000
+[02.08.26|22:24:19] 	Iter 46800 Done. | loss: 1.1890 | loss_motion: 1.5272 | loss_bone: 2.0434 | lr: 0.050000
+[02.08.26|22:24:41] 	Iter 46900 Done. | loss: 1.5174 | loss_motion: 1.5038 | loss_bone: 1.5715 | lr: 0.050000
+[02.08.26|22:25:04] 	Iter 47000 Done. | loss: 1.7912 | loss_motion: 1.4832 | loss_bone: 1.3391 | lr: 0.050000
+[02.08.26|22:25:04] 	train_mean_loss: 1.4973862167571605
+[02.08.26|22:25:04] 	train_mean_loss_motion: 1.53524105264341
+[02.08.26|22:25:04] 	train_mean_loss_bone: 1.7496083092473425
+[02.08.26|22:25:04] Training epoch: 143
+[02.08.26|22:25:27] 	Iter 47100 Done. | loss: 1.4395 | loss_motion: 2.3843 | loss_bone: 1.6405 | lr: 0.050000
+[02.08.26|22:25:49] 	Iter 47200 Done. | loss: 1.4575 | loss_motion: 1.7161 | loss_bone: 1.6390 | lr: 0.050000
+[02.08.26|22:26:12] 	Iter 47300 Done. | loss: 1.6077 | loss_motion: 1.8230 | loss_bone: 1.6374 | lr: 0.050000
+[02.08.26|22:26:19] 	train_mean_loss: 1.5126908614196086
+[02.08.26|22:26:19] 	train_mean_loss_motion: 1.620522238336661
+[02.08.26|22:26:19] 	train_mean_loss_bone: 1.779947835513112
+[02.08.26|22:26:19] Training epoch: 144
+[02.08.26|22:26:35] 	Iter 47400 Done. | loss: 1.3207 | loss_motion: 1.6301 | loss_bone: 3.2889 | lr: 0.050000
+[02.08.26|22:26:58] 	Iter 47500 Done. | loss: 1.3939 | loss_motion: 2.1214 | loss_bone: 1.6264 | lr: 0.050000
+[02.08.26|22:27:21] 	Iter 47600 Done. | loss: 1.2776 | loss_motion: 1.4615 | loss_bone: 1.6479 | lr: 0.050000
+[02.08.26|22:27:35] 	train_mean_loss: 1.4434441221804777
+[02.08.26|22:27:35] 	train_mean_loss_motion: 1.6068484242949241
+[02.08.26|22:27:35] 	train_mean_loss_bone: 1.6986119675132083
+[02.08.26|22:27:35] Training epoch: 145
+[02.08.26|22:27:43] 	Iter 47700 Done. | loss: 1.4964 | loss_motion: 1.7796 | loss_bone: 1.7716 | lr: 0.050000
+[02.08.26|22:28:06] 	Iter 47800 Done. | loss: 1.7325 | loss_motion: 1.5804 | loss_bone: 2.1753 | lr: 0.050000
+[02.08.26|22:28:29] 	Iter 47900 Done. | loss: 1.2475 | loss_motion: 1.4217 | loss_bone: 1.6819 | lr: 0.050000
+[02.08.26|22:28:50] 	train_mean_loss: 1.4440700901599088
+[02.08.26|22:28:50] 	train_mean_loss_motion: 1.574857166166392
+[02.08.26|22:28:50] 	train_mean_loss_bone: 1.651830897950694
+[02.08.26|22:28:51] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch145_model.pt.
+[02.08.26|22:28:51] Training epoch: 146
+[02.08.26|22:28:52] 	Iter 48000 Done. | loss: 1.4605 | loss_motion: 1.6532 | loss_bone: 1.9705 | lr: 0.050000
+[02.08.26|22:29:15] 	Iter 48100 Done. | loss: 1.3699 | loss_motion: 1.3517 | loss_bone: 1.6756 | lr: 0.050000
+[02.08.26|22:29:37] 	Iter 48200 Done. | loss: 1.2718 | loss_motion: 1.3895 | loss_bone: 1.6812 | lr: 0.050000
+[02.08.26|22:30:00] 	Iter 48300 Done. | loss: 1.3444 | loss_motion: 2.2500 | loss_bone: 1.3117 | lr: 0.050000
+[02.08.26|22:30:06] 	train_mean_loss: 1.4098132881153027
+[02.08.26|22:30:06] 	train_mean_loss_motion: 1.4740000707505332
+[02.08.26|22:30:06] 	train_mean_loss_bone: 1.6507620217216699
+[02.08.26|22:30:06] Training epoch: 147
+[02.08.26|22:30:23] 	Iter 48400 Done. | loss: 1.3614 | loss_motion: 1.2570 | loss_bone: 1.5997 | lr: 0.050000
+[02.08.26|22:30:46] 	Iter 48500 Done. | loss: 1.1880 | loss_motion: 1.2796 | loss_bone: 1.4649 | lr: 0.050000
+[02.08.26|22:31:08] 	Iter 48600 Done. | loss: 1.4802 | loss_motion: 1.4570 | loss_bone: 1.5094 | lr: 0.050000
+[02.08.26|22:31:21] 	train_mean_loss: 1.4022722741268192
+[02.08.26|22:31:21] 	train_mean_loss_motion: 1.4891250533279696
+[02.08.26|22:31:21] 	train_mean_loss_bone: 1.600329266394013
+[02.08.26|22:31:21] Training epoch: 148
+[02.08.26|22:31:31] 	Iter 48700 Done. | loss: 1.3634 | loss_motion: 1.5874 | loss_bone: 1.5696 | lr: 0.050000
+[02.08.26|22:31:54] 	Iter 48800 Done. | loss: 1.5200 | loss_motion: 1.4752 | loss_bone: 1.4535 | lr: 0.050000
+[02.08.26|22:32:16] 	Iter 48900 Done. | loss: 1.5017 | loss_motion: 1.4419 | loss_bone: 1.0828 | lr: 0.050000
+[02.08.26|22:32:36] 	train_mean_loss: 1.374515210213618
+[02.08.26|22:32:36] 	train_mean_loss_motion: 1.45224817065674
+[02.08.26|22:32:36] 	train_mean_loss_bone: 1.5776522110956313
+[02.08.26|22:32:36] Training epoch: 149
+[02.08.26|22:32:39] 	Iter 49000 Done. | loss: 2.1913 | loss_motion: 1.4314 | loss_bone: 1.8163 | lr: 0.050000
+[02.08.26|22:33:02] 	Iter 49100 Done. | loss: 1.2275 | loss_motion: 1.5071 | loss_bone: 1.4190 | lr: 0.050000
+[02.08.26|22:33:25] 	Iter 49200 Done. | loss: 1.0805 | loss_motion: 1.2750 | loss_bone: 1.6336 | lr: 0.050000
+[02.08.26|22:33:47] 	Iter 49300 Done. | loss: 0.9848 | loss_motion: 1.2550 | loss_bone: 1.1861 | lr: 0.050000
+[02.08.26|22:33:51] 	train_mean_loss: 1.3944747941371538
+[02.08.26|22:33:51] 	train_mean_loss_motion: 1.3967186707744426
+[02.08.26|22:33:51] 	train_mean_loss_bone: 1.5378204047499826
+[02.08.26|22:33:51] Training epoch: 150
+[02.08.26|22:34:10] 	Iter 49400 Done. | loss: 1.5498 | loss_motion: 1.8368 | loss_bone: 1.6948 | lr: 0.050000
+[02.08.26|22:34:33] 	Iter 49500 Done. | loss: 1.1018 | loss_motion: 1.2670 | loss_bone: 1.3073 | lr: 0.050000
+[02.08.26|22:34:56] 	Iter 49600 Done. | loss: 1.1859 | loss_motion: 1.3480 | loss_bone: 1.4886 | lr: 0.050000
+[02.08.26|22:35:07] 	train_mean_loss: 1.3937361180962393
+[02.08.26|22:35:07] 	train_mean_loss_motion: 1.4633801251739893
+[02.08.26|22:35:07] 	train_mean_loss_bone: 1.5193825524379119
+[02.08.26|22:35:07] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch150_model.pt.
+[02.08.26|22:35:07] Training epoch: 151
+[02.08.26|22:35:19] 	Iter 49700 Done. | loss: 6.5412 | loss_motion: 6.4343 | loss_bone: 7.1267 | lr: 0.050000
+[02.08.26|22:35:41] 	Iter 49800 Done. | loss: 6.7117 | loss_motion: 6.2854 | loss_bone: 6.8868 | lr: 0.050000
+[02.08.26|22:36:04] 	Iter 49900 Done. | loss: 6.8171 | loss_motion: 6.6405 | loss_bone: 7.3726 | lr: 0.050000
+[02.08.26|22:36:22] 	train_mean_loss: 6.656129763565755
+[02.08.26|22:36:22] 	train_mean_loss_motion: 6.545042631489273
+[02.08.26|22:36:22] 	train_mean_loss_bone: 7.092242991456092
+[02.08.26|22:36:22] Training epoch: 152
+[02.08.26|22:36:26] 	Iter 50000 Done. | loss: 6.2978 | loss_motion: 6.0917 | loss_bone: 6.7601 | lr: 0.050000
+[02.08.26|22:36:49] 	Iter 50100 Done. | loss: 6.2482 | loss_motion: 6.1177 | loss_bone: 6.8416 | lr: 0.050000
+[02.08.26|22:37:11] 	Iter 50200 Done. | loss: 6.8157 | loss_motion: 6.7604 | loss_bone: 7.3275 | lr: 0.050000
+[02.08.26|22:37:34] 	Iter 50300 Done. | loss: 6.3926 | loss_motion: 6.3178 | loss_bone: 6.9593 | lr: 0.050000
+[02.08.26|22:37:36] 	train_mean_loss: 6.4300010254736035
+[02.08.26|22:37:36] 	train_mean_loss_motion: 6.282395138121084
+[02.08.26|22:37:36] 	train_mean_loss_bone: 6.8696699156862016
+[02.08.26|22:37:36] Training epoch: 153
+[02.08.26|22:37:56] 	Iter 50400 Done. | loss: 6.0593 | loss_motion: 6.0665 | loss_bone: 6.5350 | lr: 0.050000
+[02.08.26|22:38:19] 	Iter 50500 Done. | loss: 6.1856 | loss_motion: 6.1596 | loss_bone: 6.6408 | lr: 0.050000
+[02.08.26|22:38:42] 	Iter 50600 Done. | loss: 6.2975 | loss_motion: 6.2416 | loss_bone: 6.8980 | lr: 0.050000
+[02.08.26|22:38:51] 	train_mean_loss: 6.258026705047516
+[02.08.26|22:38:51] 	train_mean_loss_motion: 6.113167905375317
+[02.08.26|22:38:51] 	train_mean_loss_bone: 6.723617591166424
+[02.08.26|22:38:51] Training epoch: 154
+[02.08.26|22:39:04] 	Iter 50700 Done. | loss: 5.7239 | loss_motion: 5.6835 | loss_bone: 6.3518 | lr: 0.050000
+[02.08.26|22:39:27] 	Iter 50800 Done. | loss: 6.1490 | loss_motion: 6.1546 | loss_bone: 6.9682 | lr: 0.050000
+[02.08.26|22:39:49] 	Iter 50900 Done. | loss: 6.4752 | loss_motion: 6.4130 | loss_bone: 7.0867 | lr: 0.050000
+[02.08.26|22:40:06] 	train_mean_loss: 6.150032108283836
+[02.08.26|22:40:06] 	train_mean_loss_motion: 6.010306041406361
+[02.08.26|22:40:06] 	train_mean_loss_bone: 6.661023114022892
+[02.08.26|22:40:06] Training epoch: 155
+[02.08.26|22:40:12] 	Iter 51000 Done. | loss: 5.5288 | loss_motion: 5.4203 | loss_bone: 6.2689 | lr: 0.050000
+[02.08.26|22:40:34] 	Iter 51100 Done. | loss: 5.8596 | loss_motion: 5.9935 | loss_bone: 6.4386 | lr: 0.050000
+[02.08.26|22:40:57] 	Iter 51200 Done. | loss: 6.3018 | loss_motion: 6.3834 | loss_bone: 6.9888 | lr: 0.050000
+[02.08.26|22:41:19] 	Iter 51300 Done. | loss: 6.5537 | loss_motion: 6.2440 | loss_bone: 6.7593 | lr: 0.050000
+[02.08.26|22:41:20] 	train_mean_loss: 6.048892214219015
+[02.08.26|22:41:20] 	train_mean_loss_motion: 5.917934038847955
+[02.08.26|22:41:20] 	train_mean_loss_bone: 6.589665434511767
+[02.08.26|22:41:21] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch155_model.pt.
+[02.08.26|22:41:21] Training epoch: 156
+[02.08.26|22:41:42] 	Iter 51400 Done. | loss: 5.6169 | loss_motion: 5.3648 | loss_bone: 5.9683 | lr: 0.050000
+[02.08.26|22:42:05] 	Iter 51500 Done. | loss: 6.1494 | loss_motion: 5.9427 | loss_bone: 6.5727 | lr: 0.050000
+[02.08.26|22:42:27] 	Iter 51600 Done. | loss: 6.1753 | loss_motion: 6.2681 | loss_bone: 6.7416 | lr: 0.050000
+[02.08.26|22:42:35] 	train_mean_loss: 5.994642452170842
+[02.08.26|22:42:35] 	train_mean_loss_motion: 5.842306301312864
+[02.08.26|22:42:35] 	train_mean_loss_bone: 6.508743915673109
+[02.08.26|22:42:35] Training epoch: 157
+[02.08.26|22:42:50] 	Iter 51700 Done. | loss: 5.4240 | loss_motion: 5.2581 | loss_bone: 6.1093 | lr: 0.050000
+[02.08.26|22:43:12] 	Iter 51800 Done. | loss: 6.2850 | loss_motion: 5.9325 | loss_bone: 6.6541 | lr: 0.050000
+[02.08.26|22:43:35] 	Iter 51900 Done. | loss: 6.1411 | loss_motion: 5.8987 | loss_bone: 6.5655 | lr: 0.050000
+[02.08.26|22:43:50] 	train_mean_loss: 5.971507785543574
+[02.08.26|22:43:50] 	train_mean_loss_motion: 5.805272394796873
+[02.08.26|22:43:50] 	train_mean_loss_bone: 6.486952781677246
+[02.08.26|22:43:50] Training epoch: 158
+[02.08.26|22:43:58] 	Iter 52000 Done. | loss: 5.4040 | loss_motion: 5.3937 | loss_bone: 5.8543 | lr: 0.050000
+[02.08.26|22:44:20] 	Iter 52100 Done. | loss: 5.9331 | loss_motion: 5.6418 | loss_bone: 6.4226 | lr: 0.050000
+[02.08.26|22:44:43] 	Iter 52200 Done. | loss: 6.7117 | loss_motion: 6.4540 | loss_bone: 6.9096 | lr: 0.050000
+[02.08.26|22:45:05] 	train_mean_loss: 5.935564911257464
+[02.08.26|22:45:05] 	train_mean_loss_motion: 5.76281301060472
+[02.08.26|22:45:05] 	train_mean_loss_bone: 6.46619393818328
+[02.08.26|22:45:05] Training epoch: 159
+[02.08.26|22:45:05] 	Iter 52300 Done. | loss: 5.1366 | loss_motion: 4.9117 | loss_bone: 5.3911 | lr: 0.050000
+[02.08.26|22:45:28] 	Iter 52400 Done. | loss: 5.8509 | loss_motion: 5.5329 | loss_bone: 6.3548 | lr: 0.050000
+[02.08.26|22:45:51] 	Iter 52500 Done. | loss: 6.1459 | loss_motion: 5.8831 | loss_bone: 6.4127 | lr: 0.050000
+[02.08.26|22:46:13] 	Iter 52600 Done. | loss: 6.5362 | loss_motion: 6.2094 | loss_bone: 6.9869 | lr: 0.050000
+[02.08.26|22:46:20] 	train_mean_loss: 5.879547470645962
+[02.08.26|22:46:20] 	train_mean_loss_motion: 5.695534696031553
+[02.08.26|22:46:20] 	train_mean_loss_bone: 6.384932394114146
+[02.08.26|22:46:20] Training epoch: 160
+[02.08.26|22:46:36] 	Iter 52700 Done. | loss: 5.8124 | loss_motion: 5.7164 | loss_bone: 6.4737 | lr: 0.050000
+[02.08.26|22:46:59] 	Iter 52800 Done. | loss: 5.8317 | loss_motion: 5.6494 | loss_bone: 6.1583 | lr: 0.050000
+[02.08.26|22:47:21] 	Iter 52900 Done. | loss: 6.1633 | loss_motion: 6.1972 | loss_bone: 6.4370 | lr: 0.050000
+[02.08.26|22:47:34] 	train_mean_loss: 5.877908254318007
+[02.08.26|22:47:34] 	train_mean_loss_motion: 5.6919059407675014
+[02.08.26|22:47:34] 	train_mean_loss_bone: 6.412081022637128
+[02.08.26|22:47:35] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch160_model.pt.
+[02.08.26|22:47:35] Training epoch: 161
+[02.08.26|22:47:44] 	Iter 53000 Done. | loss: 5.2061 | loss_motion: 5.1399 | loss_bone: 5.7098 | lr: 0.050000
+[02.08.26|22:48:06] 	Iter 53100 Done. | loss: 6.1223 | loss_motion: 5.8062 | loss_bone: 6.6392 | lr: 0.050000
+[02.08.26|22:48:29] 	Iter 53200 Done. | loss: 5.9772 | loss_motion: 5.9369 | loss_bone: 6.7818 | lr: 0.050000
+[02.08.26|22:48:49] 	train_mean_loss: 5.857710808065362
+[02.08.26|22:48:49] 	train_mean_loss_motion: 5.658156397839687
+[02.08.26|22:48:49] 	train_mean_loss_bone: 6.380788261436623
+[02.08.26|22:48:49] Training epoch: 162
+[02.08.26|22:48:51] 	Iter 53300 Done. | loss: 5.5302 | loss_motion: 5.3173 | loss_bone: 5.7279 | lr: 0.050000
+[02.08.26|22:49:14] 	Iter 53400 Done. | loss: 5.3854 | loss_motion: 5.2512 | loss_bone: 5.9342 | lr: 0.050000
+[02.08.26|22:49:37] 	Iter 53500 Done. | loss: 6.1038 | loss_motion: 5.8536 | loss_bone: 6.3684 | lr: 0.050000
+[02.08.26|22:49:59] 	Iter 53600 Done. | loss: 6.1157 | loss_motion: 5.8879 | loss_bone: 6.6774 | lr: 0.050000
+[02.08.26|22:50:04] 	train_mean_loss: 5.8253888176287045
+[02.08.26|22:50:04] 	train_mean_loss_motion: 5.613017350165145
+[02.08.26|22:50:04] 	train_mean_loss_bone: 6.346458404806085
+[02.08.26|22:50:04] Training epoch: 163
+[02.08.26|22:50:22] 	Iter 53700 Done. | loss: 5.8510 | loss_motion: 5.6036 | loss_bone: 6.0132 | lr: 0.050000
+[02.08.26|22:50:45] 	Iter 53800 Done. | loss: 5.9042 | loss_motion: 5.5659 | loss_bone: 6.4274 | lr: 0.050000
+[02.08.26|22:51:08] 	Iter 53900 Done. | loss: 6.4257 | loss_motion: 5.9845 | loss_bone: 6.9832 | lr: 0.050000
+[02.08.26|22:51:19] 	train_mean_loss: 5.820927789924368
+[02.08.26|22:51:19] 	train_mean_loss_motion: 5.6080421623506576
+[02.08.26|22:51:19] 	train_mean_loss_bone: 6.358219011312525
+[02.08.26|22:51:19] Training epoch: 164
+[02.08.26|22:51:30] 	Iter 54000 Done. | loss: 5.2039 | loss_motion: 5.1192 | loss_bone: 5.9794 | lr: 0.050000
+[02.08.26|22:51:53] 	Iter 54100 Done. | loss: 5.6076 | loss_motion: 5.4956 | loss_bone: 6.0689 | lr: 0.050000
+[02.08.26|22:52:16] 	Iter 54200 Done. | loss: 5.9347 | loss_motion: 5.8979 | loss_bone: 6.6177 | lr: 0.050000
+[02.08.26|22:52:34] 	train_mean_loss: 5.7966781310804665
+[02.08.26|22:52:34] 	train_mean_loss_motion: 5.578443754835791
+[02.08.26|22:52:34] 	train_mean_loss_bone: 6.319967222357804
+[02.08.26|22:52:34] Training epoch: 165
+[02.08.26|22:52:38] 	Iter 54300 Done. | loss: 5.1777 | loss_motion: 4.9997 | loss_bone: 5.8889 | lr: 0.050000
+[02.08.26|22:53:01] 	Iter 54400 Done. | loss: 5.4027 | loss_motion: 5.1129 | loss_bone: 5.7398 | lr: 0.050000
+[02.08.26|22:53:24] 	Iter 54500 Done. | loss: 5.9595 | loss_motion: 6.0055 | loss_bone: 6.7239 | lr: 0.050000
+[02.08.26|22:53:46] 	Iter 54600 Done. | loss: 6.2503 | loss_motion: 5.8898 | loss_bone: 6.8184 | lr: 0.050000
+[02.08.26|22:53:50] 	train_mean_loss: 5.7923786056726
+[02.08.26|22:53:50] 	train_mean_loss_motion: 5.559878906814713
+[02.08.26|22:53:50] 	train_mean_loss_bone: 6.314908724897218
+[02.08.26|22:53:50] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch165_model.pt.
+[02.08.26|22:53:50] Training epoch: 166
+[02.08.26|22:54:09] 	Iter 54700 Done. | loss: 5.6226 | loss_motion: 5.2310 | loss_bone: 5.9689 | lr: 0.050000
+[02.08.26|22:54:32] 	Iter 54800 Done. | loss: 5.7578 | loss_motion: 5.6580 | loss_bone: 6.4272 | lr: 0.050000
+[02.08.26|22:54:55] 	Iter 54900 Done. | loss: 6.2290 | loss_motion: 6.0872 | loss_bone: 6.6153 | lr: 0.050000
+[02.08.26|22:55:05] 	train_mean_loss: 5.778398351006637
+[02.08.26|22:55:05] 	train_mean_loss_motion: 5.556466928061401
+[02.08.26|22:55:05] 	train_mean_loss_bone: 6.290200716059013
+[02.08.26|22:55:05] Training epoch: 167
+[02.08.26|22:55:17] 	Iter 55000 Done. | loss: 5.5325 | loss_motion: 5.2393 | loss_bone: 5.9802 | lr: 0.050000
+[02.08.26|22:55:40] 	Iter 55100 Done. | loss: 6.0684 | loss_motion: 5.7544 | loss_bone: 6.6139 | lr: 0.050000
+[02.08.26|22:56:02] 	Iter 55200 Done. | loss: 6.1527 | loss_motion: 5.9174 | loss_bone: 6.9573 | lr: 0.050000
+[02.08.26|22:56:20] 	train_mean_loss: 5.774771128536351
+[02.08.26|22:56:20] 	train_mean_loss_motion: 5.535477119630197
+[02.08.26|22:56:20] 	train_mean_loss_bone: 6.275777159860847
+[02.08.26|22:56:20] Training epoch: 168
+[02.08.26|22:56:25] 	Iter 55300 Done. | loss: 5.0826 | loss_motion: 5.0773 | loss_bone: 5.6300 | lr: 0.050000
+[02.08.26|22:56:48] 	Iter 55400 Done. | loss: 5.7408 | loss_motion: 5.5622 | loss_bone: 6.2302 | lr: 0.050000
+[02.08.26|22:57:11] 	Iter 55500 Done. | loss: 6.0695 | loss_motion: 5.8975 | loss_bone: 6.6072 | lr: 0.050000
+[02.08.26|22:57:33] 	Iter 55600 Done. | loss: 6.2494 | loss_motion: 5.7970 | loss_bone: 6.8966 | lr: 0.050000
+[02.08.26|22:57:35] 	train_mean_loss: 5.755826143339681
+[02.08.26|22:57:35] 	train_mean_loss_motion: 5.510355321302154
+[02.08.26|22:57:35] 	train_mean_loss_bone: 6.282797258786204
+[02.08.26|22:57:35] Training epoch: 169
+[02.08.26|22:57:56] 	Iter 55700 Done. | loss: 5.4355 | loss_motion: 5.2110 | loss_bone: 5.7687 | lr: 0.050000
+[02.08.26|22:58:19] 	Iter 55800 Done. | loss: 6.0630 | loss_motion: 5.6644 | loss_bone: 6.5741 | lr: 0.050000
+[02.08.26|22:58:41] 	Iter 55900 Done. | loss: 6.1094 | loss_motion: 5.7882 | loss_bone: 6.5961 | lr: 0.050000
+[02.08.26|22:58:50] 	train_mean_loss: 5.751974663345475
+[02.08.26|22:58:50] 	train_mean_loss_motion: 5.504082597634583
+[02.08.26|22:58:50] 	train_mean_loss_bone: 6.253381978349023
+[02.08.26|22:58:50] Training epoch: 170
+[02.08.26|22:59:04] 	Iter 56000 Done. | loss: 5.6582 | loss_motion: 5.5295 | loss_bone: 6.3713 | lr: 0.050000
+[02.08.26|22:59:27] 	Iter 56100 Done. | loss: 5.7991 | loss_motion: 5.4156 | loss_bone: 6.3633 | lr: 0.050000
+[02.08.26|22:59:49] 	Iter 56200 Done. | loss: 6.1258 | loss_motion: 5.6046 | loss_bone: 6.4535 | lr: 0.050000
+[02.08.26|23:00:05] 	train_mean_loss: 5.74928516923841
+[02.08.26|23:00:05] 	train_mean_loss_motion: 5.490680481371923
+[02.08.26|23:00:05] 	train_mean_loss_bone: 6.244612821999634
+[02.08.26|23:00:05] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch170_model.pt.
+[02.08.26|23:00:05] Training epoch: 171
+[02.08.26|23:00:12] 	Iter 56300 Done. | loss: 5.3393 | loss_motion: 5.0433 | loss_bone: 5.9728 | lr: 0.050000
+[02.08.26|23:00:34] 	Iter 56400 Done. | loss: 5.7640 | loss_motion: 5.6965 | loss_bone: 6.1390 | lr: 0.050000
+[02.08.26|23:00:57] 	Iter 56500 Done. | loss: 6.0743 | loss_motion: 5.5679 | loss_bone: 6.5920 | lr: 0.050000
+[02.08.26|23:01:19] 	Iter 56600 Done. | loss: 5.8899 | loss_motion: 5.8097 | loss_bone: 6.4677 | lr: 0.050000
+[02.08.26|23:01:19] 	train_mean_loss: 5.7459832116556315
+[02.08.26|23:01:19] 	train_mean_loss_motion: 5.490732502721228
+[02.08.26|23:01:19] 	train_mean_loss_bone: 6.235338248515057
+[02.08.26|23:01:19] Training epoch: 172
+[02.08.26|23:01:42] 	Iter 56700 Done. | loss: 6.0582 | loss_motion: 5.7240 | loss_bone: 6.3755 | lr: 0.050000
+[02.08.26|23:02:04] 	Iter 56800 Done. | loss: 5.9535 | loss_motion: 5.7871 | loss_bone: 6.3926 | lr: 0.050000
+[02.08.26|23:02:27] 	Iter 56900 Done. | loss: 6.1343 | loss_motion: 5.8471 | loss_bone: 6.6028 | lr: 0.050000
+[02.08.26|23:02:34] 	train_mean_loss: 5.733785927475759
+[02.08.26|23:02:34] 	train_mean_loss_motion: 5.475832282236335
+[02.08.26|23:02:34] 	train_mean_loss_bone: 6.223041687126966
+[02.08.26|23:02:34] Training epoch: 173
+[02.08.26|23:02:49] 	Iter 57000 Done. | loss: 5.1265 | loss_motion: 4.9515 | loss_bone: 5.4897 | lr: 0.050000
+[02.08.26|23:03:12] 	Iter 57100 Done. | loss: 5.8401 | loss_motion: 5.3423 | loss_bone: 6.2621 | lr: 0.050000
+[02.08.26|23:03:34] 	Iter 57200 Done. | loss: 6.0740 | loss_motion: 5.8041 | loss_bone: 6.5597 | lr: 0.050000
+[02.08.26|23:03:48] 	train_mean_loss: 5.711232097487435
+[02.08.26|23:03:48] 	train_mean_loss_motion: 5.455082137058869
+[02.08.26|23:03:48] 	train_mean_loss_bone: 6.202659722181245
+[02.08.26|23:03:48] Training epoch: 174
+[02.08.26|23:03:57] 	Iter 57300 Done. | loss: 5.7738 | loss_motion: 5.3007 | loss_bone: 6.0731 | lr: 0.050000
+[02.08.26|23:04:19] 	Iter 57400 Done. | loss: 5.4063 | loss_motion: 5.2428 | loss_bone: 6.0982 | lr: 0.050000
+[02.08.26|23:04:42] 	Iter 57500 Done. | loss: 5.7980 | loss_motion: 5.5870 | loss_bone: 6.3266 | lr: 0.050000
+[02.08.26|23:05:03] 	train_mean_loss: 5.71262692540794
+[02.08.26|23:05:03] 	train_mean_loss_motion: 5.428318228246222
+[02.08.26|23:05:03] 	train_mean_loss_bone: 6.208836775892091
+[02.08.26|23:05:03] Training epoch: 175
+[02.08.26|23:05:05] 	Iter 57600 Done. | loss: 5.3160 | loss_motion: 4.9472 | loss_bone: 5.6985 | lr: 0.050000
+[02.08.26|23:05:27] 	Iter 57700 Done. | loss: 5.8670 | loss_motion: 5.4921 | loss_bone: 6.1461 | lr: 0.050000
+[02.08.26|23:05:50] 	Iter 57800 Done. | loss: 5.8945 | loss_motion: 5.5878 | loss_bone: 6.3137 | lr: 0.050000
+[02.08.26|23:06:12] 	Iter 57900 Done. | loss: 5.9525 | loss_motion: 5.6294 | loss_bone: 6.5710 | lr: 0.050000
+[02.08.26|23:06:18] 	train_mean_loss: 5.7098229918235015
+[02.08.26|23:06:18] 	train_mean_loss_motion: 5.424230860799461
+[02.08.26|23:06:18] 	train_mean_loss_bone: 6.198618629547765
+[02.08.26|23:06:18] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch175_model.pt.
+[02.08.26|23:06:18] Training epoch: 176
+[02.08.26|23:06:35] 	Iter 58000 Done. | loss: 5.4978 | loss_motion: 5.2526 | loss_bone: 6.0205 | lr: 0.050000
+[02.08.26|23:06:58] 	Iter 58100 Done. | loss: 5.7032 | loss_motion: 5.3607 | loss_bone: 6.1755 | lr: 0.050000
+[02.08.26|23:07:20] 	Iter 58200 Done. | loss: 6.3837 | loss_motion: 5.8685 | loss_bone: 6.6313 | lr: 0.050000
+[02.08.26|23:07:33] 	train_mean_loss: 5.703257099739375
+[02.08.26|23:07:33] 	train_mean_loss_motion: 5.421101302178605
+[02.08.26|23:07:33] 	train_mean_loss_bone: 6.186527681494767
+[02.08.26|23:07:33] Training epoch: 177
+[02.08.26|23:07:43] 	Iter 58300 Done. | loss: 5.6169 | loss_motion: 5.1980 | loss_bone: 5.6658 | lr: 0.050000
+[02.08.26|23:08:05] 	Iter 58400 Done. | loss: 5.1906 | loss_motion: 4.9859 | loss_bone: 5.7489 | lr: 0.050000
+[02.08.26|23:08:28] 	Iter 58500 Done. | loss: 6.1267 | loss_motion: 5.6603 | loss_bone: 6.7125 | lr: 0.050000
+[02.08.26|23:08:47] 	train_mean_loss: 5.699593326476405
+[02.08.26|23:08:47] 	train_mean_loss_motion: 5.410403601712691
+[02.08.26|23:08:47] 	train_mean_loss_bone: 6.181004685577669
+[02.08.26|23:08:47] Training epoch: 178
+[02.08.26|23:08:50] 	Iter 58600 Done. | loss: 5.2239 | loss_motion: 4.9887 | loss_bone: 5.6511 | lr: 0.050000
+[02.08.26|23:09:13] 	Iter 58700 Done. | loss: 5.4325 | loss_motion: 5.1154 | loss_bone: 6.0431 | lr: 0.050000
+[02.08.26|23:09:35] 	Iter 58800 Done. | loss: 5.9323 | loss_motion: 5.6318 | loss_bone: 6.4673 | lr: 0.050000
+[02.08.26|23:09:58] 	Iter 58900 Done. | loss: 5.9914 | loss_motion: 5.6415 | loss_bone: 6.5744 | lr: 0.050000
+[02.08.26|23:10:02] 	train_mean_loss: 5.697494012711632
+[02.08.26|23:10:02] 	train_mean_loss_motion: 5.398487736451302
+[02.08.26|23:10:02] 	train_mean_loss_bone: 6.166322728298222
+[02.08.26|23:10:02] Training epoch: 179
+[02.08.26|23:10:20] 	Iter 59000 Done. | loss: 5.6876 | loss_motion: 5.4161 | loss_bone: 5.8915 | lr: 0.050000
+[02.08.26|23:10:43] 	Iter 59100 Done. | loss: 5.7115 | loss_motion: 5.4562 | loss_bone: 6.3393 | lr: 0.050000
+[02.08.26|23:11:05] 	Iter 59200 Done. | loss: 6.0921 | loss_motion: 5.6248 | loss_bone: 6.7090 | lr: 0.050000
+[02.08.26|23:11:16] 	train_mean_loss: 5.670078774593388
+[02.08.26|23:11:16] 	train_mean_loss_motion: 5.363577678484499
+[02.08.26|23:11:16] 	train_mean_loss_bone: 6.139234119311561
+[02.08.26|23:11:16] Training epoch: 180
+[02.08.26|23:11:28] 	Iter 59300 Done. | loss: 5.5017 | loss_motion: 5.2341 | loss_bone: 6.0102 | lr: 0.050000
+[02.08.26|23:11:51] 	Iter 59400 Done. | loss: 5.7069 | loss_motion: 5.1233 | loss_bone: 5.9627 | lr: 0.050000
+[02.08.26|23:12:13] 	Iter 59500 Done. | loss: 5.9485 | loss_motion: 5.6633 | loss_bone: 6.5471 | lr: 0.050000
+[02.08.26|23:12:31] 	train_mean_loss: 5.689227254008959
+[02.08.26|23:12:31] 	train_mean_loss_motion: 5.368445745047485
+[02.08.26|23:12:31] 	train_mean_loss_bone: 6.143897177589624
+[02.08.26|23:12:31] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch180_model.pt.
+[02.08.26|23:12:31] Training epoch: 181
+[02.08.26|23:12:36] 	Iter 59600 Done. | loss: 5.1789 | loss_motion: 4.9507 | loss_bone: 5.5108 | lr: 0.050000
+[02.08.26|23:12:58] 	Iter 59700 Done. | loss: 5.4888 | loss_motion: 5.2579 | loss_bone: 6.1745 | lr: 0.050000
+[02.08.26|23:13:20] 	Iter 59800 Done. | loss: 5.8727 | loss_motion: 5.4513 | loss_bone: 6.4609 | lr: 0.050000
+[02.08.26|23:13:43] 	Iter 59900 Done. | loss: 5.8553 | loss_motion: 5.6126 | loss_bone: 6.7064 | lr: 0.050000
+[02.08.26|23:13:45] 	train_mean_loss: 5.681102582695261
+[02.08.26|23:13:45] 	train_mean_loss_motion: 5.367454893279292
+[02.08.26|23:13:45] 	train_mean_loss_bone: 6.170371142038766
+[02.08.26|23:13:45] Training epoch: 182
+[02.08.26|23:14:05] 	Iter 60000 Done. | loss: 5.4760 | loss_motion: 5.3227 | loss_bone: 5.9064 | lr: 0.050000
+[02.08.26|23:14:28] 	Iter 60100 Done. | loss: 5.9443 | loss_motion: 5.7217 | loss_bone: 6.5167 | lr: 0.050000
+[02.08.26|23:14:50] 	Iter 60200 Done. | loss: 5.9480 | loss_motion: 5.7164 | loss_bone: 6.3164 | lr: 0.050000
+[02.08.26|23:14:59] 	train_mean_loss: 5.663622287104857
+[02.08.26|23:14:59] 	train_mean_loss_motion: 5.35234047927165
+[02.08.26|23:14:59] 	train_mean_loss_bone: 6.140178259765994
+[02.08.26|23:14:59] Training epoch: 183
+[02.08.26|23:15:12] 	Iter 60300 Done. | loss: 5.5788 | loss_motion: 5.0741 | loss_bone: 5.9489 | lr: 0.050000
+[02.08.26|23:15:35] 	Iter 60400 Done. | loss: 5.8670 | loss_motion: 5.4614 | loss_bone: 6.2588 | lr: 0.050000
+[02.08.26|23:15:57] 	Iter 60500 Done. | loss: 5.8233 | loss_motion: 5.7653 | loss_bone: 6.5013 | lr: 0.050000
+[02.08.26|23:16:13] 	train_mean_loss: 5.651524924079457
+[02.08.26|23:16:13] 	train_mean_loss_motion: 5.3304476233767595
+[02.08.26|23:16:13] 	train_mean_loss_bone: 6.11488897634777
+[02.08.26|23:16:13] Training epoch: 184
+[02.08.26|23:16:19] 	Iter 60600 Done. | loss: 5.0373 | loss_motion: 4.7321 | loss_bone: 5.4388 | lr: 0.050000
+[02.08.26|23:16:42] 	Iter 60700 Done. | loss: 5.6479 | loss_motion: 5.5887 | loss_bone: 5.8940 | lr: 0.050000
+[02.08.26|23:17:04] 	Iter 60800 Done. | loss: 6.0220 | loss_motion: 5.5323 | loss_bone: 6.6326 | lr: 0.050000
+[02.08.26|23:17:26] 	Iter 60900 Done. | loss: 6.1483 | loss_motion: 5.6818 | loss_bone: 6.6109 | lr: 0.050000
+[02.08.26|23:17:27] 	train_mean_loss: 5.649843900225314
+[02.08.26|23:17:27] 	train_mean_loss_motion: 5.318091251338717
+[02.08.26|23:17:27] 	train_mean_loss_bone: 6.1171961219649305
+[02.08.26|23:17:27] Training epoch: 185
+[02.08.26|23:17:49] 	Iter 61000 Done. | loss: 5.6812 | loss_motion: 5.3260 | loss_bone: 5.9840 | lr: 0.050000
+[02.08.26|23:18:11] 	Iter 61100 Done. | loss: 5.8150 | loss_motion: 5.5514 | loss_bone: 6.3789 | lr: 0.050000
+[02.08.26|23:18:33] 	Iter 61200 Done. | loss: 5.9848 | loss_motion: 5.6557 | loss_bone: 6.6806 | lr: 0.050000
+[02.08.26|23:18:41] 	train_mean_loss: 5.6519474911185545
+[02.08.26|23:18:41] 	train_mean_loss_motion: 5.316537339881828
+[02.08.26|23:18:41] 	train_mean_loss_bone: 6.1201168187075154
+[02.08.26|23:18:41] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch185_model.pt.
+[02.08.26|23:18:41] Training epoch: 186
+[02.08.26|23:18:55] 	Iter 61300 Done. | loss: 5.7679 | loss_motion: 5.6138 | loss_bone: 6.1631 | lr: 0.050000
+[02.08.26|23:19:18] 	Iter 61400 Done. | loss: 5.7737 | loss_motion: 5.4467 | loss_bone: 6.3111 | lr: 0.050000
+[02.08.26|23:19:40] 	Iter 61500 Done. | loss: 6.1742 | loss_motion: 5.5768 | loss_bone: 6.5216 | lr: 0.050000
+[02.08.26|23:19:54] 	train_mean_loss: 5.650573299730652
+[02.08.26|23:19:54] 	train_mean_loss_motion: 5.305596929302388
+[02.08.26|23:19:54] 	train_mean_loss_bone: 6.1066546670619815
+[02.08.26|23:19:54] Training epoch: 187
+[02.08.26|23:20:02] 	Iter 61600 Done. | loss: 4.9405 | loss_motion: 4.8191 | loss_bone: 5.3944 | lr: 0.050000
+[02.08.26|23:20:24] 	Iter 61700 Done. | loss: 5.4192 | loss_motion: 5.0710 | loss_bone: 6.1005 | lr: 0.050000
+[02.08.26|23:20:47] 	Iter 61800 Done. | loss: 6.0693 | loss_motion: 5.5573 | loss_bone: 6.4973 | lr: 0.050000
+[02.08.26|23:21:08] 	train_mean_loss: 5.633563014315694
+[02.08.26|23:21:08] 	train_mean_loss_motion: 5.286371867822377
+[02.08.26|23:21:08] 	train_mean_loss_bone: 6.1045346404130365
+[02.08.26|23:21:08] Training epoch: 188
+[02.08.26|23:21:09] 	Iter 61900 Done. | loss: 5.2064 | loss_motion: 4.7714 | loss_bone: 5.6236 | lr: 0.050000
+[02.08.26|23:21:32] 	Iter 62000 Done. | loss: 5.1405 | loss_motion: 5.0333 | loss_bone: 5.8674 | lr: 0.050000
+[02.08.26|23:21:54] 	Iter 62100 Done. | loss: 5.8610 | loss_motion: 5.4119 | loss_bone: 6.1982 | lr: 0.050000
+[02.08.26|23:22:16] 	Iter 62200 Done. | loss: 5.8866 | loss_motion: 5.6997 | loss_bone: 6.5615 | lr: 0.050000
+[02.08.26|23:22:22] 	train_mean_loss: 5.638398209367274
+[02.08.26|23:22:22] 	train_mean_loss_motion: 5.285915963959478
+[02.08.26|23:22:22] 	train_mean_loss_bone: 6.088824697131477
+[02.08.26|23:22:22] Training epoch: 189
+[02.08.26|23:22:38] 	Iter 62300 Done. | loss: 5.4462 | loss_motion: 4.8514 | loss_bone: 5.6794 | lr: 0.050000
+[02.08.26|23:23:01] 	Iter 62400 Done. | loss: 5.7593 | loss_motion: 5.5549 | loss_bone: 6.4501 | lr: 0.050000
+[02.08.26|23:23:23] 	Iter 62500 Done. | loss: 6.0208 | loss_motion: 5.6080 | loss_bone: 6.6862 | lr: 0.050000
+[02.08.26|23:23:36] 	train_mean_loss: 5.645673854113346
+[02.08.26|23:23:36] 	train_mean_loss_motion: 5.278566714860161
+[02.08.26|23:23:36] 	train_mean_loss_bone: 6.084590463839989
+[02.08.26|23:23:36] Training epoch: 190
+[02.08.26|23:23:45] 	Iter 62600 Done. | loss: 5.5221 | loss_motion: 5.2861 | loss_bone: 5.9301 | lr: 0.050000
+[02.08.26|23:24:07] 	Iter 62700 Done. | loss: 5.6527 | loss_motion: 5.5150 | loss_bone: 6.2337 | lr: 0.050000
+[02.08.26|23:24:29] 	Iter 62800 Done. | loss: 5.6600 | loss_motion: 5.4621 | loss_bone: 6.4618 | lr: 0.050000
+[02.08.26|23:24:49] 	train_mean_loss: 5.639386790756733
+[02.08.26|23:24:49] 	train_mean_loss_motion: 5.283494751979217
+[02.08.26|23:24:49] 	train_mean_loss_bone: 6.084119183059185
+[02.08.26|23:24:49] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch190_model.pt.
+[02.08.26|23:24:49] Training epoch: 191
+[02.08.26|23:24:51] 	Iter 62900 Done. | loss: 5.1673 | loss_motion: 4.8620 | loss_bone: 5.7738 | lr: 0.050000
+[02.08.26|23:25:14] 	Iter 63000 Done. | loss: 5.8956 | loss_motion: 5.5756 | loss_bone: 6.3245 | lr: 0.050000
+[02.08.26|23:25:36] 	Iter 63100 Done. | loss: 5.5483 | loss_motion: 5.2364 | loss_bone: 6.1071 | lr: 0.050000
+[02.08.26|23:25:58] 	Iter 63200 Done. | loss: 6.0274 | loss_motion: 5.4989 | loss_bone: 6.5274 | lr: 0.050000
+[02.08.26|23:26:02] 	train_mean_loss: 5.640871360582888
+[02.08.26|23:26:02] 	train_mean_loss_motion: 5.27908563469832
+[02.08.26|23:26:02] 	train_mean_loss_bone: 6.0947010106550605
+[02.08.26|23:26:02] Training epoch: 192
+[02.08.26|23:26:20] 	Iter 63300 Done. | loss: 5.2798 | loss_motion: 4.9880 | loss_bone: 5.7225 | lr: 0.050000
+[02.08.26|23:26:42] 	Iter 63400 Done. | loss: 5.5215 | loss_motion: 5.2064 | loss_bone: 6.1137 | lr: 0.050000
+[02.08.26|23:27:04] 	Iter 63500 Done. | loss: 6.0519 | loss_motion: 5.5507 | loss_bone: 6.5107 | lr: 0.050000
+[02.08.26|23:27:16] 	train_mean_loss: 5.648304410571418
+[02.08.26|23:27:16] 	train_mean_loss_motion: 5.26529599244501
+[02.08.26|23:27:16] 	train_mean_loss_bone: 6.1010431811168475
+[02.08.26|23:27:16] Training epoch: 193
+[02.08.26|23:27:27] 	Iter 63600 Done. | loss: 5.4649 | loss_motion: 5.0030 | loss_bone: 5.9107 | lr: 0.050000
+[02.08.26|23:27:49] 	Iter 63700 Done. | loss: 6.0101 | loss_motion: 5.7056 | loss_bone: 6.2263 | lr: 0.050000
+[02.08.26|23:28:11] 	Iter 63800 Done. | loss: 6.1567 | loss_motion: 5.6147 | loss_bone: 6.6754 | lr: 0.050000
+[02.08.26|23:28:29] 	train_mean_loss: 5.636838826528129
+[02.08.26|23:28:29] 	train_mean_loss_motion: 5.271349633208215
+[02.08.26|23:28:29] 	train_mean_loss_bone: 6.084002543792264
+[02.08.26|23:28:29] Training epoch: 194
+[02.08.26|23:28:33] 	Iter 63900 Done. | loss: 5.2718 | loss_motion: 4.9099 | loss_bone: 5.2690 | lr: 0.050000
+[02.08.26|23:28:55] 	Iter 64000 Done. | loss: 5.6566 | loss_motion: 5.2840 | loss_bone: 6.0312 | lr: 0.050000
+[02.08.26|23:29:17] 	Iter 64100 Done. | loss: 5.8085 | loss_motion: 5.5561 | loss_bone: 6.5471 | lr: 0.050000
+[02.08.26|23:29:39] 	Iter 64200 Done. | loss: 5.8596 | loss_motion: 5.4383 | loss_bone: 6.4602 | lr: 0.050000
+[02.08.26|23:29:42] 	train_mean_loss: 5.639032006623882
+[02.08.26|23:29:42] 	train_mean_loss_motion: 5.251706654931843
+[02.08.26|23:29:42] 	train_mean_loss_bone: 6.071791303121792
+[02.08.26|23:29:42] Training epoch: 195
+[02.08.26|23:30:02] 	Iter 64300 Done. | loss: 5.1016 | loss_motion: 4.6625 | loss_bone: 5.4834 | lr: 0.050000
+[02.08.26|23:30:24] 	Iter 64400 Done. | loss: 5.7203 | loss_motion: 5.3746 | loss_bone: 6.3666 | lr: 0.050000
+[02.08.26|23:30:46] 	Iter 64500 Done. | loss: 6.1284 | loss_motion: 5.5544 | loss_bone: 6.3362 | lr: 0.050000
+[02.08.26|23:30:56] 	train_mean_loss: 5.61384415266377
+[02.08.26|23:30:56] 	train_mean_loss_motion: 5.234217351296877
+[02.08.26|23:30:56] 	train_mean_loss_bone: 6.051295404347768
+[02.08.26|23:30:56] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch195_model.pt.
+[02.08.26|23:30:56] Training epoch: 196
+[02.08.26|23:31:09] 	Iter 64600 Done. | loss: 5.4806 | loss_motion: 5.3309 | loss_bone: 5.7450 | lr: 0.050000
+[02.08.26|23:31:31] 	Iter 64700 Done. | loss: 5.5875 | loss_motion: 5.3903 | loss_bone: 6.0835 | lr: 0.050000
+[02.08.26|23:31:53] 	Iter 64800 Done. | loss: 5.9530 | loss_motion: 5.8875 | loss_bone: 6.5588 | lr: 0.050000
+[02.08.26|23:32:10] 	train_mean_loss: 5.625327427221569
+[02.08.26|23:32:10] 	train_mean_loss_motion: 5.245130448182904
+[02.08.26|23:32:10] 	train_mean_loss_bone: 6.050868609160455
+[02.08.26|23:32:10] Training epoch: 197
+[02.08.26|23:32:15] 	Iter 64900 Done. | loss: 4.8554 | loss_motion: 4.5360 | loss_bone: 5.0584 | lr: 0.050000
+[02.08.26|23:32:37] 	Iter 65000 Done. | loss: 5.5728 | loss_motion: 5.1781 | loss_bone: 5.7843 | lr: 0.050000
+[02.08.26|23:33:00] 	Iter 65100 Done. | loss: 5.7254 | loss_motion: 5.3500 | loss_bone: 6.2935 | lr: 0.050000
+[02.08.26|23:33:22] 	Iter 65200 Done. | loss: 5.9229 | loss_motion: 5.5714 | loss_bone: 6.5475 | lr: 0.050000
+[02.08.26|23:33:23] 	train_mean_loss: 5.628256257567161
+[02.08.26|23:33:23] 	train_mean_loss_motion: 5.21802163628293
+[02.08.26|23:33:23] 	train_mean_loss_bone: 6.046737647848907
+[02.08.26|23:33:23] Training epoch: 198
+[02.08.26|23:33:44] 	Iter 65300 Done. | loss: 5.1121 | loss_motion: 4.8147 | loss_bone: 5.5752 | lr: 0.050000
+[02.08.26|23:34:06] 	Iter 65400 Done. | loss: 5.4249 | loss_motion: 5.0989 | loss_bone: 6.2815 | lr: 0.050000
+[02.08.26|23:34:28] 	Iter 65500 Done. | loss: 5.9880 | loss_motion: 5.5944 | loss_bone: 6.4199 | lr: 0.050000
+[02.08.26|23:34:36] 	train_mean_loss: 5.602592289627859
+[02.08.26|23:34:36] 	train_mean_loss_motion: 5.189571693224489
+[02.08.26|23:34:36] 	train_mean_loss_bone: 6.035367272771738
+[02.08.26|23:34:36] Training epoch: 199
+[02.08.26|23:34:50] 	Iter 65600 Done. | loss: 5.0073 | loss_motion: 4.7165 | loss_bone: 5.0325 | lr: 0.050000
+[02.08.26|23:35:13] 	Iter 65700 Done. | loss: 5.6035 | loss_motion: 5.2740 | loss_bone: 6.0369 | lr: 0.050000
+[02.08.26|23:35:35] 	Iter 65800 Done. | loss: 5.9357 | loss_motion: 5.4022 | loss_bone: 6.3222 | lr: 0.050000
+[02.08.26|23:35:50] 	train_mean_loss: 5.61214950509662
+[02.08.26|23:35:50] 	train_mean_loss_motion: 5.2025757801136585
+[02.08.26|23:35:50] 	train_mean_loss_bone: 6.021697587477116
+[02.08.26|23:35:50] Training epoch: 200
+[02.08.26|23:35:57] 	Iter 65900 Done. | loss: 4.9564 | loss_motion: 4.7493 | loss_bone: 5.4418 | lr: 0.050000
+[02.08.26|23:36:20] 	Iter 66000 Done. | loss: 5.4725 | loss_motion: 5.1443 | loss_bone: 6.0760 | lr: 0.050000
+[02.08.26|23:36:42] 	Iter 66100 Done. | loss: 5.8813 | loss_motion: 5.2906 | loss_bone: 6.4285 | lr: 0.050000
+[02.08.26|23:37:04] 	train_mean_loss: 5.6003129604719915
+[02.08.26|23:37:04] 	train_mean_loss_motion: 5.195881614512187
+[02.08.26|23:37:04] 	train_mean_loss_bone: 6.018642473076766
+[02.08.26|23:37:04] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch200_model.pt.
+[02.08.26|23:37:04] Training epoch: 201
+[02.08.26|23:37:04] 	Iter 66200 Done. | loss: 5.1324 | loss_motion: 4.7399 | loss_bone: 5.3589 | lr: 0.050000
+[02.08.26|23:37:27] 	Iter 66300 Done. | loss: 5.5968 | loss_motion: 5.3566 | loss_bone: 6.0890 | lr: 0.050000
+[02.08.26|23:37:49] 	Iter 66400 Done. | loss: 5.6577 | loss_motion: 5.0232 | loss_bone: 5.8333 | lr: 0.050000
+[02.08.26|23:38:11] 	Iter 66500 Done. | loss: 5.8478 | loss_motion: 5.3733 | loss_bone: 6.6728 | lr: 0.050000
+[02.08.26|23:38:18] 	train_mean_loss: 5.603097469064765
+[02.08.26|23:38:18] 	train_mean_loss_motion: 5.182936462390819
+[02.08.26|23:38:18] 	train_mean_loss_bone: 6.0141672223716345
+[02.08.26|23:38:18] Training epoch: 202
+[02.08.26|23:38:33] 	Iter 66600 Done. | loss: 5.1204 | loss_motion: 4.7656 | loss_bone: 5.8840 | lr: 0.050000
+[02.08.26|23:38:55] 	Iter 66700 Done. | loss: 5.7075 | loss_motion: 5.1721 | loss_bone: 6.0592 | lr: 0.050000
+[02.08.26|23:39:18] 	Iter 66800 Done. | loss: 5.9376 | loss_motion: 5.4201 | loss_bone: 6.3080 | lr: 0.050000
+[02.08.26|23:39:31] 	train_mean_loss: 5.6111045272688855
+[02.08.26|23:39:31] 	train_mean_loss_motion: 5.188112590248131
+[02.08.26|23:39:31] 	train_mean_loss_bone: 6.013961839531844
+[02.08.26|23:39:31] Training epoch: 203
+[02.08.26|23:39:40] 	Iter 66900 Done. | loss: 5.0829 | loss_motion: 4.6947 | loss_bone: 5.3517 | lr: 0.050000
+[02.08.26|23:40:02] 	Iter 67000 Done. | loss: 5.2575 | loss_motion: 4.7381 | loss_bone: 5.6185 | lr: 0.050000
+[02.08.26|23:40:25] 	Iter 67100 Done. | loss: 5.9196 | loss_motion: 5.3000 | loss_bone: 6.2241 | lr: 0.050000
+[02.08.26|23:40:45] 	train_mean_loss: 5.588465720865302
+[02.08.26|23:40:45] 	train_mean_loss_motion: 5.161635793587952
+[02.08.26|23:40:45] 	train_mean_loss_bone: 5.975748740654337
+[02.08.26|23:40:45] Training epoch: 204
+[02.08.26|23:40:47] 	Iter 67200 Done. | loss: 5.1662 | loss_motion: 4.7168 | loss_bone: 5.4569 | lr: 0.050000
+[02.08.26|23:41:09] 	Iter 67300 Done. | loss: 5.5710 | loss_motion: 5.1540 | loss_bone: 6.0414 | lr: 0.050000
+[02.08.26|23:41:31] 	Iter 67400 Done. | loss: 5.7858 | loss_motion: 5.3561 | loss_bone: 6.0959 | lr: 0.050000
+[02.08.26|23:41:53] 	Iter 67500 Done. | loss: 6.0494 | loss_motion: 5.5177 | loss_bone: 6.7437 | lr: 0.050000
+[02.08.26|23:41:58] 	train_mean_loss: 5.625025828439304
+[02.08.26|23:41:58] 	train_mean_loss_motion: 5.20334920134069
+[02.08.26|23:41:58] 	train_mean_loss_bone: 6.0295343442265725
+[02.08.26|23:41:58] Training epoch: 205
+[02.08.26|23:42:16] 	Iter 67600 Done. | loss: 5.2463 | loss_motion: 4.9951 | loss_bone: 5.6235 | lr: 0.050000
+[02.08.26|23:42:38] 	Iter 67700 Done. | loss: 5.7834 | loss_motion: 5.2684 | loss_bone: 6.2054 | lr: 0.050000
+[02.08.26|23:43:00] 	Iter 67800 Done. | loss: 5.8741 | loss_motion: 5.3299 | loss_bone: 6.3210 | lr: 0.050000
+[02.08.26|23:43:12] 	train_mean_loss: 5.612096203057788
+[02.08.26|23:43:12] 	train_mean_loss_motion: 5.168322571814961
+[02.08.26|23:43:12] 	train_mean_loss_bone: 6.018218988378242
+[02.08.26|23:43:12] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch205_model.pt.
+[02.08.26|23:43:12] Training epoch: 206
+[02.08.26|23:43:22] 	Iter 67900 Done. | loss: 4.7971 | loss_motion: 4.3835 | loss_bone: 5.1257 | lr: 0.050000
+[02.08.26|23:43:44] 	Iter 68000 Done. | loss: 5.4335 | loss_motion: 5.0540 | loss_bone: 5.8648 | lr: 0.050000
+[02.08.26|23:44:07] 	Iter 68100 Done. | loss: 6.1433 | loss_motion: 5.4613 | loss_bone: 6.2875 | lr: 0.050000
+[02.08.26|23:44:25] 	train_mean_loss: 5.591914138044835
+[02.08.26|23:44:25] 	train_mean_loss_motion: 5.146196434505036
+[02.08.26|23:44:25] 	train_mean_loss_bone: 5.979094323795008
+[02.08.26|23:44:25] Training epoch: 207
+[02.08.26|23:44:29] 	Iter 68200 Done. | loss: 4.8334 | loss_motion: 4.5479 | loss_bone: 5.1789 | lr: 0.050000
+[02.08.26|23:44:51] 	Iter 68300 Done. | loss: 5.2198 | loss_motion: 4.9190 | loss_bone: 5.9151 | lr: 0.050000
+[02.08.26|23:45:13] 	Iter 68400 Done. | loss: 5.6352 | loss_motion: 5.1530 | loss_bone: 6.1599 | lr: 0.050000
+[02.08.26|23:45:35] 	Iter 68500 Done. | loss: 5.8227 | loss_motion: 5.2613 | loss_bone: 6.3543 | lr: 0.050000
+[02.08.26|23:45:39] 	train_mean_loss: 5.585790904987254
+[02.08.26|23:45:39] 	train_mean_loss_motion: 5.1414564440977895
+[02.08.26|23:45:39] 	train_mean_loss_bone: 5.982817870252442
+[02.08.26|23:45:39] Training epoch: 208
+[02.08.26|23:45:58] 	Iter 68600 Done. | loss: 5.4523 | loss_motion: 5.1469 | loss_bone: 6.0650 | lr: 0.050000
+[02.08.26|23:46:20] 	Iter 68700 Done. | loss: 5.6208 | loss_motion: 5.1331 | loss_bone: 6.1479 | lr: 0.050000
+[02.08.26|23:46:42] 	Iter 68800 Done. | loss: 5.7003 | loss_motion: 5.3086 | loss_bone: 6.3550 | lr: 0.050000
+[02.08.26|23:46:53] 	train_mean_loss: 5.588490663338284
+[02.08.26|23:46:53] 	train_mean_loss_motion: 5.136507926030461
+[02.08.26|23:46:53] 	train_mean_loss_bone: 5.965610195862923
+[02.08.26|23:46:53] Training epoch: 209
+[02.08.26|23:47:05] 	Iter 68900 Done. | loss: 5.3080 | loss_motion: 4.7022 | loss_bone: 5.6706 | lr: 0.050000
+[02.08.26|23:47:27] 	Iter 69000 Done. | loss: 5.5575 | loss_motion: 5.1093 | loss_bone: 6.1370 | lr: 0.050000
+[02.08.26|23:47:49] 	Iter 69100 Done. | loss: 6.2546 | loss_motion: 5.5196 | loss_bone: 6.4470 | lr: 0.050000
+[02.08.26|23:48:06] 	train_mean_loss: 5.606167362535828
+[02.08.26|23:48:06] 	train_mean_loss_motion: 5.153300890389526
+[02.08.26|23:48:06] 	train_mean_loss_bone: 5.970862197011619
+[02.08.26|23:48:06] Training epoch: 210
+[02.08.26|23:48:11] 	Iter 69200 Done. | loss: 4.8898 | loss_motion: 4.4518 | loss_bone: 5.0344 | lr: 0.050000
+[02.08.26|23:48:34] 	Iter 69300 Done. | loss: 5.4943 | loss_motion: 4.9103 | loss_bone: 5.6552 | lr: 0.050000
+[02.08.26|23:48:56] 	Iter 69400 Done. | loss: 5.7613 | loss_motion: 5.3752 | loss_bone: 6.1162 | lr: 0.050000
+[02.08.26|23:49:18] 	Iter 69500 Done. | loss: 5.9053 | loss_motion: 5.2062 | loss_bone: 6.3865 | lr: 0.050000
+[02.08.26|23:49:20] 	train_mean_loss: 5.595611693275659
+[02.08.26|23:49:20] 	train_mean_loss_motion: 5.133764367809468
+[02.08.26|23:49:20] 	train_mean_loss_bone: 5.968931780120758
+[02.08.26|23:49:21] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch210_model.pt.
+[02.08.26|23:49:21] Training epoch: 211
+[02.08.26|23:49:41] 	Iter 69600 Done. | loss: 5.2798 | loss_motion: 4.6556 | loss_bone: 5.2257 | lr: 0.050000
+[02.08.26|23:50:03] 	Iter 69700 Done. | loss: 5.9662 | loss_motion: 5.2313 | loss_bone: 6.0937 | lr: 0.050000
+[02.08.26|23:50:25] 	Iter 69800 Done. | loss: 6.0320 | loss_motion: 5.5426 | loss_bone: 6.4094 | lr: 0.050000
+[02.08.26|23:50:34] 	train_mean_loss: 5.6008918350196675
+[02.08.26|23:50:34] 	train_mean_loss_motion: 5.130668470146433
+[02.08.26|23:50:34] 	train_mean_loss_bone: 5.957501408556797
+[02.08.26|23:50:34] Training epoch: 212
+[02.08.26|23:50:48] 	Iter 69900 Done. | loss: 5.1931 | loss_motion: 4.7161 | loss_bone: 5.1889 | lr: 0.050000
+[02.08.26|23:51:10] 	Iter 70000 Done. | loss: 5.6491 | loss_motion: 5.2728 | loss_bone: 6.0449 | lr: 0.050000
+[02.08.26|23:51:32] 	Iter 70100 Done. | loss: 6.0824 | loss_motion: 5.7370 | loss_bone: 6.4879 | lr: 0.050000
+[02.08.26|23:51:48] 	train_mean_loss: 5.580706737552885
+[02.08.26|23:51:48] 	train_mean_loss_motion: 5.108925983624876
+[02.08.26|23:51:48] 	train_mean_loss_bone: 5.961350929340927
+[02.08.26|23:51:48] Training epoch: 213
+[02.08.26|23:51:54] 	Iter 70200 Done. | loss: 5.1234 | loss_motion: 4.7977 | loss_bone: 5.4055 | lr: 0.050000
+[02.08.26|23:52:16] 	Iter 70300 Done. | loss: 5.2953 | loss_motion: 4.8862 | loss_bone: 5.7166 | lr: 0.050000
+[02.08.26|23:52:38] 	Iter 70400 Done. | loss: 5.6029 | loss_motion: 5.1729 | loss_bone: 6.1536 | lr: 0.050000
+[02.08.26|23:53:01] 	Iter 70500 Done. | loss: 5.8854 | loss_motion: 5.4002 | loss_bone: 6.2646 | lr: 0.050000
+[02.08.26|23:53:01] 	train_mean_loss: 5.594851745939687
+[02.08.26|23:53:01] 	train_mean_loss_motion: 5.121134615376636
+[02.08.26|23:53:01] 	train_mean_loss_bone: 5.969398900461341
+[02.08.26|23:53:01] Training epoch: 214
+[02.08.26|23:53:23] 	Iter 70600 Done. | loss: 4.9965 | loss_motion: 4.5973 | loss_bone: 5.3915 | lr: 0.050000
+[02.08.26|23:53:45] 	Iter 70700 Done. | loss: 5.8454 | loss_motion: 5.3731 | loss_bone: 6.4624 | lr: 0.050000
+[02.08.26|23:54:07] 	Iter 70800 Done. | loss: 5.7456 | loss_motion: 5.2818 | loss_bone: 6.6297 | lr: 0.050000
+[02.08.26|23:54:14] 	train_mean_loss: 5.574388674018606
+[02.08.26|23:54:14] 	train_mean_loss_motion: 5.0941397632356855
+[02.08.26|23:54:14] 	train_mean_loss_bone: 5.941478906441311
+[02.08.26|23:54:14] Training epoch: 215
+[02.08.26|23:54:29] 	Iter 70900 Done. | loss: 5.0590 | loss_motion: 4.6235 | loss_bone: 5.5668 | lr: 0.050000
+[02.08.26|23:54:51] 	Iter 71000 Done. | loss: 5.5925 | loss_motion: 5.1246 | loss_bone: 5.8681 | lr: 0.050000
+[02.08.26|23:55:13] 	Iter 71100 Done. | loss: 6.1882 | loss_motion: 5.4776 | loss_bone: 6.3480 | lr: 0.050000
+[02.08.26|23:55:28] 	train_mean_loss: 5.582250197488376
+[02.08.26|23:55:28] 	train_mean_loss_motion: 5.101548854678059
+[02.08.26|23:55:28] 	train_mean_loss_bone: 5.943771706607047
+[02.08.26|23:55:28] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch215_model.pt.
+[02.08.26|23:55:28] Training epoch: 216
+[02.08.26|23:55:36] 	Iter 71200 Done. | loss: 4.8414 | loss_motion: 4.5099 | loss_bone: 5.1704 | lr: 0.050000
+[02.08.26|23:55:58] 	Iter 71300 Done. | loss: 5.5461 | loss_motion: 5.0800 | loss_bone: 6.1928 | lr: 0.050000
+[02.08.26|23:56:20] 	Iter 71400 Done. | loss: 5.6624 | loss_motion: 5.2504 | loss_bone: 6.1934 | lr: 0.050000
+[02.08.26|23:56:41] 	train_mean_loss: 5.570560471168818
+[02.08.26|23:56:41] 	train_mean_loss_motion: 5.080230953470098
+[02.08.26|23:56:41] 	train_mean_loss_bone: 5.929919574195885
+[02.08.26|23:56:41] Training epoch: 217
+[02.08.26|23:56:42] 	Iter 71500 Done. | loss: 4.8746 | loss_motion: 4.4467 | loss_bone: 5.3913 | lr: 0.050000
+[02.08.26|23:57:04] 	Iter 71600 Done. | loss: 5.3827 | loss_motion: 5.0208 | loss_bone: 5.6149 | lr: 0.050000
+[02.08.26|23:57:27] 	Iter 71700 Done. | loss: 5.7593 | loss_motion: 5.1978 | loss_bone: 6.1031 | lr: 0.050000
+[02.08.26|23:57:49] 	Iter 71800 Done. | loss: 6.0122 | loss_motion: 5.5144 | loss_bone: 6.5235 | lr: 0.050000
+[02.08.26|23:57:55] 	train_mean_loss: 5.588481378699357
+[02.08.26|23:57:55] 	train_mean_loss_motion: 5.101533451829432
+[02.08.26|23:57:55] 	train_mean_loss_bone: 5.948091166977436
+[02.08.26|23:57:55] Training epoch: 218
+[02.08.26|23:58:11] 	Iter 71900 Done. | loss: 5.2567 | loss_motion: 4.9490 | loss_bone: 5.7448 | lr: 0.050000
+[02.08.26|23:58:33] 	Iter 72000 Done. | loss: 5.8004 | loss_motion: 5.1546 | loss_bone: 5.7972 | lr: 0.050000
+[02.08.26|23:58:55] 	Iter 72100 Done. | loss: 6.0774 | loss_motion: 5.6067 | loss_bone: 6.4643 | lr: 0.050000
+[02.08.26|23:59:08] 	train_mean_loss: 5.596267265135428
+[02.08.26|23:59:08] 	train_mean_loss_motion: 5.097768145385466
+[02.08.26|23:59:08] 	train_mean_loss_bone: 5.936357868402026
+[02.08.26|23:59:08] Training epoch: 219
+[02.08.26|23:59:18] 	Iter 72200 Done. | loss: 5.2210 | loss_motion: 4.7983 | loss_bone: 5.3108 | lr: 0.050000
+[02.08.26|23:59:40] 	Iter 72300 Done. | loss: 5.4175 | loss_motion: 4.9903 | loss_bone: 5.7884 | lr: 0.050000
+[02.09.26|00:00:02] 	Iter 72400 Done. | loss: 5.8550 | loss_motion: 5.3995 | loss_bone: 6.4598 | lr: 0.050000
+[02.09.26|00:00:22] 	train_mean_loss: 5.593667886048285
+[02.09.26|00:00:22] 	train_mean_loss_motion: 5.089617939513976
+[02.09.26|00:00:22] 	train_mean_loss_bone: 5.9427818488498465
+[02.09.26|00:00:22] Training epoch: 220
+[02.09.26|00:00:24] 	Iter 72500 Done. | loss: 4.7901 | loss_motion: 4.4276 | loss_bone: 5.0790 | lr: 0.050000
+[02.09.26|00:00:47] 	Iter 72600 Done. | loss: 5.2372 | loss_motion: 4.8983 | loss_bone: 6.0048 | lr: 0.050000
+[02.09.26|00:01:09] 	Iter 72700 Done. | loss: 5.5829 | loss_motion: 5.1738 | loss_bone: 6.4800 | lr: 0.050000
+[02.09.26|00:01:31] 	Iter 72800 Done. | loss: 5.9508 | loss_motion: 5.3679 | loss_bone: 6.5052 | lr: 0.050000
+[02.09.26|00:01:35] 	train_mean_loss: 5.5856347444194325
+[02.09.26|00:01:35] 	train_mean_loss_motion: 5.091493665631805
+[02.09.26|00:01:35] 	train_mean_loss_bone: 5.9259996356560745
+[02.09.26|00:01:35] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch220_model.pt.
+[02.09.26|00:01:35] Training epoch: 221
+[02.09.26|00:01:54] 	Iter 72900 Done. | loss: 5.2744 | loss_motion: 4.7419 | loss_bone: 5.6520 | lr: 0.050000
+[02.09.26|00:02:16] 	Iter 73000 Done. | loss: 5.8828 | loss_motion: 5.3324 | loss_bone: 6.0497 | lr: 0.050000
+[02.09.26|00:02:38] 	Iter 73100 Done. | loss: 5.9627 | loss_motion: 5.4937 | loss_bone: 6.2937 | lr: 0.050000
+[02.09.26|00:02:49] 	train_mean_loss: 5.5658429165981325
+[02.09.26|00:02:49] 	train_mean_loss_motion: 5.058597556053692
+[02.09.26|00:02:49] 	train_mean_loss_bone: 5.908495218732206
+[02.09.26|00:02:49] Training epoch: 222
+[02.09.26|00:03:00] 	Iter 73200 Done. | loss: 5.4017 | loss_motion: 4.9405 | loss_bone: 5.4235 | lr: 0.050000
+[02.09.26|00:03:22] 	Iter 73300 Done. | loss: 5.7652 | loss_motion: 5.2946 | loss_bone: 6.2032 | lr: 0.050000
+[02.09.26|00:03:44] 	Iter 73400 Done. | loss: 6.0325 | loss_motion: 5.4744 | loss_bone: 6.4629 | lr: 0.050000
+[02.09.26|00:04:02] 	train_mean_loss: 5.587392534734259
+[02.09.26|00:04:02] 	train_mean_loss_motion: 5.082574013136665
+[02.09.26|00:04:02] 	train_mean_loss_bone: 5.91687967842079
+[02.09.26|00:04:02] Training epoch: 223
+[02.09.26|00:04:07] 	Iter 73500 Done. | loss: 4.8160 | loss_motion: 4.4973 | loss_bone: 4.9849 | lr: 0.050000
+[02.09.26|00:04:29] 	Iter 73600 Done. | loss: 5.7928 | loss_motion: 5.0921 | loss_bone: 5.8997 | lr: 0.050000
+[02.09.26|00:04:51] 	Iter 73700 Done. | loss: 5.7860 | loss_motion: 5.2339 | loss_bone: 6.0748 | lr: 0.050000
+[02.09.26|00:05:13] 	Iter 73800 Done. | loss: 6.1094 | loss_motion: 5.5293 | loss_bone: 6.4296 | lr: 0.050000
+[02.09.26|00:05:16] 	train_mean_loss: 5.569617408279926
+[02.09.26|00:05:16] 	train_mean_loss_motion: 5.060747963424175
+[02.09.26|00:05:16] 	train_mean_loss_bone: 5.9034877558129075
+[02.09.26|00:05:16] Training epoch: 224
+[02.09.26|00:05:36] 	Iter 73900 Done. | loss: 5.0459 | loss_motion: 4.4070 | loss_bone: 5.1196 | lr: 0.050000
+[02.09.26|00:05:58] 	Iter 74000 Done. | loss: 5.5538 | loss_motion: 5.2718 | loss_bone: 5.8151 | lr: 0.050000
+[02.09.26|00:06:20] 	Iter 74100 Done. | loss: 5.7336 | loss_motion: 5.2609 | loss_bone: 6.3675 | lr: 0.050000
+[02.09.26|00:06:29] 	train_mean_loss: 5.570659313317152
+[02.09.26|00:06:29] 	train_mean_loss_motion: 5.0476845441628075
+[02.09.26|00:06:29] 	train_mean_loss_bone: 5.908993994721473
+[02.09.26|00:06:29] Training epoch: 225
+[02.09.26|00:06:42] 	Iter 74200 Done. | loss: 5.2979 | loss_motion: 4.8224 | loss_bone: 5.4107 | lr: 0.050000
+[02.09.26|00:07:04] 	Iter 74300 Done. | loss: 5.5078 | loss_motion: 4.7943 | loss_bone: 5.8956 | lr: 0.050000
+[02.09.26|00:07:26] 	Iter 74400 Done. | loss: 6.0433 | loss_motion: 5.4577 | loss_bone: 6.7699 | lr: 0.050000
+[02.09.26|00:07:43] 	train_mean_loss: 5.581367243452735
+[02.09.26|00:07:43] 	train_mean_loss_motion: 5.0470196934264955
+[02.09.26|00:07:43] 	train_mean_loss_bone: 5.909371461032741
+[02.09.26|00:07:43] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch225_model.pt.
+[02.09.26|00:07:43] Training epoch: 226
+[02.09.26|00:07:49] 	Iter 74500 Done. | loss: 5.0003 | loss_motion: 4.5291 | loss_bone: 5.3936 | lr: 0.050000
+[02.09.26|00:08:11] 	Iter 74600 Done. | loss: 5.3180 | loss_motion: 4.9582 | loss_bone: 5.6690 | lr: 0.050000
+[02.09.26|00:08:33] 	Iter 74700 Done. | loss: 5.7402 | loss_motion: 4.9575 | loss_bone: 5.9679 | lr: 0.050000
+[02.09.26|00:08:55] 	Iter 74800 Done. | loss: 5.9195 | loss_motion: 5.2880 | loss_bone: 6.1224 | lr: 0.050000
+[02.09.26|00:08:57] 	train_mean_loss: 5.59442868909807
+[02.09.26|00:08:57] 	train_mean_loss_motion: 5.0526925789985775
+[02.09.26|00:08:57] 	train_mean_loss_bone: 5.916976701096826
+[02.09.26|00:08:57] Training epoch: 227
+[02.09.26|00:09:18] 	Iter 74900 Done. | loss: 5.1907 | loss_motion: 4.6098 | loss_bone: 5.4279 | lr: 0.050000
+[02.09.26|00:09:40] 	Iter 75000 Done. | loss: 5.5687 | loss_motion: 4.8895 | loss_bone: 6.0569 | lr: 0.050000
+[02.09.26|00:10:02] 	Iter 75100 Done. | loss: 5.9919 | loss_motion: 5.6266 | loss_bone: 6.5611 | lr: 0.050000
+[02.09.26|00:10:10] 	train_mean_loss: 5.5750835006690815
+[02.09.26|00:10:10] 	train_mean_loss_motion: 5.0553541644462285
+[02.09.26|00:10:10] 	train_mean_loss_bone: 5.901666932235671
+[02.09.26|00:10:10] Training epoch: 228
+[02.09.26|00:10:24] 	Iter 75200 Done. | loss: 5.1329 | loss_motion: 4.7538 | loss_bone: 5.2281 | lr: 0.050000
+[02.09.26|00:10:46] 	Iter 75300 Done. | loss: 5.6181 | loss_motion: 5.1386 | loss_bone: 5.9967 | lr: 0.050000
+[02.09.26|00:11:09] 	Iter 75400 Done. | loss: 6.1568 | loss_motion: 5.5168 | loss_bone: 6.3933 | lr: 0.050000
+[02.09.26|00:11:23] 	train_mean_loss: 5.577683774366119
+[02.09.26|00:11:23] 	train_mean_loss_motion: 5.05443950650195
+[02.09.26|00:11:23] 	train_mean_loss_bone: 5.904089397534142
+[02.09.26|00:11:23] Training epoch: 229
+[02.09.26|00:11:31] 	Iter 75500 Done. | loss: 4.7462 | loss_motion: 4.4527 | loss_bone: 4.9278 | lr: 0.050000
+[02.09.26|00:11:53] 	Iter 75600 Done. | loss: 5.4395 | loss_motion: 5.0408 | loss_bone: 5.9925 | lr: 0.050000
+[02.09.26|00:12:15] 	Iter 75700 Done. | loss: 5.8775 | loss_motion: 5.3844 | loss_bone: 6.3699 | lr: 0.050000
+[02.09.26|00:12:37] 	train_mean_loss: 5.574375553073479
+[02.09.26|00:12:37] 	train_mean_loss_motion: 5.03550633490986
+[02.09.26|00:12:37] 	train_mean_loss_bone: 5.892887491473979
+[02.09.26|00:12:37] Training epoch: 230
+[02.09.26|00:12:37] 	Iter 75800 Done. | loss: 5.1180 | loss_motion: 4.6145 | loss_bone: 4.9666 | lr: 0.050000
+[02.09.26|00:13:00] 	Iter 75900 Done. | loss: 5.3937 | loss_motion: 4.6829 | loss_bone: 5.5213 | lr: 0.050000
+[02.09.26|00:13:22] 	Iter 76000 Done. | loss: 5.9074 | loss_motion: 5.3598 | loss_bone: 6.2634 | lr: 0.050000
+[02.09.26|00:13:44] 	Iter 76100 Done. | loss: 6.0874 | loss_motion: 5.5791 | loss_bone: 6.6001 | lr: 0.050000
+[02.09.26|00:13:50] 	train_mean_loss: 5.576051713476729
+[02.09.26|00:13:50] 	train_mean_loss_motion: 5.033607847380854
+[02.09.26|00:13:50] 	train_mean_loss_bone: 5.897591197598737
+[02.09.26|00:13:51] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch230_model.pt.
+[02.09.26|00:13:51] Training epoch: 231
+[02.09.26|00:14:06] 	Iter 76200 Done. | loss: 5.2915 | loss_motion: 4.8838 | loss_bone: 5.6257 | lr: 0.050000
+[02.09.26|00:14:29] 	Iter 76300 Done. | loss: 5.7435 | loss_motion: 4.9772 | loss_bone: 5.9817 | lr: 0.050000
+[02.09.26|00:14:51] 	Iter 76400 Done. | loss: 6.0639 | loss_motion: 5.5872 | loss_bone: 6.4093 | lr: 0.050000
+[02.09.26|00:15:04] 	train_mean_loss: 5.56431628137917
+[02.09.26|00:15:04] 	train_mean_loss_motion: 5.019560321220098
+[02.09.26|00:15:04] 	train_mean_loss_bone: 5.8733465304187416
+[02.09.26|00:15:04] Training epoch: 232
+[02.09.26|00:15:13] 	Iter 76500 Done. | loss: 5.4424 | loss_motion: 4.9313 | loss_bone: 5.6709 | lr: 0.050000
+[02.09.26|00:15:36] 	Iter 76600 Done. | loss: 5.7558 | loss_motion: 5.1292 | loss_bone: 6.0578 | lr: 0.050000
+[02.09.26|00:15:58] 	Iter 76700 Done. | loss: 5.8166 | loss_motion: 5.1068 | loss_bone: 6.0473 | lr: 0.050000
+[02.09.26|00:16:18] 	train_mean_loss: 5.571194952708357
+[02.09.26|00:16:18] 	train_mean_loss_motion: 5.0067277415641485
+[02.09.26|00:16:18] 	train_mean_loss_bone: 5.8733394081138774
+[02.09.26|00:16:18] Training epoch: 233
+[02.09.26|00:16:20] 	Iter 76800 Done. | loss: 5.1033 | loss_motion: 4.4559 | loss_bone: 5.0400 | lr: 0.050000
+[02.09.26|00:16:42] 	Iter 76900 Done. | loss: 5.4164 | loss_motion: 4.8556 | loss_bone: 5.5859 | lr: 0.050000
+[02.09.26|00:17:04] 	Iter 77000 Done. | loss: 5.9788 | loss_motion: 5.2889 | loss_bone: 6.3154 | lr: 0.050000
+[02.09.26|00:17:27] 	Iter 77100 Done. | loss: 5.9491 | loss_motion: 5.1989 | loss_bone: 6.3418 | lr: 0.050000
+[02.09.26|00:17:32] 	train_mean_loss: 5.582213675507606
+[02.09.26|00:17:32] 	train_mean_loss_motion: 5.019161515365554
+[02.09.26|00:17:32] 	train_mean_loss_bone: 5.869183234937962
+[02.09.26|00:17:32] Training epoch: 234
+[02.09.26|00:17:49] 	Iter 77200 Done. | loss: 4.9657 | loss_motion: 4.4795 | loss_bone: 5.3783 | lr: 0.050000
+[02.09.26|00:18:11] 	Iter 77300 Done. | loss: 5.6682 | loss_motion: 5.0270 | loss_bone: 5.7280 | lr: 0.050000
+[02.09.26|00:18:34] 	Iter 77400 Done. | loss: 6.0920 | loss_motion: 5.3894 | loss_bone: 6.5084 | lr: 0.050000
+[02.09.26|00:18:45] 	train_mean_loss: 5.561112532082642
+[02.09.26|00:18:45] 	train_mean_loss_motion: 5.0054717020685935
+[02.09.26|00:18:45] 	train_mean_loss_bone: 5.843127442270608
+[02.09.26|00:18:45] Training epoch: 235
+[02.09.26|00:18:56] 	Iter 77500 Done. | loss: 4.9030 | loss_motion: 4.4542 | loss_bone: 5.2806 | lr: 0.050000
+[02.09.26|00:19:18] 	Iter 77600 Done. | loss: 5.3934 | loss_motion: 4.8303 | loss_bone: 5.6125 | lr: 0.050000
+[02.09.26|00:19:41] 	Iter 77700 Done. | loss: 5.9659 | loss_motion: 5.4001 | loss_bone: 6.4394 | lr: 0.050000
+[02.09.26|00:19:59] 	train_mean_loss: 5.567546480011724
+[02.09.26|00:19:59] 	train_mean_loss_motion: 4.991498465984609
+[02.09.26|00:19:59] 	train_mean_loss_bone: 5.859299034510494
+[02.09.26|00:19:59] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch235_model.pt.
+[02.09.26|00:19:59] Training epoch: 236
+[02.09.26|00:20:03] 	Iter 77800 Done. | loss: 4.5303 | loss_motion: 3.9363 | loss_bone: 4.7342 | lr: 0.050000
+[02.09.26|00:20:25] 	Iter 77900 Done. | loss: 5.4546 | loss_motion: 4.9239 | loss_bone: 5.7978 | lr: 0.050000
+[02.09.26|00:20:47] 	Iter 78000 Done. | loss: 5.7683 | loss_motion: 5.2687 | loss_bone: 6.1852 | lr: 0.050000
+[02.09.26|00:21:10] 	Iter 78100 Done. | loss: 6.2257 | loss_motion: 5.5497 | loss_bone: 6.5274 | lr: 0.050000
+[02.09.26|00:21:13] 	train_mean_loss: 5.566306372063398
+[02.09.26|00:21:13] 	train_mean_loss_motion: 5.006184284780681
+[02.09.26|00:21:13] 	train_mean_loss_bone: 5.849593694116414
+[02.09.26|00:21:13] Training epoch: 237
+[02.09.26|00:21:32] 	Iter 78200 Done. | loss: 5.4468 | loss_motion: 4.8826 | loss_bone: 5.4011 | lr: 0.050000
+[02.09.26|00:21:54] 	Iter 78300 Done. | loss: 5.9079 | loss_motion: 5.3768 | loss_bone: 6.3694 | lr: 0.050000
+[02.09.26|00:22:16] 	Iter 78400 Done. | loss: 6.0592 | loss_motion: 5.2434 | loss_bone: 6.2751 | lr: 0.050000
+[02.09.26|00:22:26] 	train_mean_loss: 5.58249277218591
+[02.09.26|00:22:26] 	train_mean_loss_motion: 5.003726603401391
+[02.09.26|00:22:26] 	train_mean_loss_bone: 5.848457146267156
+[02.09.26|00:22:26] Training epoch: 238
+[02.09.26|00:22:38] 	Iter 78500 Done. | loss: 5.2600 | loss_motion: 4.6761 | loss_bone: 5.4083 | lr: 0.050000
+[02.09.26|00:23:01] 	Iter 78600 Done. | loss: 5.7209 | loss_motion: 5.2405 | loss_bone: 6.2132 | lr: 0.050000
+[02.09.26|00:23:23] 	Iter 78700 Done. | loss: 6.1073 | loss_motion: 5.3524 | loss_bone: 6.4155 | lr: 0.050000
+[02.09.26|00:23:40] 	train_mean_loss: 5.571290815704899
+[02.09.26|00:23:40] 	train_mean_loss_motion: 4.999589000943924
+[02.09.26|00:23:40] 	train_mean_loss_bone: 5.854888287915924
+[02.09.26|00:23:40] Training epoch: 239
+[02.09.26|00:23:45] 	Iter 78800 Done. | loss: 5.3334 | loss_motion: 5.0227 | loss_bone: 5.5261 | lr: 0.050000
+[02.09.26|00:24:07] 	Iter 78900 Done. | loss: 5.4118 | loss_motion: 4.8678 | loss_bone: 5.8022 | lr: 0.050000
+[02.09.26|00:24:29] 	Iter 79000 Done. | loss: 5.7322 | loss_motion: 5.1480 | loss_bone: 6.2146 | lr: 0.050000
+[02.09.26|00:24:52] 	Iter 79100 Done. | loss: 5.9862 | loss_motion: 5.1904 | loss_bone: 6.4115 | lr: 0.050000
+[02.09.26|00:24:53] 	train_mean_loss: 5.56201851836144
+[02.09.26|00:24:53] 	train_mean_loss_motion: 4.9762899176951985
+[02.09.26|00:24:53] 	train_mean_loss_bone: 5.836078161199287
+[02.09.26|00:24:53] Training epoch: 240
+[02.09.26|00:25:14] 	Iter 79200 Done. | loss: 5.5205 | loss_motion: 4.9850 | loss_bone: 6.0036 | lr: 0.050000
+[02.09.26|00:25:36] 	Iter 79300 Done. | loss: 6.0240 | loss_motion: 5.3754 | loss_bone: 6.3059 | lr: 0.050000
+[02.09.26|00:25:58] 	Iter 79400 Done. | loss: 6.0413 | loss_motion: 5.3012 | loss_bone: 6.4002 | lr: 0.050000
+[02.09.26|00:26:07] 	train_mean_loss: 5.574648234779381
+[02.09.26|00:26:07] 	train_mean_loss_motion: 4.998695228034996
+[02.09.26|00:26:07] 	train_mean_loss_bone: 5.85872012971031
+[02.09.26|00:26:07] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch240_model.pt.
+[02.09.26|00:26:07] Training epoch: 241
+[02.09.26|00:26:20] 	Iter 79500 Done. | loss: 5.3913 | loss_motion: 4.7492 | loss_bone: 5.6108 | lr: 0.050000
+[02.09.26|00:26:43] 	Iter 79600 Done. | loss: 5.5550 | loss_motion: 5.0724 | loss_bone: 6.0668 | lr: 0.050000
+[02.09.26|00:27:05] 	Iter 79700 Done. | loss: 5.9835 | loss_motion: 5.2649 | loss_bone: 6.3837 | lr: 0.050000
+[02.09.26|00:27:20] 	train_mean_loss: 5.571436815751643
+[02.09.26|00:27:20] 	train_mean_loss_motion: 4.973418408650286
+[02.09.26|00:27:20] 	train_mean_loss_bone: 5.824712809479129
+[02.09.26|00:27:20] Training epoch: 242
+[02.09.26|00:27:27] 	Iter 79800 Done. | loss: 5.3026 | loss_motion: 4.7078 | loss_bone: 5.4648 | lr: 0.050000
+[02.09.26|00:27:49] 	Iter 79900 Done. | loss: 5.4950 | loss_motion: 5.0274 | loss_bone: 5.9315 | lr: 0.050000
+[02.09.26|00:28:12] 	Iter 80000 Done. | loss: 6.1210 | loss_motion: 5.3103 | loss_bone: 6.3666 | lr: 0.050000
+[02.09.26|00:28:34] 	Iter 80100 Done. | loss: 5.8061 | loss_motion: 5.0375 | loss_bone: 6.3151 | lr: 0.050000
+[02.09.26|00:28:34] 	train_mean_loss: 5.574392421007877
+[02.09.26|00:28:34] 	train_mean_loss_motion: 4.9867993899342515
+[02.09.26|00:28:34] 	train_mean_loss_bone: 5.830331507046057
+[02.09.26|00:28:34] Training epoch: 243
+[02.09.26|00:28:56] 	Iter 80200 Done. | loss: 5.1559 | loss_motion: 4.5111 | loss_bone: 5.3631 | lr: 0.050000
+[02.09.26|00:29:18] 	Iter 80300 Done. | loss: 5.7911 | loss_motion: 5.2187 | loss_bone: 6.1965 | lr: 0.050000
+[02.09.26|00:29:40] 	Iter 80400 Done. | loss: 6.1154 | loss_motion: 5.3455 | loss_bone: 6.3612 | lr: 0.050000
+[02.09.26|00:29:48] 	train_mean_loss: 5.578122437180349
+[02.09.26|00:29:48] 	train_mean_loss_motion: 4.97820169471902
+[02.09.26|00:29:48] 	train_mean_loss_bone: 5.845064712074948
+[02.09.26|00:29:48] Training epoch: 244
+[02.09.26|00:30:03] 	Iter 80500 Done. | loss: 5.0220 | loss_motion: 4.6220 | loss_bone: 5.2868 | lr: 0.050000
+[02.09.26|00:30:25] 	Iter 80600 Done. | loss: 6.0318 | loss_motion: 5.0823 | loss_bone: 6.1602 | lr: 0.050000
+[02.09.26|00:30:47] 	Iter 80700 Done. | loss: 6.2453 | loss_motion: 5.6597 | loss_bone: 6.3140 | lr: 0.050000
+[02.09.26|00:31:01] 	train_mean_loss: 5.571539207527644
+[02.09.26|00:31:01] 	train_mean_loss_motion: 4.969226853004756
+[02.09.26|00:31:01] 	train_mean_loss_bone: 5.822893852913848
+[02.09.26|00:31:01] Training epoch: 245
+[02.09.26|00:31:09] 	Iter 80800 Done. | loss: 5.1959 | loss_motion: 4.6542 | loss_bone: 5.3482 | lr: 0.050000
+[02.09.26|00:31:31] 	Iter 80900 Done. | loss: 5.8401 | loss_motion: 5.1128 | loss_bone: 6.0557 | lr: 0.050000
+[02.09.26|00:31:54] 	Iter 81000 Done. | loss: 5.8605 | loss_motion: 5.0977 | loss_bone: 6.3813 | lr: 0.050000
+[02.09.26|00:32:15] 	train_mean_loss: 5.560342453037504
+[02.09.26|00:32:15] 	train_mean_loss_motion: 4.961471828449168
+[02.09.26|00:32:15] 	train_mean_loss_bone: 5.825433392539125
+[02.09.26|00:32:15] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch245_model.pt.
+[02.09.26|00:32:15] Training epoch: 246
+[02.09.26|00:32:16] 	Iter 81100 Done. | loss: 4.9141 | loss_motion: 4.4447 | loss_bone: 5.1025 | lr: 0.050000
+[02.09.26|00:32:38] 	Iter 81200 Done. | loss: 5.2369 | loss_motion: 4.5238 | loss_bone: 5.2951 | lr: 0.050000
+[02.09.26|00:33:00] 	Iter 81300 Done. | loss: 5.7016 | loss_motion: 5.0839 | loss_bone: 5.9882 | lr: 0.050000
+[02.09.26|00:33:23] 	Iter 81400 Done. | loss: 5.9494 | loss_motion: 5.2739 | loss_bone: 5.9812 | lr: 0.050000
+[02.09.26|00:33:28] 	train_mean_loss: 5.569303975004444
+[02.09.26|00:33:28] 	train_mean_loss_motion: 4.955194820450152
+[02.09.26|00:33:28] 	train_mean_loss_bone: 5.820503220457325
+[02.09.26|00:33:28] Training epoch: 247
+[02.09.26|00:33:45] 	Iter 81500 Done. | loss: 5.2921 | loss_motion: 4.7031 | loss_bone: 5.6954 | lr: 0.050000
+[02.09.26|00:34:07] 	Iter 81600 Done. | loss: 5.5583 | loss_motion: 5.0272 | loss_bone: 5.8806 | lr: 0.050000
+[02.09.26|00:34:29] 	Iter 81700 Done. | loss: 5.8804 | loss_motion: 5.2201 | loss_bone: 6.1304 | lr: 0.050000
+[02.09.26|00:34:41] 	train_mean_loss: 5.559826850891113
+[02.09.26|00:34:41] 	train_mean_loss_motion: 4.956900911388801
+[02.09.26|00:34:41] 	train_mean_loss_bone: 5.8193086871927955
+[02.09.26|00:34:41] Training epoch: 248
+[02.09.26|00:34:51] 	Iter 81800 Done. | loss: 4.8522 | loss_motion: 4.4690 | loss_bone: 5.1094 | lr: 0.050000
+[02.09.26|00:35:14] 	Iter 81900 Done. | loss: 5.4382 | loss_motion: 4.7825 | loss_bone: 5.9025 | lr: 0.050000
+[02.09.26|00:35:36] 	Iter 82000 Done. | loss: 6.0827 | loss_motion: 5.2991 | loss_bone: 6.2645 | lr: 0.050000
+[02.09.26|00:35:55] 	train_mean_loss: 5.5610927714321905
+[02.09.26|00:35:55] 	train_mean_loss_motion: 4.946300214150881
+[02.09.26|00:35:55] 	train_mean_loss_bone: 5.8051682512565685
+[02.09.26|00:35:55] Training epoch: 249
+[02.09.26|00:35:58] 	Iter 82100 Done. | loss: 4.8812 | loss_motion: 4.0925 | loss_bone: 4.8373 | lr: 0.050000
+[02.09.26|00:36:20] 	Iter 82200 Done. | loss: 5.1185 | loss_motion: 4.7338 | loss_bone: 5.5241 | lr: 0.050000
+[02.09.26|00:36:42] 	Iter 82300 Done. | loss: 5.7950 | loss_motion: 5.2050 | loss_bone: 5.8371 | lr: 0.050000
+[02.09.26|00:37:05] 	Iter 82400 Done. | loss: 5.9722 | loss_motion: 5.3652 | loss_bone: 6.1516 | lr: 0.050000
+[02.09.26|00:37:09] 	train_mean_loss: 5.579488989089551
+[02.09.26|00:37:09] 	train_mean_loss_motion: 4.970352285218023
+[02.09.26|00:37:09] 	train_mean_loss_bone: 5.82513758783254
+[02.09.26|00:37:09] Training epoch: 250
+[02.09.26|00:37:27] 	Iter 82500 Done. | loss: 5.5482 | loss_motion: 5.0078 | loss_bone: 5.7817 | lr: 0.050000
+[02.09.26|00:37:49] 	Iter 82600 Done. | loss: 5.8897 | loss_motion: 4.9724 | loss_bone: 5.7788 | lr: 0.050000
+[02.09.26|00:38:12] 	Iter 82700 Done. | loss: 6.0099 | loss_motion: 5.4278 | loss_bone: 6.2371 | lr: 0.050000
+[02.09.26|00:38:22] 	train_mean_loss: 5.591358984345035
+[02.09.26|00:38:22] 	train_mean_loss_motion: 4.967144613179555
+[02.09.26|00:38:22] 	train_mean_loss_bone: 5.83455920003332
+[02.09.26|00:38:23] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch250_model.pt.
+[02.09.26|00:38:23] Training epoch: 251
+[02.09.26|00:38:34] 	Iter 82800 Done. | loss: 5.3932 | loss_motion: 4.8234 | loss_bone: 5.5039 | lr: 0.005000
+[02.09.26|00:38:56] 	Iter 82900 Done. | loss: 5.2908 | loss_motion: 4.6223 | loss_bone: 5.5710 | lr: 0.005000
+[02.09.26|00:39:18] 	Iter 83000 Done. | loss: 5.8618 | loss_motion: 5.1685 | loss_bone: 6.0713 | lr: 0.005000
+[02.09.26|00:39:36] 	train_mean_loss: 5.440346457086661
+[02.09.26|00:39:36] 	train_mean_loss_motion: 4.804754170046112
+[02.09.26|00:39:36] 	train_mean_loss_bone: 5.674931442629535
+[02.09.26|00:39:36] Training epoch: 252
+[02.09.26|00:39:40] 	Iter 83100 Done. | loss: 4.9552 | loss_motion: 4.2506 | loss_bone: 4.8585 | lr: 0.005000
+[02.09.26|00:40:03] 	Iter 83200 Done. | loss: 5.0550 | loss_motion: 4.5069 | loss_bone: 5.4254 | lr: 0.005000
+[02.09.26|00:40:25] 	Iter 83300 Done. | loss: 5.6398 | loss_motion: 4.9597 | loss_bone: 5.9575 | lr: 0.005000
+[02.09.26|00:40:47] 	Iter 83400 Done. | loss: 5.6560 | loss_motion: 5.1547 | loss_bone: 6.1121 | lr: 0.005000
+[02.09.26|00:40:50] 	train_mean_loss: 5.381365362611062
+[02.09.26|00:40:50] 	train_mean_loss_motion: 4.756696428777228
+[02.09.26|00:40:50] 	train_mean_loss_bone: 5.615383459362018
+[02.09.26|00:40:50] Training epoch: 253
+[02.09.26|00:41:09] 	Iter 83500 Done. | loss: 4.8326 | loss_motion: 4.3697 | loss_bone: 5.1048 | lr: 0.005000
+[02.09.26|00:41:32] 	Iter 83600 Done. | loss: 5.4374 | loss_motion: 5.0206 | loss_bone: 5.7140 | lr: 0.005000
+[02.09.26|00:41:54] 	Iter 83700 Done. | loss: 5.7552 | loss_motion: 5.0895 | loss_bone: 6.0356 | lr: 0.005000
+[02.09.26|00:42:03] 	train_mean_loss: 5.398893527754124
+[02.09.26|00:42:03] 	train_mean_loss_motion: 4.7760180080045025
+[02.09.26|00:42:03] 	train_mean_loss_bone: 5.637880720040589
+[02.09.26|00:42:03] Training epoch: 254
+[02.09.26|00:42:16] 	Iter 83800 Done. | loss: 5.0580 | loss_motion: 4.4561 | loss_bone: 5.2089 | lr: 0.005000
+[02.09.26|00:42:38] 	Iter 83900 Done. | loss: 5.3171 | loss_motion: 4.7280 | loss_bone: 5.5196 | lr: 0.005000
+[02.09.26|00:43:00] 	Iter 84000 Done. | loss: 5.9911 | loss_motion: 5.1279 | loss_bone: 6.2231 | lr: 0.005000
+[02.09.26|00:43:17] 	train_mean_loss: 5.39494926907865
+[02.09.26|00:43:17] 	train_mean_loss_motion: 4.761570397460568
+[02.09.26|00:43:17] 	train_mean_loss_bone: 5.62489613593525
+[02.09.26|00:43:17] Training epoch: 255
+[02.09.26|00:43:23] 	Iter 84100 Done. | loss: 4.5132 | loss_motion: 3.9278 | loss_bone: 4.6550 | lr: 0.005000
+[02.09.26|00:43:45] 	Iter 84200 Done. | loss: 4.9589 | loss_motion: 4.3951 | loss_bone: 5.2291 | lr: 0.005000
+[02.09.26|00:44:07] 	Iter 84300 Done. | loss: 5.7173 | loss_motion: 4.9064 | loss_bone: 5.6998 | lr: 0.005000
+[02.09.26|00:44:29] 	Iter 84400 Done. | loss: 6.0685 | loss_motion: 5.1931 | loss_bone: 6.3076 | lr: 0.005000
+[02.09.26|00:44:30] 	train_mean_loss: 5.370625042123017
+[02.09.26|00:44:30] 	train_mean_loss_motion: 4.7328644202194905
+[02.09.26|00:44:30] 	train_mean_loss_bone: 5.593748766850129
+[02.09.26|00:44:30] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch255_model.pt.
+[02.09.26|00:44:30] Training epoch: 256
+[02.09.26|00:44:52] 	Iter 84500 Done. | loss: 5.1784 | loss_motion: 4.4853 | loss_bone: 5.4939 | lr: 0.005000
+[02.09.26|00:45:14] 	Iter 84600 Done. | loss: 5.7710 | loss_motion: 4.8767 | loss_bone: 5.8741 | lr: 0.005000
+[02.09.26|00:45:36] 	Iter 84700 Done. | loss: 5.8017 | loss_motion: 4.8830 | loss_bone: 6.0173 | lr: 0.005000
+[02.09.26|00:45:44] 	train_mean_loss: 5.3793662610010795
+[02.09.26|00:45:44] 	train_mean_loss_motion: 4.736679022405803
+[02.09.26|00:45:44] 	train_mean_loss_bone: 5.6024216035341565
+[02.09.26|00:45:44] Training epoch: 257
+[02.09.26|00:45:58] 	Iter 84800 Done. | loss: 4.4975 | loss_motion: 4.0120 | loss_bone: 4.6220 | lr: 0.005000
+[02.09.26|00:46:20] 	Iter 84900 Done. | loss: 5.7352 | loss_motion: 5.0889 | loss_bone: 5.9942 | lr: 0.005000
+[02.09.26|00:46:42] 	Iter 85000 Done. | loss: 5.9137 | loss_motion: 5.1845 | loss_bone: 6.3673 | lr: 0.005000
+[02.09.26|00:46:57] 	train_mean_loss: 5.382014585765827
+[02.09.26|00:46:57] 	train_mean_loss_motion: 4.747113625448636
+[02.09.26|00:46:57] 	train_mean_loss_bone: 5.623235260251786
+[02.09.26|00:46:57] Training epoch: 258
+[02.09.26|00:47:05] 	Iter 85100 Done. | loss: 5.0553 | loss_motion: 4.3658 | loss_bone: 4.9413 | lr: 0.005000
+[02.09.26|00:47:27] 	Iter 85200 Done. | loss: 5.1379 | loss_motion: 4.6857 | loss_bone: 5.6938 | lr: 0.005000
+[02.09.26|00:47:49] 	Iter 85300 Done. | loss: 5.8557 | loss_motion: 5.0414 | loss_bone: 6.1048 | lr: 0.005000
+[02.09.26|00:48:11] 	train_mean_loss: 5.385360500243495
+[02.09.26|00:48:11] 	train_mean_loss_motion: 4.744639015629932
+[02.09.26|00:48:11] 	train_mean_loss_bone: 5.601126920060449
+[02.09.26|00:48:11] Training epoch: 259
+[02.09.26|00:48:12] 	Iter 85400 Done. | loss: 4.6802 | loss_motion: 4.2682 | loss_bone: 4.8521 | lr: 0.005000
+[02.09.26|00:48:34] 	Iter 85500 Done. | loss: 5.0354 | loss_motion: 4.4552 | loss_bone: 5.3839 | lr: 0.005000
+[02.09.26|00:48:56] 	Iter 85600 Done. | loss: 5.6957 | loss_motion: 4.8932 | loss_bone: 5.9078 | lr: 0.005000
+[02.09.26|00:49:18] 	Iter 85700 Done. | loss: 5.7845 | loss_motion: 5.0730 | loss_bone: 5.9994 | lr: 0.005000
+[02.09.26|00:49:24] 	train_mean_loss: 5.3759747790425925
+[02.09.26|00:49:24] 	train_mean_loss_motion: 4.740859804556809
+[02.09.26|00:49:24] 	train_mean_loss_bone: 5.590321778530801
+[02.09.26|00:49:24] Training epoch: 260
+[02.09.26|00:49:40] 	Iter 85800 Done. | loss: 5.0704 | loss_motion: 4.5497 | loss_bone: 5.3679 | lr: 0.005000
+[02.09.26|00:50:03] 	Iter 85900 Done. | loss: 5.1937 | loss_motion: 4.7201 | loss_bone: 5.5621 | lr: 0.005000
+[02.09.26|00:50:25] 	Iter 86000 Done. | loss: 5.7983 | loss_motion: 4.9749 | loss_bone: 6.1326 | lr: 0.005000
+[02.09.26|00:50:38] 	train_mean_loss: 5.368726288083817
+[02.09.26|00:50:38] 	train_mean_loss_motion: 4.737317101832963
+[02.09.26|00:50:38] 	train_mean_loss_bone: 5.5978314912571285
+[02.09.26|00:50:38] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch260_model.pt.
+[02.09.26|00:50:38] Training epoch: 261
+[02.09.26|00:50:47] 	Iter 86100 Done. | loss: 4.6819 | loss_motion: 4.3245 | loss_bone: 4.8470 | lr: 0.005000
+[02.09.26|00:51:09] 	Iter 86200 Done. | loss: 5.2982 | loss_motion: 4.6249 | loss_bone: 5.4417 | lr: 0.005000
+[02.09.26|00:51:32] 	Iter 86300 Done. | loss: 5.5990 | loss_motion: 4.9657 | loss_bone: 6.0568 | lr: 0.005000
+[02.09.26|00:51:52] 	train_mean_loss: 5.355589133375001
+[02.09.26|00:51:52] 	train_mean_loss_motion: 4.717693209287983
+[02.09.26|00:51:52] 	train_mean_loss_bone: 5.584267768975111
+[02.09.26|00:51:52] Training epoch: 262
+[02.09.26|00:51:54] 	Iter 86400 Done. | loss: 4.6913 | loss_motion: 4.1241 | loss_bone: 5.0196 | lr: 0.005000
+[02.09.26|00:52:16] 	Iter 86500 Done. | loss: 5.3565 | loss_motion: 4.6209 | loss_bone: 5.4159 | lr: 0.005000
+[02.09.26|00:52:38] 	Iter 86600 Done. | loss: 5.5417 | loss_motion: 4.8589 | loss_bone: 5.6513 | lr: 0.005000
+[02.09.26|00:53:01] 	Iter 86700 Done. | loss: 5.9597 | loss_motion: 5.0902 | loss_bone: 6.1804 | lr: 0.005000
+[02.09.26|00:53:05] 	train_mean_loss: 5.376103935645066
+[02.09.26|00:53:05] 	train_mean_loss_motion: 4.729163861346749
+[02.09.26|00:53:05] 	train_mean_loss_bone: 5.588847249656285
+[02.09.26|00:53:05] Training epoch: 263
+[02.09.26|00:53:23] 	Iter 86800 Done. | loss: 4.7951 | loss_motion: 4.3280 | loss_bone: 5.0050 | lr: 0.005000
+[02.09.26|00:53:45] 	Iter 86900 Done. | loss: 5.4309 | loss_motion: 4.9606 | loss_bone: 5.9861 | lr: 0.005000
+[02.09.26|00:54:07] 	Iter 87000 Done. | loss: 5.5661 | loss_motion: 4.9036 | loss_bone: 5.9529 | lr: 0.005000
+[02.09.26|00:54:19] 	train_mean_loss: 5.377504289690461
+[02.09.26|00:54:19] 	train_mean_loss_motion: 4.733174640966686
+[02.09.26|00:54:19] 	train_mean_loss_bone: 5.586531000915251
+[02.09.26|00:54:19] Training epoch: 264
+[02.09.26|00:54:30] 	Iter 87100 Done. | loss: 4.9087 | loss_motion: 4.3318 | loss_bone: 5.0666 | lr: 0.005000
+[02.09.26|00:54:52] 	Iter 87200 Done. | loss: 5.5623 | loss_motion: 4.8359 | loss_bone: 5.5874 | lr: 0.005000
+[02.09.26|00:55:14] 	Iter 87300 Done. | loss: 5.9666 | loss_motion: 5.1761 | loss_bone: 6.3791 | lr: 0.005000
+[02.09.26|00:55:33] 	train_mean_loss: 5.3661247135289125
+[02.09.26|00:55:33] 	train_mean_loss_motion: 4.720489224638463
+[02.09.26|00:55:33] 	train_mean_loss_bone: 5.585638550473124
+[02.09.26|00:55:33] Training epoch: 265
+[02.09.26|00:55:36] 	Iter 87400 Done. | loss: 4.7506 | loss_motion: 4.1104 | loss_bone: 5.0346 | lr: 0.005000
+[02.09.26|00:55:59] 	Iter 87500 Done. | loss: 5.1299 | loss_motion: 4.3301 | loss_bone: 5.0065 | lr: 0.005000
+[02.09.26|00:56:21] 	Iter 87600 Done. | loss: 5.6167 | loss_motion: 4.9141 | loss_bone: 5.9514 | lr: 0.005000
+[02.09.26|00:56:43] 	Iter 87700 Done. | loss: 6.1314 | loss_motion: 5.4244 | loss_bone: 6.3222 | lr: 0.005000
+[02.09.26|00:56:46] 	train_mean_loss: 5.370253320907178
+[02.09.26|00:56:46] 	train_mean_loss_motion: 4.730994243276084
+[02.09.26|00:56:46] 	train_mean_loss_bone: 5.593250060009452
+[02.09.26|00:56:47] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch265_model.pt.
+[02.09.26|00:56:47] Training epoch: 266
+[02.09.26|00:57:06] 	Iter 87800 Done. | loss: 5.0419 | loss_motion: 4.4194 | loss_bone: 5.3124 | lr: 0.005000
+[02.09.26|00:57:28] 	Iter 87900 Done. | loss: 5.4256 | loss_motion: 4.9325 | loss_bone: 5.7776 | lr: 0.005000
+[02.09.26|00:57:50] 	Iter 88000 Done. | loss: 5.7973 | loss_motion: 5.0910 | loss_bone: 6.0253 | lr: 0.005000
+[02.09.26|00:58:00] 	train_mean_loss: 5.341527620471136
+[02.09.26|00:58:00] 	train_mean_loss_motion: 4.696981561147915
+[02.09.26|00:58:00] 	train_mean_loss_bone: 5.558744976527741
+[02.09.26|00:58:00] Training epoch: 267
+[02.09.26|00:58:12] 	Iter 88100 Done. | loss: 5.0280 | loss_motion: 4.2488 | loss_bone: 5.0410 | lr: 0.005000
+[02.09.26|00:58:34] 	Iter 88200 Done. | loss: 5.3643 | loss_motion: 4.7771 | loss_bone: 5.5463 | lr: 0.005000
+[02.09.26|00:58:57] 	Iter 88300 Done. | loss: 5.9005 | loss_motion: 5.0602 | loss_bone: 6.2310 | lr: 0.005000
+[02.09.26|00:59:13] 	train_mean_loss: 5.36190337356844
+[02.09.26|00:59:13] 	train_mean_loss_motion: 4.711313169168202
+[02.09.26|00:59:13] 	train_mean_loss_bone: 5.556454147096847
+[02.09.26|00:59:13] Training epoch: 268
+[02.09.26|00:59:19] 	Iter 88400 Done. | loss: 4.6572 | loss_motion: 4.0705 | loss_bone: 4.7108 | lr: 0.005000
+[02.09.26|00:59:41] 	Iter 88500 Done. | loss: 5.4914 | loss_motion: 4.7459 | loss_bone: 5.5769 | lr: 0.005000
+[02.09.26|01:00:03] 	Iter 88600 Done. | loss: 5.8427 | loss_motion: 5.1129 | loss_bone: 5.9561 | lr: 0.005000
+[02.09.26|01:00:25] 	Iter 88700 Done. | loss: 5.5496 | loss_motion: 5.0276 | loss_bone: 6.1101 | lr: 0.005000
+[02.09.26|01:00:27] 	train_mean_loss: 5.346772227042392
+[02.09.26|01:00:27] 	train_mean_loss_motion: 4.69675103127056
+[02.09.26|01:00:27] 	train_mean_loss_bone: 5.558907042097109
+[02.09.26|01:00:27] Training epoch: 269
+[02.09.26|01:00:48] 	Iter 88800 Done. | loss: 4.5809 | loss_motion: 4.0261 | loss_bone: 4.7291 | lr: 0.005000
+[02.09.26|01:01:10] 	Iter 88900 Done. | loss: 5.2758 | loss_motion: 4.6038 | loss_bone: 5.4217 | lr: 0.005000
+[02.09.26|01:01:32] 	Iter 89000 Done. | loss: 5.7763 | loss_motion: 5.1312 | loss_bone: 6.1235 | lr: 0.005000
+[02.09.26|01:01:40] 	train_mean_loss: 5.352850916882656
+[02.09.26|01:01:40] 	train_mean_loss_motion: 4.713044209062513
+[02.09.26|01:01:40] 	train_mean_loss_bone: 5.57525276921667
+[02.09.26|01:01:40] Training epoch: 270
+[02.09.26|01:01:54] 	Iter 89100 Done. | loss: 4.6875 | loss_motion: 4.1574 | loss_bone: 4.8701 | lr: 0.005000
+[02.09.26|01:02:16] 	Iter 89200 Done. | loss: 5.3822 | loss_motion: 4.9541 | loss_bone: 5.8478 | lr: 0.005000
+[02.09.26|01:02:38] 	Iter 89300 Done. | loss: 5.8462 | loss_motion: 5.2187 | loss_bone: 6.0504 | lr: 0.005000
+[02.09.26|01:02:54] 	train_mean_loss: 5.366279276476166
+[02.09.26|01:02:54] 	train_mean_loss_motion: 4.720696891542648
+[02.09.26|01:02:54] 	train_mean_loss_bone: 5.572608185678811
+[02.09.26|01:02:54] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch270_model.pt.
+[02.09.26|01:02:54] Training epoch: 271
+[02.09.26|01:03:01] 	Iter 89400 Done. | loss: 4.3969 | loss_motion: 3.7021 | loss_bone: 4.4968 | lr: 0.005000
+[02.09.26|01:03:23] 	Iter 89500 Done. | loss: 5.0541 | loss_motion: 4.4431 | loss_bone: 5.1449 | lr: 0.005000
+[02.09.26|01:03:45] 	Iter 89600 Done. | loss: 5.4987 | loss_motion: 4.8072 | loss_bone: 6.0273 | lr: 0.005000
+[02.09.26|01:04:07] 	Iter 89700 Done. | loss: 5.7890 | loss_motion: 5.0320 | loss_bone: 5.9211 | lr: 0.005000
+[02.09.26|01:04:07] 	train_mean_loss: 5.342832516327365
+[02.09.26|01:04:07] 	train_mean_loss_motion: 4.693464889987358
+[02.09.26|01:04:07] 	train_mean_loss_bone: 5.551951781500502
+[02.09.26|01:04:07] Training epoch: 272
+[02.09.26|01:04:29] 	Iter 89800 Done. | loss: 4.9995 | loss_motion: 4.4186 | loss_bone: 5.2570 | lr: 0.005000
+[02.09.26|01:04:51] 	Iter 89900 Done. | loss: 6.0069 | loss_motion: 5.1829 | loss_bone: 6.1346 | lr: 0.005000
+[02.09.26|01:05:14] 	Iter 90000 Done. | loss: 5.8229 | loss_motion: 5.0622 | loss_bone: 6.2027 | lr: 0.005000
+[02.09.26|01:05:20] 	train_mean_loss: 5.350365694916141
+[02.09.26|01:05:20] 	train_mean_loss_motion: 4.697958408885852
+[02.09.26|01:05:20] 	train_mean_loss_bone: 5.5422591730907245
+[02.09.26|01:05:20] Training epoch: 273
+[02.09.26|01:05:36] 	Iter 90100 Done. | loss: 5.0050 | loss_motion: 4.3741 | loss_bone: 5.2176 | lr: 0.005000
+[02.09.26|01:05:58] 	Iter 90200 Done. | loss: 5.3353 | loss_motion: 4.7659 | loss_bone: 5.5491 | lr: 0.005000
+[02.09.26|01:06:20] 	Iter 90300 Done. | loss: 5.8989 | loss_motion: 5.0028 | loss_bone: 6.2685 | lr: 0.005000
+[02.09.26|01:06:34] 	train_mean_loss: 5.337702457278157
+[02.09.26|01:06:34] 	train_mean_loss_motion: 4.68120107261796
+[02.09.26|01:06:34] 	train_mean_loss_bone: 5.5359604999738155
+[02.09.26|01:06:34] Training epoch: 274
+[02.09.26|01:06:42] 	Iter 90400 Done. | loss: 4.9813 | loss_motion: 4.5295 | loss_bone: 4.8037 | lr: 0.005000
+[02.09.26|01:07:05] 	Iter 90500 Done. | loss: 5.5608 | loss_motion: 4.9708 | loss_bone: 5.5937 | lr: 0.005000
+[02.09.26|01:07:27] 	Iter 90600 Done. | loss: 5.8621 | loss_motion: 5.2255 | loss_bone: 6.1732 | lr: 0.005000
+[02.09.26|01:07:47] 	train_mean_loss: 5.352709605974733
+[02.09.26|01:07:47] 	train_mean_loss_motion: 4.713479340976819
+[02.09.26|01:07:47] 	train_mean_loss_bone: 5.554550093106273
+[02.09.26|01:07:47] Training epoch: 275
+[02.09.26|01:07:49] 	Iter 90700 Done. | loss: 4.5570 | loss_motion: 4.1368 | loss_bone: 4.6792 | lr: 0.005000
+[02.09.26|01:08:11] 	Iter 90800 Done. | loss: 5.3082 | loss_motion: 4.5512 | loss_bone: 5.2610 | lr: 0.005000
+[02.09.26|01:08:33] 	Iter 90900 Done. | loss: 5.5653 | loss_motion: 4.8991 | loss_bone: 5.7872 | lr: 0.005000
+[02.09.26|01:08:56] 	Iter 91000 Done. | loss: 5.7353 | loss_motion: 5.0528 | loss_bone: 6.0530 | lr: 0.005000
+[02.09.26|01:09:01] 	train_mean_loss: 5.3491529424385
+[02.09.26|01:09:01] 	train_mean_loss_motion: 4.703327606091687
+[02.09.26|01:09:01] 	train_mean_loss_bone: 5.5463531960893615
+[02.09.26|01:09:01] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch275_model.pt.
+[02.09.26|01:09:01] Training epoch: 276
+[02.09.26|01:09:18] 	Iter 91100 Done. | loss: 4.7997 | loss_motion: 4.2142 | loss_bone: 4.8201 | lr: 0.005000
+[02.09.26|01:09:40] 	Iter 91200 Done. | loss: 5.4339 | loss_motion: 4.6732 | loss_bone: 5.5917 | lr: 0.005000
+[02.09.26|01:10:02] 	Iter 91300 Done. | loss: 5.8586 | loss_motion: 4.9866 | loss_bone: 6.2770 | lr: 0.005000
+[02.09.26|01:10:15] 	train_mean_loss: 5.3299876988114185
+[02.09.26|01:10:15] 	train_mean_loss_motion: 4.680261968485898
+[02.09.26|01:10:15] 	train_mean_loss_bone: 5.522141254920614
+[02.09.26|01:10:15] Training epoch: 277
+[02.09.26|01:10:25] 	Iter 91400 Done. | loss: 4.8956 | loss_motion: 4.4178 | loss_bone: 5.0106 | lr: 0.005000
+[02.09.26|01:10:47] 	Iter 91500 Done. | loss: 5.2224 | loss_motion: 4.7228 | loss_bone: 5.4737 | lr: 0.005000
+[02.09.26|01:11:09] 	Iter 91600 Done. | loss: 6.0396 | loss_motion: 5.2686 | loss_bone: 6.1337 | lr: 0.005000
+[02.09.26|01:11:28] 	train_mean_loss: 5.3531455114889
+[02.09.26|01:11:28] 	train_mean_loss_motion: 4.699804640248463
+[02.09.26|01:11:28] 	train_mean_loss_bone: 5.553307109729041
+[02.09.26|01:11:28] Training epoch: 278
+[02.09.26|01:11:31] 	Iter 91700 Done. | loss: 4.7255 | loss_motion: 4.0108 | loss_bone: 4.6127 | lr: 0.005000
+[02.09.26|01:11:54] 	Iter 91800 Done. | loss: 5.3646 | loss_motion: 4.7275 | loss_bone: 5.4106 | lr: 0.005000
+[02.09.26|01:12:16] 	Iter 91900 Done. | loss: 5.5055 | loss_motion: 4.9363 | loss_bone: 5.8493 | lr: 0.005000
+[02.09.26|01:12:38] 	Iter 92000 Done. | loss: 5.7724 | loss_motion: 5.2111 | loss_bone: 6.2517 | lr: 0.005000
+[02.09.26|01:12:42] 	train_mean_loss: 5.343188029401612
+[02.09.26|01:12:42] 	train_mean_loss_motion: 4.682193863427891
+[02.09.26|01:12:42] 	train_mean_loss_bone: 5.536844972397265
+[02.09.26|01:12:42] Training epoch: 279
+[02.09.26|01:13:00] 	Iter 92100 Done. | loss: 4.6561 | loss_motion: 4.2177 | loss_bone: 5.0189 | lr: 0.005000
+[02.09.26|01:13:22] 	Iter 92200 Done. | loss: 5.6647 | loss_motion: 4.8807 | loss_bone: 5.5709 | lr: 0.005000
+[02.09.26|01:13:44] 	Iter 92300 Done. | loss: 6.0409 | loss_motion: 5.5373 | loss_bone: 6.4449 | lr: 0.005000
+[02.09.26|01:13:55] 	train_mean_loss: 5.3712913060836565
+[02.09.26|01:13:55] 	train_mean_loss_motion: 4.714343317325742
+[02.09.26|01:13:55] 	train_mean_loss_bone: 5.564278385070155
+[02.09.26|01:13:55] Training epoch: 280
+[02.09.26|01:14:07] 	Iter 92400 Done. | loss: 5.3315 | loss_motion: 4.7521 | loss_bone: 5.2328 | lr: 0.005000
+[02.09.26|01:14:29] 	Iter 92500 Done. | loss: 5.4056 | loss_motion: 4.7367 | loss_bone: 5.4957 | lr: 0.005000
+[02.09.26|01:14:51] 	Iter 92600 Done. | loss: 5.7498 | loss_motion: 5.1999 | loss_bone: 6.1594 | lr: 0.005000
+[02.09.26|01:15:09] 	train_mean_loss: 5.35860175020385
+[02.09.26|01:15:09] 	train_mean_loss_motion: 4.704160251646243
+[02.09.26|01:15:09] 	train_mean_loss_bone: 5.548377054335488
+[02.09.26|01:15:09] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch280_model.pt.
+[02.09.26|01:15:09] Training epoch: 281
+[02.09.26|01:15:13] 	Iter 92700 Done. | loss: 4.7273 | loss_motion: 4.2612 | loss_bone: 4.8139 | lr: 0.005000
+[02.09.26|01:15:36] 	Iter 92800 Done. | loss: 4.7764 | loss_motion: 4.2552 | loss_bone: 5.1955 | lr: 0.005000
+[02.09.26|01:15:58] 	Iter 92900 Done. | loss: 5.7550 | loss_motion: 5.1794 | loss_bone: 6.1829 | lr: 0.005000
+[02.09.26|01:16:20] 	Iter 93000 Done. | loss: 5.8409 | loss_motion: 5.1509 | loss_bone: 6.1377 | lr: 0.005000
+[02.09.26|01:16:22] 	train_mean_loss: 5.346890432236778
+[02.09.26|01:16:22] 	train_mean_loss_motion: 4.697282242991053
+[02.09.26|01:16:22] 	train_mean_loss_bone: 5.536862180312235
+[02.09.26|01:16:22] Training epoch: 282
+[02.09.26|01:16:42] 	Iter 93100 Done. | loss: 5.1317 | loss_motion: 4.4689 | loss_bone: 5.0959 | lr: 0.005000
+[02.09.26|01:17:05] 	Iter 93200 Done. | loss: 5.6649 | loss_motion: 4.7468 | loss_bone: 5.7356 | lr: 0.005000
+[02.09.26|01:17:27] 	Iter 93300 Done. | loss: 5.5998 | loss_motion: 5.0180 | loss_bone: 6.0585 | lr: 0.005000
+[02.09.26|01:17:36] 	train_mean_loss: 5.332567481476015
+[02.09.26|01:17:36] 	train_mean_loss_motion: 4.679375927253792
+[02.09.26|01:17:36] 	train_mean_loss_bone: 5.524509605684309
+[02.09.26|01:17:36] Training epoch: 283
+[02.09.26|01:17:49] 	Iter 93400 Done. | loss: 4.6273 | loss_motion: 3.8415 | loss_bone: 4.5770 | lr: 0.005000
+[02.09.26|01:18:11] 	Iter 93500 Done. | loss: 5.2026 | loss_motion: 4.4330 | loss_bone: 5.5746 | lr: 0.005000
+[02.09.26|01:18:33] 	Iter 93600 Done. | loss: 5.9904 | loss_motion: 5.2851 | loss_bone: 6.2766 | lr: 0.005000
+[02.09.26|01:18:49] 	train_mean_loss: 5.357332516292791
+[02.09.26|01:18:49] 	train_mean_loss_motion: 4.69471865838388
+[02.09.26|01:18:49] 	train_mean_loss_bone: 5.536154948692667
+[02.09.26|01:18:49] Training epoch: 284
+[02.09.26|01:18:56] 	Iter 93700 Done. | loss: 4.7261 | loss_motion: 4.1074 | loss_bone: 4.7010 | lr: 0.005000
+[02.09.26|01:19:18] 	Iter 93800 Done. | loss: 5.0859 | loss_motion: 4.4458 | loss_bone: 5.2478 | lr: 0.005000
+[02.09.26|01:19:40] 	Iter 93900 Done. | loss: 5.5552 | loss_motion: 4.7319 | loss_bone: 5.6685 | lr: 0.005000
+[02.09.26|01:20:02] 	Iter 94000 Done. | loss: 6.0129 | loss_motion: 5.2758 | loss_bone: 6.4974 | lr: 0.005000
+[02.09.26|01:20:03] 	train_mean_loss: 5.327428157956218
+[02.09.26|01:20:03] 	train_mean_loss_motion: 4.687244941100613
+[02.09.26|01:20:03] 	train_mean_loss_bone: 5.5205009178092475
+[02.09.26|01:20:03] Training epoch: 285
+[02.09.26|01:20:25] 	Iter 94100 Done. | loss: 4.9163 | loss_motion: 4.6088 | loss_bone: 5.1788 | lr: 0.005000
+[02.09.26|01:20:47] 	Iter 94200 Done. | loss: 5.7053 | loss_motion: 4.9602 | loss_bone: 5.7674 | lr: 0.005000
+[02.09.26|01:21:09] 	Iter 94300 Done. | loss: 5.6722 | loss_motion: 4.8697 | loss_bone: 6.0444 | lr: 0.005000
+[02.09.26|01:21:17] 	train_mean_loss: 5.336054853802361
+[02.09.26|01:21:17] 	train_mean_loss_motion: 4.680057938365418
+[02.09.26|01:21:17] 	train_mean_loss_bone: 5.520380668409642
+[02.09.26|01:21:17] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch285_model.pt.
+[02.09.26|01:21:17] Training epoch: 286
+[02.09.26|01:21:32] 	Iter 94400 Done. | loss: 4.8420 | loss_motion: 4.2397 | loss_bone: 4.9067 | lr: 0.005000
+[02.09.26|01:21:54] 	Iter 94500 Done. | loss: 5.1983 | loss_motion: 4.7910 | loss_bone: 5.6088 | lr: 0.005000
+[02.09.26|01:22:16] 	Iter 94600 Done. | loss: 5.8855 | loss_motion: 5.0160 | loss_bone: 6.1447 | lr: 0.005000
+[02.09.26|01:22:30] 	train_mean_loss: 5.329303304954598
+[02.09.26|01:22:30] 	train_mean_loss_motion: 4.6751021604163405
+[02.09.26|01:22:30] 	train_mean_loss_bone: 5.5142490871003025
+[02.09.26|01:22:30] Training epoch: 287
+[02.09.26|01:22:38] 	Iter 94700 Done. | loss: 4.7921 | loss_motion: 4.2467 | loss_bone: 4.9600 | lr: 0.005000
+[02.09.26|01:23:00] 	Iter 94800 Done. | loss: 5.0263 | loss_motion: 4.3853 | loss_bone: 5.3656 | lr: 0.005000
+[02.09.26|01:23:23] 	Iter 94900 Done. | loss: 5.7489 | loss_motion: 5.1143 | loss_bone: 6.0354 | lr: 0.005000
+[02.09.26|01:23:44] 	train_mean_loss: 5.334027092982635
+[02.09.26|01:23:44] 	train_mean_loss_motion: 4.6688284902774315
+[02.09.26|01:23:44] 	train_mean_loss_bone: 5.508748632183248
+[02.09.26|01:23:44] Training epoch: 288
+[02.09.26|01:23:45] 	Iter 95000 Done. | loss: 4.6815 | loss_motion: 4.0628 | loss_bone: 4.9655 | lr: 0.005000
+[02.09.26|01:24:07] 	Iter 95100 Done. | loss: 5.0027 | loss_motion: 4.3682 | loss_bone: 5.2316 | lr: 0.005000
+[02.09.26|01:24:29] 	Iter 95200 Done. | loss: 5.4863 | loss_motion: 4.8495 | loss_bone: 5.9779 | lr: 0.005000
+[02.09.26|01:24:52] 	Iter 95300 Done. | loss: 5.7814 | loss_motion: 5.0384 | loss_bone: 6.1183 | lr: 0.005000
+[02.09.26|01:24:58] 	train_mean_loss: 5.341921619058016
+[02.09.26|01:24:58] 	train_mean_loss_motion: 4.693803440768193
+[02.09.26|01:24:58] 	train_mean_loss_bone: 5.529609178848497
+[02.09.26|01:24:58] Training epoch: 289
+[02.09.26|01:25:14] 	Iter 95400 Done. | loss: 5.0064 | loss_motion: 4.4503 | loss_bone: 5.0477 | lr: 0.005000
+[02.09.26|01:25:36] 	Iter 95500 Done. | loss: 5.2375 | loss_motion: 4.4687 | loss_bone: 5.3051 | lr: 0.005000
+[02.09.26|01:25:58] 	Iter 95600 Done. | loss: 5.8340 | loss_motion: 4.9164 | loss_bone: 5.8127 | lr: 0.005000
+[02.09.26|01:26:11] 	train_mean_loss: 5.340391705043366
+[02.09.26|01:26:11] 	train_mean_loss_motion: 4.677019450599693
+[02.09.26|01:26:11] 	train_mean_loss_bone: 5.518352435074544
+[02.09.26|01:26:11] Training epoch: 290
+[02.09.26|01:26:20] 	Iter 95700 Done. | loss: 4.5703 | loss_motion: 4.0843 | loss_bone: 4.7388 | lr: 0.005000
+[02.09.26|01:26:43] 	Iter 95800 Done. | loss: 5.3804 | loss_motion: 4.6321 | loss_bone: 5.6324 | lr: 0.005000
+[02.09.26|01:27:05] 	Iter 95900 Done. | loss: 5.7702 | loss_motion: 5.1289 | loss_bone: 6.0087 | lr: 0.005000
+[02.09.26|01:27:24] 	train_mean_loss: 5.3431775764396185
+[02.09.26|01:27:24] 	train_mean_loss_motion: 4.679137070013317
+[02.09.26|01:27:24] 	train_mean_loss_bone: 5.5149541938412945
+[02.09.26|01:27:25] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch290_model.pt.
+[02.09.26|01:27:25] Training epoch: 291
+[02.09.26|01:27:27] 	Iter 96000 Done. | loss: 4.4244 | loss_motion: 3.8757 | loss_bone: 4.4383 | lr: 0.005000
+[02.09.26|01:27:49] 	Iter 96100 Done. | loss: 5.3248 | loss_motion: 4.5143 | loss_bone: 5.4061 | lr: 0.005000
+[02.09.26|01:28:11] 	Iter 96200 Done. | loss: 5.2947 | loss_motion: 4.7747 | loss_bone: 5.9112 | lr: 0.005000
+[02.09.26|01:28:34] 	Iter 96300 Done. | loss: 5.8332 | loss_motion: 5.1140 | loss_bone: 6.1560 | lr: 0.005000
+[02.09.26|01:28:38] 	train_mean_loss: 5.351763898152239
+[02.09.26|01:28:38] 	train_mean_loss_motion: 4.69807057150181
+[02.09.26|01:28:38] 	train_mean_loss_bone: 5.5318550631358905
+[02.09.26|01:28:38] Training epoch: 292
+[02.09.26|01:28:56] 	Iter 96400 Done. | loss: 4.8633 | loss_motion: 4.2323 | loss_bone: 5.2068 | lr: 0.005000
+[02.09.26|01:29:18] 	Iter 96500 Done. | loss: 5.3961 | loss_motion: 4.6380 | loss_bone: 5.5317 | lr: 0.005000
+[02.09.26|01:29:41] 	Iter 96600 Done. | loss: 5.7572 | loss_motion: 5.1499 | loss_bone: 6.2411 | lr: 0.005000
+[02.09.26|01:29:52] 	train_mean_loss: 5.3636812457865455
+[02.09.26|01:29:52] 	train_mean_loss_motion: 4.70534788661853
+[02.09.26|01:29:52] 	train_mean_loss_bone: 5.556648101691393
+[02.09.26|01:29:52] Training epoch: 293
+[02.09.26|01:30:03] 	Iter 96700 Done. | loss: 4.8566 | loss_motion: 4.2972 | loss_bone: 4.9850 | lr: 0.005000
+[02.09.26|01:30:25] 	Iter 96800 Done. | loss: 5.1536 | loss_motion: 4.5207 | loss_bone: 5.1432 | lr: 0.005000
+[02.09.26|01:30:47] 	Iter 96900 Done. | loss: 5.8296 | loss_motion: 5.3095 | loss_bone: 6.0321 | lr: 0.005000
+[02.09.26|01:31:06] 	train_mean_loss: 5.342854086365945
+[02.09.26|01:31:06] 	train_mean_loss_motion: 4.6810157018125595
+[02.09.26|01:31:06] 	train_mean_loss_bone: 5.526606041138986
+[02.09.26|01:31:06] Training epoch: 294
+[02.09.26|01:31:10] 	Iter 97000 Done. | loss: 4.9215 | loss_motion: 4.5196 | loss_bone: 4.9130 | lr: 0.005000
+[02.09.26|01:31:32] 	Iter 97100 Done. | loss: 5.1323 | loss_motion: 4.5009 | loss_bone: 5.1874 | lr: 0.005000
+[02.09.26|01:31:54] 	Iter 97200 Done. | loss: 5.7339 | loss_motion: 4.8428 | loss_bone: 5.7484 | lr: 0.005000
+[02.09.26|01:32:16] 	Iter 97300 Done. | loss: 5.8258 | loss_motion: 5.1430 | loss_bone: 6.1605 | lr: 0.005000
+[02.09.26|01:32:19] 	train_mean_loss: 5.355181352609594
+[02.09.26|01:32:19] 	train_mean_loss_motion: 4.6897836862373925
+[02.09.26|01:32:19] 	train_mean_loss_bone: 5.521984325074717
+[02.09.26|01:32:19] Training epoch: 295
+[02.09.26|01:32:39] 	Iter 97400 Done. | loss: 5.3448 | loss_motion: 4.7872 | loss_bone: 5.5574 | lr: 0.005000
+[02.09.26|01:33:01] 	Iter 97500 Done. | loss: 5.5091 | loss_motion: 4.8402 | loss_bone: 5.6877 | lr: 0.005000
+[02.09.26|01:33:23] 	Iter 97600 Done. | loss: 5.8185 | loss_motion: 5.0389 | loss_bone: 5.9439 | lr: 0.005000
+[02.09.26|01:33:33] 	train_mean_loss: 5.340352738371789
+[02.09.26|01:33:33] 	train_mean_loss_motion: 4.66880043899905
+[02.09.26|01:33:33] 	train_mean_loss_bone: 5.51063295577588
+[02.09.26|01:33:33] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch295_model.pt.
+[02.09.26|01:33:33] Training epoch: 296
+[02.09.26|01:33:46] 	Iter 97700 Done. | loss: 4.9903 | loss_motion: 4.4429 | loss_bone: 5.0577 | lr: 0.005000
+[02.09.26|01:34:08] 	Iter 97800 Done. | loss: 5.6946 | loss_motion: 4.9784 | loss_bone: 5.5990 | lr: 0.005000
+[02.09.26|01:34:30] 	Iter 97900 Done. | loss: 5.8558 | loss_motion: 5.1134 | loss_bone: 6.2158 | lr: 0.005000
+[02.09.26|01:34:47] 	train_mean_loss: 5.351728133924778
+[02.09.26|01:34:47] 	train_mean_loss_motion: 4.6784827831648625
+[02.09.26|01:34:47] 	train_mean_loss_bone: 5.519175032474483
+[02.09.26|01:34:47] Training epoch: 297
+[02.09.26|01:34:52] 	Iter 98000 Done. | loss: 4.3742 | loss_motion: 3.7178 | loss_bone: 4.5073 | lr: 0.005000
+[02.09.26|01:35:15] 	Iter 98100 Done. | loss: 5.2484 | loss_motion: 4.6660 | loss_bone: 5.6100 | lr: 0.005000
+[02.09.26|01:35:37] 	Iter 98200 Done. | loss: 5.7237 | loss_motion: 4.8223 | loss_bone: 5.8156 | lr: 0.005000
+[02.09.26|01:35:59] 	Iter 98300 Done. | loss: 6.0055 | loss_motion: 5.0794 | loss_bone: 6.2080 | lr: 0.005000
+[02.09.26|01:36:00] 	train_mean_loss: 5.346640383729041
+[02.09.26|01:36:00] 	train_mean_loss_motion: 4.680168118001471
+[02.09.26|01:36:00] 	train_mean_loss_bone: 5.5259778492400295
+[02.09.26|01:36:00] Training epoch: 298
+[02.09.26|01:36:21] 	Iter 98400 Done. | loss: 4.7825 | loss_motion: 4.2791 | loss_bone: 5.1458 | lr: 0.005000
+[02.09.26|01:36:44] 	Iter 98500 Done. | loss: 5.5747 | loss_motion: 5.0149 | loss_bone: 5.7811 | lr: 0.005000
+[02.09.26|01:37:06] 	Iter 98600 Done. | loss: 5.6078 | loss_motion: 5.0029 | loss_bone: 5.9608 | lr: 0.005000
+[02.09.26|01:37:14] 	train_mean_loss: 5.3407316438381045
+[02.09.26|01:37:14] 	train_mean_loss_motion: 4.668494522031341
+[02.09.26|01:37:14] 	train_mean_loss_bone: 5.524427766886363
+[02.09.26|01:37:14] Training epoch: 299
+[02.09.26|01:37:28] 	Iter 98700 Done. | loss: 4.9235 | loss_motion: 4.4605 | loss_bone: 5.1341 | lr: 0.005000
+[02.09.26|01:37:50] 	Iter 98800 Done. | loss: 5.4709 | loss_motion: 4.9535 | loss_bone: 5.8633 | lr: 0.005000
+[02.09.26|01:38:12] 	Iter 98900 Done. | loss: 5.6335 | loss_motion: 4.8589 | loss_bone: 5.9300 | lr: 0.005000
+[02.09.26|01:38:28] 	train_mean_loss: 5.360044565805856
+[02.09.26|01:38:28] 	train_mean_loss_motion: 4.688106781046196
+[02.09.26|01:38:28] 	train_mean_loss_bone: 5.535328533714272
+[02.09.26|01:38:28] Training epoch: 300
+[02.09.26|01:38:35] 	Iter 99000 Done. | loss: 4.3950 | loss_motion: 3.9106 | loss_bone: 4.8412 | lr: 0.005000
+[02.09.26|01:38:57] 	Iter 99100 Done. | loss: 5.5500 | loss_motion: 4.6965 | loss_bone: 5.4679 | lr: 0.005000
+[02.09.26|01:39:19] 	Iter 99200 Done. | loss: 5.8153 | loss_motion: 5.1770 | loss_bone: 6.0799 | lr: 0.005000
+[02.09.26|01:39:41] 	train_mean_loss: 5.361129880311626
+[02.09.26|01:39:41] 	train_mean_loss_motion: 4.687530950477116
+[02.09.26|01:39:41] 	train_mean_loss_bone: 5.519172491263767
+[02.09.26|01:39:41] The model has been saved as work_dir/crossclr_3views/fulltrain_goalkeeper_v1/epoch300_model.pt.

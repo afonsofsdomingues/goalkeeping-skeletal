@@ -1,0 +1,69 @@
+# command line: main.py finetune_crossclr_3views --config config/CrosSCLR/finetune_3views.yaml
+
+base_lr: 0.01
+batch_size: 64
+config: config/CrosSCLR/finetune_3views.yaml
+context: true
+cross_epoch: 150
+debug: false
+device:
+- 0
+eval_interval: -1
+ignore_weights:
+- queue
+- queue_motion
+- queue_bone
+- queue_ptr
+- queue_ptr_motion
+- queue_ptr_bone
+log_interval: 100
+model: net.crossclr_3views.CrosSCLR
+model_args:
+    Temperature: 0.07
+    base_encoder: net.st_gcn.Model
+    dropout: 0.5
+    edge_importance_weighting: true
+    feature_dim: 128
+    graph_args:
+        layout: ntu-rgb+d
+        strategy: spatial
+    hidden_channels: 16
+    hidden_dim: 256
+    in_channels: 3
+    mlp: true
+    momentum: 0.999
+    num_class: 60
+    pretrain: true
+    queue_size: 16384
+nesterov: false
+num_epoch: 100
+num_worker: 0
+optimizer: SGD
+pavi_log: false
+phase: train
+print_log: true
+save_interval: 5
+save_log: true
+save_result: false
+start_epoch: 0
+step:
+- 80
+test_batch_size: 64
+test_feeder: feeder.feeder
+test_feeder_args: {}
+topk: 1
+train_feeder: feeder.ntu_feeder.Feeder_dual
+train_feeder_args:
+    data_path: ../../data/tensor/train_position.npy
+    label_path: ../../data/tensor/train_label.pkl
+    mirror: true
+    mmap: false
+    noise_std: 0.01
+    random_rotation_angle: 20
+    shear_amplitude: 0.5
+    temperal_padding_ratio: 6
+use_gpu: true
+view: all
+weight_decay: 0.0001
+weights: weights/crossclr_3views_xview_frame50_channel16_cross150_epoch300.pt
+work_dir: work_dir/crossclr_3views/finetune_goalkeeper_v2

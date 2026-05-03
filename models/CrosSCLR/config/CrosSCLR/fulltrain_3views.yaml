@@ -1,0 +1,72 @@
+# Adapted yaml file for training from scratch using goalkeeper data (instead of pretraining)
+# Command for training (execute inside CrosSCLR-main directory):
+#    python main.py fulltrain_crossclr_3views --config config/CrosSCLR/fulltrain_3views.yaml
+
+work_dir: work_dir/crossclr_3views/fulltrain_goalkeeper_v1
+# feeder
+train_feeder: feeder.ntu_feeder.Feeder_dual
+num_worker: 0
+train_feeder_args:
+  data_path: ../../data/tensor_native/train_position.npy
+  label_path: ../../data/tensor_native/train_label.pkl  # DUMMY PATH, not used because Feeder_dual generates labels sequentially
+  shear_amplitude: 0.5
+  temperal_padding_ratio: 6
+  mirror: True
+  random_rotation_angle: 0
+  noise_std: 0.01
+  mmap: False
+
+# model
+model: net.crossclr_3views.CrosSCLR
+model_args:
+  base_encoder: net.st_gcn.Model
+  pretrain: True
+  feature_dim: 128
+  queue_size: 16384   # original queue size was 32768, but we only have ~18k samples
+  momentum: 0.999
+  Temperature: 0.07
+  mlp: True
+  in_channels: 3
+  hidden_channels: 16 # 1/4 x channels of standard stgcn
+  hidden_dim: 256
+  num_class: 60
+  dropout: 0.5
+  graph_args:
+    layout: 'native'
+    strategy: 'spatial'
+  edge_importance_weighting: True
+
+# Ignore the size-mismatched layers after changing the queue size
+# In any case, we don't want to fill up the queue with the checkpoint that uses samples from the other dataset
+ignore_weights: 
+  - queue
+  - queue_motion
+  - queue_bone
+  - queue_ptr
+  - queue_ptr_motion
+  - queue_ptr_bone
+
+# optim
+nesterov: False
+weight_decay: 1e-4
+base_lr: 0.05   # Increased from 0.01 to 0.05 (Standard is 0.1 for batch 128, scaled for batch 64)
+optimizer: SGD
+step: [250]      # Delay decay until late in training (Standard for CL)
+
+# training
+device: [0]
+batch_size: 64        # original batch size was 128
+test_batch_size: 64   # original batch size was 128
+num_epoch: 300  # Increased to 300 to allow convergence and "cross-view" training
+start_epoch: 0
+
+# cross training
+topk: 1
+view: 'all'
+cross_epoch: 150 # Now valid (150 < 300)
+context: True
+
+# log
+save_interval: 5
+eval_interval: -1
+log_interval: 100
